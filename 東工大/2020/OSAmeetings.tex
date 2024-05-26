@@ -1,0 +1,87 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                   File: OSAmeetings.tex             %
+%                  Date: 29 Novemver 2018              %
+%                                                     %
+%     For preparing LaTeX manuscripts for submission  %
+%       submission to OSA meetings and conferences    %
+%                                                     %
+%       (c) 2018 Optical Society of America           %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt,dvipdfmx]{jsarticle}
+%% if A4 paper needed, change letterpaper to A4
+\usepackage[dvipdfmx]{graphicx}
+\usepackage[dvipdfmx]{color}
+\usepackage{osameet3} %% use version 3 for proper copyright statement
+\usepackage{ascmac}
+%% provide authormark
+\newcommand\authormark[1]{\textsuperscript{#1}}
+
+%% standard packages and arguments should be modified as needed
+\usepackage{amsmath,amssymb}
+\usepackage[colorlinks=true,bookmarks=false,citecolor=blue,urlcolor=blue]{hyperref} %pdflatex
+%\usepackage[breaklinks,colorlinks=true,bookmarks=false,citecolor=blue,urlcolor=blue]{hyperref} %latex w/dvipdf
+\usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage{empheq}
+\usepackage{physics}
+\usepackage[scr=rsfs]{mathalpha}
+\usepackage[svgnames]{xcolor}% tikzより前に読み込む必要あり
+\usepackage{tikz}
+\usepackage{bm}
+\usepackage{here}
+\usepackage{braket}
+\usepackage{framed,color}
+\usepackage{dcolumn}
+\definecolor{shadecolor}{gray}{0.80}
+\usetikzlibrary{perspective}
+\tikzset
+{%
+  my ball/.style={draw,circle,minimum size=2*\r cm,inner sep=0,shading=ball,ball color=cyan!50!blue,opacity=#1},
+  my ball/.default=1,
+  hidden line/.style={black!60}
+}
+\begin{document}
+
+\title{東工大理物 2020}
+
+\author{21B00817 鈴木泰雅,\authormark{1}}
+
+\email{\authormark{*}suzuki.t.ec@m.titech.ac.jp} %% email address is required
+
+\section*{\Large{第一問}}
+この問題は中心力の作用する場合の運動の解析である．実は角運動量が保存する条件から運動方程式の自由度を削減することができ，自由度を削減したラウシアンという修正したラグランジアンを得る．これを下に考察していく．
+まず，極座標における運動エネルギーは
+\begin{eqnarray}
+  T = \frac{1}{2}m\dot{\bm{r}}^2 = \frac{1}{2}m\left( \dot{r}^2 + \left( r\dot{\theta} \right)^2 \right)
+\end{eqnarray}
+であり，ポテンシャルは
+\begin{eqnarray}
+  U = -G\frac{mM}{r}
+\end{eqnarray}
+である．
+ラグランジアンは
+\begin{eqnarray}
+  L = \frac{1}{2}m\left( \dot{r}^2 + \left( r\dot{\theta} \right)^2 \right) + G\frac{mM}{r}
+\end{eqnarray}
+よってラグランジュ方程式は
+\begin{eqnarray}
+  \frac{d}{dt}\left( \frac{\partial L}{\partial \dot{r}} \right) - \frac{\partial L}{\partial r} &&= m\ddot{r}- mr \dot{\theta}^2 + G\frac{mM}{r^2} =0\\
+  \frac{d}{dt}\left( \frac{\partial L}{\partial \dot{\theta}} \right) - \frac{\partial L}{\partial \theta} &&= mr^2 \ddot{\theta} =0
+\end{eqnarray}
+である．また，ラグランジアンには$\theta$が陽に含まれていないため，$\theta$に対応する一般化運動量である角運動量が保存する：
+\begin{eqnarray}
+  \frac{\partial L}{\partial \dot{\theta}} = mr^2 \dot{\theta} = \text{Const} =: M_\theta
+\end{eqnarray}
+また，この保存量(第一積分とも呼ぶ)から，速度に対応する成分である$\dot{\theta}$を逆算すると
+\begin{eqnarray}
+  \dot{\theta} = \frac{M_\theta}{mr^2}
+\end{eqnarray}
+であり，これによってラグランジアンの自由度が減り以下の修正したラグランジアンが得られる：
+\begin{eqnarray}
+  R = \frac{1}{2}m\dot{r}^2 + \frac{1}{2}\frac{M_\theta^2}{mr^2} + G\frac{mM}{r}
+\end{eqnarray}
+このラグランジアンには$\theta,\dot{\theta}$が含まれておらず，もともと$r,\dot{r},\theta,\dot{\theta}$という4つの自由度があったが，この式には2つの自由度しか存在しない．一般的には$q,\dot{q}$の$2n$個の自由度
+があった時，第一積分によって，$2n-2$個の自由度に削減されるのである．なお，この修正したラグランジアンのことをラウシアンという．
+
+\end{document}
