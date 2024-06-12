@@ -1,0 +1,298 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                   File: OSAmeetings.tex             %
+%                  Date: 29 Novemver 2018              %
+%                                                     %
+%     For preparing LaTeX manuscripts for submission  %
+%       submission to OSA meetings and conferences    %
+%                                                     %
+%       (c) 2018 Optical Society of America           %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt,dvipdfmx]{jsarticle}
+%% if A4 paper needed, change letterpaper to A4
+\usepackage[dvipdfmx]{graphicx}
+\usepackage[dvipdfmx]{color}
+\usepackage{osameet3} %% use version 3 for proper copyright statement
+\usepackage{ascmac}
+%% provide authormark
+\newcommand\authormark[1]{\textsuperscript{#1}}
+
+%% standard packages and arguments should be modified as needed
+\usepackage{amsmath,amssymb}
+\usepackage[colorlinks=true,bookmarks=false,citecolor=blue,urlcolor=blue]{hyperref} %pdflatex
+%\usepackage[breaklinks,colorlinks=true,bookmarks=false,citecolor=blue,urlcolor=blue]{hyperref} %latex w/dvipdf
+\usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage{empheq}
+\usepackage{physics}
+\usepackage[scr=rsfs]{mathalpha}
+\usepackage[svgnames]{xcolor}% tikzより前に読み込む必要あり
+\usepackage{tikz}
+\usepackage{bm}
+\usepackage{here}
+\usepackage{braket}
+\usepackage{framed,color}
+\usepackage{dcolumn}
+\definecolor{shadecolor}{gray}{0.80}
+\usetikzlibrary{perspective}
+\tikzset
+{%
+  my ball/.style={draw,circle,minimum size=2*\r cm,inner sep=0,shading=ball,ball color=cyan!50!blue,opacity=#1},
+  my ball/.default=1,
+  hidden line/.style={black!60}
+}
+\begin{document}
+
+\title{東大物理工学科 2020}
+
+\author{21B00817 鈴木泰雅,\authormark{1}}
+
+\email{\authormark{*}suzuki.t.ec@m.titech.ac.jp} %% email address is required
+
+\section*{\Large{第一問}}
+\subsection*{\large{[1.1]}}
+万有引力と遠心力が釣り合う点なので，
+\begin{eqnarray}
+  G \frac{mM}{R^2} = m\frac{v_1^2}{R}
+\end{eqnarray}
+よって，
+\begin{eqnarray}
+  v_1 = \sqrt{G\frac{M}{R}}
+\end{eqnarray}
+である．
+\subsection*{\large{[1.2]}}
+\begin{eqnarray}
+  \frac{1}{2}mv_2^2 - G\frac{mM}{R}>0 
+\end{eqnarray}
+を満たせばよいので
+\begin{eqnarray}
+  v_2 = \sqrt{G\frac{2M}{R}}
+\end{eqnarray}
+である．
+\subsection*{\large{[1.3]}}
+エネルギー保存則より
+\begin{eqnarray}
+  \frac{1}{2}mv^2 - G\frac{mM}{R} =: E 
+\end{eqnarray}
+であり，
+\begin{eqnarray}
+  E = \frac{1}{2}m \left( \dot{r} + r^2 \dot{\theta}^2 \right)- G\frac{Mm}{r}
+\end{eqnarray}
+が成立する．また，面積速度が一定である：
+\begin{eqnarray}
+  h = r^2 \dot{\theta} = rv
+\end{eqnarray}
+であるため，
+\begin{eqnarray}
+  \dot{\theta} = \frac{v}{r}
+\end{eqnarray}
+であるから，
+\begin{eqnarray}
+  E = \frac{1}{2}m\dot{r} + \frac{1}{2}mr^2 \left( \frac{v}{r} \right)^2 - G\frac{Mm}{r}
+\end{eqnarray}
+であり，長軸の位置にいるとき，$\dot{r}=0$であるため，
+\begin{eqnarray}
+  E = \frac{1}{2}mr^2 \left( \frac{v}{r} \right)^2 - G\frac{Mm}{r}
+\end{eqnarray}
+であり，それぞれの位置を$r_{\pm}$とすると，
+\begin{eqnarray}
+  r_{\pm} = -G\frac{mM}{2E} \pm \frac{1}{2}\sqrt{ \frac{G^2 m^2 M^2}{E^2}+ 2\frac{mv^2}{E} }
+\end{eqnarray}
+であり，長軸の長さは
+\begin{eqnarray}
+  a = r_+ + r_- = -G\frac{mM}{E}=  G \frac{M}{G\frac{M}{R}- \frac{1}{2}v^2}
+\end{eqnarray}
+である．
+\subsection*{\large{[2.1]}}
+円運動をしているため
+\begin{eqnarray}
+  2mR_0 \omega_0^2 = G\frac{2mM}{R_0^2}, \quad\therefore \omega_0 = \sqrt{ G\frac{M}{R_0^3} }
+\end{eqnarray}
+である．
+\subsection*{\large{[2.2]}}
+$z$軸周りの慣性モーメントは
+\begin{eqnarray}
+  I_z = \int_0^{l}r^2\left( m\delta(r-1/2) + m\delta(m+l/2) \right)dr =\frac{ml^2}{2}
+\end{eqnarray}
+\subsection*{\large{[2.3]}}
+
+回転系で考える．それぞれの地球の中心からの距離は
+\begin{eqnarray}
+  r_{\pm} = \sqrt{ R_0^2 + (l/2)^2 \pm 2R_0 (l/2)\cos\phi } \approx R_0 \left( 1 \pm \frac{l}{2R_0}\cos\phi \right)
+\end{eqnarray}
+である．よって，トルクは
+\begin{eqnarray}
+  \bm{r}\times \bm{F} &&= -\left[ \frac{l}{2}mR_0 \left( 1 + \frac{l}{2R_0}\cos\phi \right)\omega_0^2 \sin\phi  \right]+\left[ \frac{l}{2}mR_0 \left( 1 - \frac{l}{2R_0}\cos\phi \right)\omega_0^2 \sin\phi  \right]\\
+  &&= -\frac{1}{4}\sin(2\phi)m l^2\omega_0^2
+\end{eqnarray}
+である．
+\subsection*{\large{[2.4]}}
+トルクが$0$の時
+\begin{eqnarray}
+  \sin(2\phi)= 0\quad\therefore \phi=0,\frac{\pi}{2},\pi,\frac{3\pi}{2},\pi
+\end{eqnarray}
+である．また，運動方程式は
+\begin{eqnarray}
+  I_z \dot{\omega}_z = \bm{r}\times \bm{F}
+\end{eqnarray}
+ゆえ
+\begin{eqnarray}
+  \frac{ml^2}{2} \dot{\phi} = -\frac{1}{4}\sin(2\phi) l^2\omega_0^2 \approx -\frac{1}{4}2\phi l^2\omega_0^2
+\end{eqnarray}
+である．よって，
+\begin{eqnarray}
+  \ddot{\phi} = -\omega_0^2 \phi
+\end{eqnarray}
+となるため微小振動の角振動数は
+\begin{eqnarray}
+  \omega_0
+\end{eqnarray}
+である．
+\section*{\Large{第二問}}
+\subsection*{\large{[1.1]}}
+ファラデーの法則より
+\begin{eqnarray}
+  \oint_C \bm{E}\cdot d\bm{r} = -\frac{d}{dt}\int_S \bm{B}\cdot d\bm{S}
+\end{eqnarray}
+であるため，
+\begin{eqnarray}
+  E 2\pi r= -\mu_0H_0 \cos(2\pi ft)\cdot 2\pi f \cdot \pi r^2
+\end{eqnarray}
+であるため，
+\begin{eqnarray}
+  E =  -\mu_0H_0 \cos(2\pi ft)\cdot f\pi r
+\end{eqnarray}
+である．
+\subsection*{\large{[1.2]}}
+全体の起電力は
+\begin{eqnarray}
+  E = \int_0^R dr\left(-\mu_0H_0 \cos(2\pi ft)\cdot f\pi r\right)
+\end{eqnarray}
+であり，
+微小円環で発生する電力$P$は
+\begin{eqnarray}
+  P &&= EI =  \frac{E^2}{\rho} = \left(\mu_0H_0 \cos(2\pi ft)\cdot f\pi r\right)^2/\rho
+\end{eqnarray}
+である．よって，答えは
+\begin{eqnarray}
+  \int_0^R  PL 2\pi r dr = \left(\mu_0H_0 \cos(2\pi ft)\cdot f\pi \right)^2\frac{1}{\rho}\frac{1}{4}R^4 L 2\pi
+\end{eqnarray}
+\subsection*{\large{[1.3]}}
+\begin{eqnarray}
+  \int_0^t \left( \left(\mu_0H_0 \cos(2\pi ft)\cdot f\pi \right)^2\frac{1}{\rho}\frac{1}{4}R^4 L 2\pi\right) dt \frac{1}{C}
+\end{eqnarray}
+
+\subsection*{\large{[2.1]}}
+ビオザバールの法則より
+\begin{eqnarray}
+  \bm{B} = \frac{I a^2}{2\mu_0(a^2+x^2)^{3/2}}\bm{e}_x
+\end{eqnarray}
+である．詳しくはカステラのp232
+\subsection*{\large{[2.2]}}
+それぞれの磁束密度を足し合わせて
+\begin{eqnarray}
+  \bm{B} = \frac{I a^2}{2\mu_0(a^2+(x+b)^2)^{3/2}}\bm{e}_x -\frac{I a^2}{2\mu_0(a^2+(x-b)^2)^{3/2}}\bm{e}_x
+\end{eqnarray}
+である．ここで$x\sim 0$の時，
+\begin{eqnarray}
+  (a^2 +(x\pm b)^2)^{-3/2} &&= ( a^2 + b^2 + x^2 \pm 2bx) ^{-3/2} = (a^2 + b^2 )^{-3/2} \left( 1 + \frac{x^2 \pm 2bx}{a^2+b^2} \right)^{-3/2}\\
+  &&= (a^2 + b^2 )^{-3/2}\left( 1 - \frac{3}{2} \frac{x^2 \pm 2bx}{a^2+b^2} + \frac{15}{8} \left(\frac{x^2 \pm 2bx}{a^2+b^2}\right)^{2} +\cdots \right)
+\end{eqnarray}
+となる．ここで，$x^2$の項は無視するため
+\begin{eqnarray}
+  (a^2 +(x\pm b)^2)^{-3/2} \approx (a^2 + b^2 )^{-3/2} \left( 1\mp \frac{3}{2}\frac{2bx}{a^2+b^2} \right)
+\end{eqnarray}
+である．よって，
+\begin{eqnarray}
+  \bm{B} = \frac{I a^2}{2\mu_0}(a^2 + b^2 )^{-3/2} \left( -\frac{3bx}{a^2+b^2} \right)\bm{e}_x = -3 \frac{Ia^2}{\mu_0}(a^2+b^2)^{-1/2}bx\bm{e}_x
+\end{eqnarray}
+\subsection*{\large{[2.3]}}
+\begin{eqnarray}
+  \bm{B} = \frac{I a^3}{2\mu_0(a^2+(x+b)^2)^{3/2}}\bm{e}_x +\frac{I a^3}{2\mu_0(a^2+(x-b)^2)^{3/2}}\bm{e}_x
+\end{eqnarray}
+となる．よって，二次の項まで考えると
+\begin{eqnarray}
+  \bm{B} = \frac{Ia^3}{2\mu_0}\left[ 2 + x^2\left( -\frac{3}{2(a^2+b^2)} + \frac{15}{2}\frac{b^2}{(a^2+b^2)^2} \right) \right]
+\end{eqnarray}
+である．よって，この二次の項を$0$にするような$a,b$の関係式は
+\begin{eqnarray}
+  -\frac{3}{2(a^2+b^2)} + \frac{15}{2}\frac{b^2}{(a^2+b^2)^2}=0 \quad\therefore a =2b
+\end{eqnarray}
+である．
+\newpage
+\section*{\Large{第三問}}
+\subsection*{\large{[1.1]}}
+$x=0$での境界条件により
+\begin{eqnarray}
+  1+r=t
+\end{eqnarray}
+であり，微小区間$-\epsilon,\epsilon$でシュレディンガー方程式を積分すると
+\begin{eqnarray}
+  -\frac{\hbar^2}{2m}\left( \psi'(\epsilon)-\psi'(-\epsilon) \right) + \alpha \psi(0) = 0
+\end{eqnarray}
+となる．よって，
+\begin{eqnarray}
+  -\frac{\hbar^2}{2m}ik\left( t-(1-r) \right) + \alpha t = 0, \quad\therefore t = \frac{i(-1+r)}{2C-i}
+\end{eqnarray}
+\subsection*{\large{[1.2]}}
+これらを解くと
+\begin{eqnarray}
+  r = \frac{-C^2-iC}{1+C^2}, \quad t =\frac{1-iC}{1+C^2}
+\end{eqnarray}
+となる．
+\subsection*{\large{[2.1]}}
+分からん
+\subsection*{\large{[2.2]}}
+分からん
+\subsection*{\large{[3]}}
+それぞれの境界条件より,
+\begin{eqnarray}
+  &&1= t_1 +r_1, \quad 1 = \frac{1}{2C}i( t_1-r_1-1 ),\\
+  &&t_1e^{ikL} + r_1 e^{-ikL} = e^{ikL}, \quad e^{ikL} = \frac{1}{2C}i( e^{ikL}- t_1e^{ikL} + r_1 e^{-ikL}  )
+\end{eqnarray}
+ここで未知数は$t_1,r_1,L$の4つであり方程式は$4$つあるためこれは$L$に関して解くことができる．よって解くと
+\begin{eqnarray}
+  r_1 = Ci, \quad t_1 = 1- Ci, \quad e^{-2ikL} = 1,-1
+\end{eqnarray}
+となってしまいすべてを満たす$L$が存在しなくなってしまう....
+\newpage
+\section*{\Large{第四問}}
+\subsection*{\large{[1]}}
+\begin{eqnarray}
+  \left( \frac{\partial P}{\partial n} \right)&&= -\frac{nk_BT}{(1-bn)^2}(-b)-2an = \frac{bnk_BT}{(1-bn)^2}-2an\\
+  \left( \frac{\partial^2 P}{\partial n^2} \right)&&= 2b^2\frac{nk_BT}{(1-bn)^3}-2a
+\end{eqnarray}
+である．よって，
+\begin{eqnarray}
+  n_C =\frac{1}{3b}, \quad T_C = \frac{8a}{9k_B b}
+\end{eqnarray}
+となる．また，圧力は
+\begin{eqnarray}
+  P_C = \frac{a}{3b^2}
+\end{eqnarray}
+である．
+\subsection*{\large{[2]}}
+多変数関数の逆関数の積分がこれでいいのか分からないけど...
+\begin{eqnarray}
+  \frac{\partial V}{\partial P} = -\frac{N}{n^2}\left( \frac{\partial P}{\partial n} \right)^{-1} = -\frac{N}{n^2}\left( \frac{bnk_BT}{(1-bn)^2}-2an \right)^{-1}
+\end{eqnarray}
+であり，$n_C=n, T>T_C$の時，
+\begin{eqnarray}
+  \frac{\partial V}{\partial P}=-\frac{N}{n_C^2} \frac{4}{3k_B(T-T_C)}
+\end{eqnarray}
+である．ここで，
+\begin{eqnarray}
+  -\frac{n_C}{N}\frac{\partial V}{\partial P} = \frac{1}{n_C} \frac{4}{3k_B(T-T_C)}
+\end{eqnarray}
+である．この時，
+\subsection*{\large{[3]}}
+まず，$Z_0$を求めるとガウス積分より
+\begin{eqnarray}
+  Z_0 = \frac{1}{N!}\frac{V^{N}}{h^{3N}}\left( \frac{2m\pi}{k_B T} \right)^{3N/2}
+\end{eqnarray}
+となる．よって自由エネルギーは
+\begin{eqnarray}
+  
+\end{eqnarray}
+
+\end{document}
