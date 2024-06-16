@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.141592653-p3.9.0-210218-2.6 (utf8.sjis) (TeX Live 2021/W32TeX) (preloaded format=platex 2021.9.13)  8 JUN 2024 14:22
+This is e-pTeX, Version 3.141592653-p3.9.0-210218-2.6 (utf8.sjis) (TeX Live 2021/W32TeX) (preloaded format=platex 2021.9.13)  16 JUN 2024 00:14
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -850,14 +850,14 @@ LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
 (Font)              scaled to size 11.53198pt on input line 53.
 [1
 
-] [2] [3] [4] [5] [6] (out/OSAmeetings.aux) ) 
+] [2] [3] [4] [5] [6] [7] [8] [9] [10] [11] (out/OSAmeetings.aux) ) 
 Here is how much of TeX's memory you used:
  28904 strings out of 479062
  569961 string characters out of 5869667
- 815953 words of memory out of 5000000
+ 819953 words of memory out of 5000000
  46480 multiletter control sequences out of 15000+600000
  485276 words of font info for 139 fonts, out of 8000000 for 9000
  993 hyphenation exceptions out of 8191
- 84i,11n,83p,456b,353s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 84i,14n,83p,456b,353s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on out/OSAmeetings.dvi (6 pages, 27236 bytes).
+Output written on out/OSAmeetings.dvi (11 pages, 55580 bytes).
