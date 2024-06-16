@@ -43,7 +43,7 @@
 }
 \begin{document}
 
-\title{東大物理工学科 2020}
+\title{東大物理工学科 2018}
 
 \author{21B00817 鈴木泰雅,\authormark{1}}
 
@@ -283,24 +283,33 @@ $x=0$での境界条件により
 となる．
 
 \subsection*{\large{[3]}}
-それぞれの境界条件より,
+$x<0$の領域で反射する波動関数が$0$になるためにはすべての反射する波動関数が干渉して相殺する必要がある．そこで，それぞれ$0,1,2,\cdots$回だけポテンシャルに反射されるときの反射する波動関数の重ね合わせは
 \begin{eqnarray}
-  &&1= t_1 +r_1, \quad 1 = \frac{1}{2C}i( t_1-r_1-1 ),\\
-  &&t_1e^{ikL} + r_1 e^{-ikL} =t_2 e^{ikL}, \quad e^{ikL} = \frac{1}{2C}i( t_2e^{ikL}- t_1e^{ikL} + r_1 e^{-ikL}  )
+  re^{-ikx} + t^2re^{-ik(x+2L)} + t^2r^3e^{-ik(x+4L)} + \cdots &&= e^{-ikx}\left[ r+ rt^2 e^{-2ikL}\left( 1 + r^2 e^{-ik2L} + \cdots \right) \right]\\
+  &&=e^{-ikx}\left[ r+\frac{rt^2e^{-2ikL}}{1-r^2e^{-2ikL}} \right]
 \end{eqnarray}
-ここで未知数は$t_1,r_1,L,t_2$の4つであり方程式は$4$つあるためこれは$L$に関して解くことができる．よって解くと
+である．これが$0$になるということは
 \begin{eqnarray}
-  r_1 = Ci, \quad t_1 = 1- Ci, \quad e^{-2ikL} = 1,-1
+  \exp\left( -2ikL+2in\pi \right) = \frac{1}{r^2-t^2} = \frac{1+C^4+2C^2}{C^4+(2C^3+2C)i-1}
 \end{eqnarray}
-となる．よって，
+であることから，
 \begin{eqnarray}
-  -1 = e^{-2ikL}
+  L = \frac{n\pi}{k} -\frac{1}{2ik}\log\left( \frac{1+C^4+2C^2}{C^4+(2C^3+2C)i-1} \right), \quad n\in\mathbb{Z}_+
 \end{eqnarray}
-である．よって，
+である．ここで，
 \begin{eqnarray}
-  \pi+2n\pi = -2kL, \quad\therefore L = -\frac{\pi+2n\pi}{2k},\quad n\in \mathbb{Z}_-
+  |r^2-t^2|=1
+\end{eqnarray}
+であるため，
+\begin{eqnarray}
+  \log\left( \frac{1+C^4+2C^2}{C^4+(2C^3+2C)i-1} \right) = i\arg \left( \frac{1+C^4+2C^2}{C^4+(2C^3+2C)i-1} \right) 
+\end{eqnarray}
+より，
+\begin{eqnarray}
+  L = \frac{n\pi}{k} -\frac{1}{2k}\arg \left( \frac{1+C^4+2C^2}{C^4+(2C^3+2C)i-1} \right) \in \Re
 \end{eqnarray}
 である．
+
 \newpage
 \section*{\Large{第四問}}
 \subsection*{\large{[1]}}

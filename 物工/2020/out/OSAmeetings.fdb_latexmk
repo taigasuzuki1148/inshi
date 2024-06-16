@@ -1,11 +1,11 @@
 # Fdb version 3
-["dvipdf"] 1718464473 "out/OSAmeetings.dvi" "out/OSAmeetings.pdf" "out/OSAmeetings" 1718464475
-  "out/OSAmeetings.dvi" 1718464472 55580 5392c76c07a24dcf5fd68cbebf5c35cd "latex"
+["dvipdf"] 1718502151 "out/OSAmeetings.dvi" "out/OSAmeetings.pdf" "out/OSAmeetings" 1718502153
+  "out/OSAmeetings.dvi" 1718502151 38564 658e553e2e186f78458a51fea267bd2c "latex"
   (generated)
   "out/OSAmeetings.pdf"
-["latex"] 1718464468 "c:/Users/taiga/Desktop/â@ééëŒçÙ/inshi/ï®çH/ëÊ2âÒ/OSAmeetings.tex" "out/OSAmeetings.dvi" "OSAmeetings" 1718464475
-  "OSAmeetings.tex" 1718464462 20358 93136a4c247ad831114237a7c374c354 ""
-  "c:/Users/taiga/Desktop/â@ééëŒçÙ/inshi/ï®çH/ëÊ2âÒ/OSAmeetings.tex" 1718464462 20358 93136a4c247ad831114237a7c374c354 ""
+["latex"] 1718502145 "c:/Users/taiga/Desktop/â@ééëŒçÙ/inshi/ï®çH/ëÊ1âÒ/OSAmeetings.tex" "out/OSAmeetings.dvi" "OSAmeetings" 1718502153
+  "OSAmeetings.tex" 1718502134 16409 95d9401fcd5a798ec9d560c01edc7db6 ""
+  "c:/Users/taiga/Desktop/â@ééëŒçÙ/inshi/ï®çH/ëÊ1âÒ/OSAmeetings.tex" 1718502134 16409 95d9401fcd5a798ec9d560c01edc7db6 ""
   "c:/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1631505127 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2021/texmf-dist/fonts/tfm/ptex-fonts/jis/jis.tfm" 1631509821 468 53f854284f6afa6c36aaa2d1090ecc12 ""
   "c:/texlive/2021/texmf-dist/fonts/tfm/ptex-fonts/jis/jisg.tfm" 1631509821 468 53f854284f6afa6c36aaa2d1090ecc12 ""
@@ -212,7 +212,7 @@
   "jabbrv-ltwa-en.ldf" 1650768242 268657 c239d07b7cc89e14f920c5fc8ed8d12e ""
   "jabbrv.sty" 1650768242 15480 2106da179daf9d5a102407956ba23e0c ""
   "osameet3.sty" 1684717046 8105 5f6f28f3ae7567899e95f0d7231b5691 ""
-  "out/OSAmeetings.aux" 1718464472 653 b2125326246c3f8f1fb7023393653362 "latex"
+  "out/OSAmeetings.aux" 1718502151 652 5ff74d65eac5cf6c51e7bc339bccdb55 "latex"
   (generated)
   "out/OSAmeetings.aux"
   "out/OSAmeetings.dvi"
