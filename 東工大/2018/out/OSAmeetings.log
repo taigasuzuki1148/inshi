@@ -1,10 +1,10 @@
-This is e-pTeX, Version 3.141592653-p3.9.0-210218-2.6 (utf8.sjis) (TeX Live 2021/W32TeX) (preloaded format=platex 2021.9.13)  19 MAY 2024 23:51
+This is e-pTeX, Version 3.141592653-p3.9.0-210218-2.6 (utf8.sjis) (TeX Live 2021/W32TeX) (preloaded format=platex 2021.9.13)  16 JUN 2024 13:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/taiga/Desktop/院試対策/東工大/2021/OSAmeetings.tex
-(c:/Users/taiga/Desktop/院試対策/東工大/2021/OSAmeetings.tex
+**c:/Users/taiga/Desktop/院試対策/inshi/東工大/2018/OSAmeetings.tex
+(c:/Users/taiga/Desktop/院試対策/inshi/東工大/2018/OSAmeetings.tex
 pLaTeX2e <2021-06-01>+2 (based on LaTeX2e <2021-06-01> patch level 1)
 L3 programming layer <2021-08-27> (c:/texlive/2021/texmf-dist/tex/platex/jsclasses/jsarticle.cls
 Document Class: jsarticle 2021/06/28 jsclasses (okumura, texjporg)
@@ -832,37 +832,29 @@ LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <14.4> not available
 (Font)              Font shape `JY1/gt/m/n' tried instead on input line 52.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
 (Font)              scaled to size 13.83836pt on input line 52.
-LaTeX Font Info:    Font shape `JT1/mc/m/it' in size <10> not available
-(Font)              Font shape `JT1/mc/m/n' tried instead on input line 53.
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 53.
-LaTeX Font Info:    Font shape `JY1/mc/m/it' in size <10> not available
-(Font)              Font shape `JY1/mc/m/n' tried instead on input line 53.
-LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 53.
-LaTeX Font Info:    Font shape `JT1/mc/m/it' in size <12> not available
-(Font)              Font shape `JT1/mc/m/n' tried instead on input line 53.
+(Font)              scaled to size 6.72699pt on input line 74.
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 11.53198pt on input line 53.
-LaTeX Font Info:    Font shape `JY1/mc/m/it' in size <12> not available
-(Font)              Font shape `JY1/mc/m/n' tried instead on input line 53.
-LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 11.53198pt on input line 53.
+(Font)              scaled to size 4.805pt on input line 74.
 [1
 
-] [2]
+]
+LaTeX Font Info:    Font shape `JT1/mc/m/it' in size <10> not available
+(Font)              Font shape `JT1/mc/m/n' tried instead on input line 145.
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 6.72699pt on input line 165.
-LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 4.805pt on input line 165.
-[3] [4] [5] [6] (out/OSAmeetings.aux) ) 
+(Font)              scaled to size 9.60999pt on input line 145.
+LaTeX Font Info:    Font shape `JY1/mc/m/it' in size <10> not available
+(Font)              Font shape `JY1/mc/m/n' tried instead on input line 145.
+LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
+(Font)              scaled to size 9.60999pt on input line 145.
+[2] [3] [4] [5] [6] (out/OSAmeetings.aux) ) 
 Here is how much of TeX's memory you used:
- 28904 strings out of 479062
- 569946 string characters out of 5869667
- 819953 words of memory out of 5000000
- 46480 multiletter control sequences out of 15000+600000
- 485654 words of font info for 141 fonts, out of 8000000 for 9000
+ 28900 strings out of 479062
+ 569912 string characters out of 5869667
+ 820953 words of memory out of 5000000
+ 46477 multiletter control sequences out of 15000+600000
+ 481247 words of font info for 139 fonts, out of 8000000 for 9000
  993 hyphenation exceptions out of 8191
- 84i,15n,83p,451b,353s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 84i,11n,83p,457b,361s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on out/OSAmeetings.dvi (6 pages, 30380 bytes).
+Output written on out/OSAmeetings.dvi (6 pages, 32888 bytes).
