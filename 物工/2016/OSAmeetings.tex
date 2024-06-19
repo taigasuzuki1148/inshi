@@ -1,0 +1,56 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                   File: OSAmeetings.tex             %
+%                  Date: 29 Novemver 2018              %
+%                                                     %
+%     For preparing LaTeX manuscripts for submission  %
+%       submission to OSA meetings and conferences    %
+%                                                     %
+%       (c) 2018 Optical Society of America           %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt,dvipdfmx]{jsarticle}
+%% if A4 paper needed, change letterpaper to A4
+\usepackage[dvipdfmx]{graphicx}
+\usepackage[dvipdfmx]{color}
+\usepackage{osameet3} %% use version 3 for proper copyright statement
+\usepackage{ascmac}
+%% provide authormark
+\newcommand\authormark[1]{\textsuperscript{#1}}
+
+%% standard packages and arguments should be modified as needed
+\usepackage{amsmath,amssymb}
+\usepackage[colorlinks=true,bookmarks=false,citecolor=blue,urlcolor=blue]{hyperref} %pdflatex
+%\usepackage[breaklinks,colorlinks=true,bookmarks=false,citecolor=blue,urlcolor=blue]{hyperref} %latex w/dvipdf
+\usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage{empheq}
+\usepackage{physics}
+\usepackage[scr=rsfs]{mathalpha}
+\usepackage[svgnames]{xcolor}% tikzより前に読み込む必要あり
+\usepackage{tikz}
+\usepackage{bm}
+\usepackage{here}
+\usepackage{braket}
+\usepackage{framed,color}
+\usepackage{dcolumn}
+\definecolor{shadecolor}{gray}{0.80}
+\usetikzlibrary{perspective}
+\tikzset
+{%
+  my ball/.style={draw,circle,minimum size=2*\r cm,inner sep=0,shading=ball,ball color=cyan!50!blue,opacity=#1},
+  my ball/.default=1,
+  hidden line/.style={black!60}
+}
+\begin{document}
+
+\title{東大物理工学科 2016}
+
+\author{21B00817 鈴木泰雅,\authormark{1}}
+
+\email{\authormark{*}suzuki.t.ec@m.titech.ac.jp} %% email address is required
+
+\section*{\Large{第一問}}
+\subsection*{\large{[1.1]}}
+
+
+\end{document}
