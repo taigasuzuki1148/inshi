@@ -295,5 +295,91 @@
   q_A:q_B:q_C = 1/2:1/6:-1/3
 \end{eqnarray}
 である．
+\newpage
+\section*{\Large{第二問}}
 
+\subsection*{\large{[1]}}
+\begin{eqnarray}
+  \phi(P) = \frac{-q}{4\pi\epsilon_0}\frac{1}{r_-} + \frac{q}{4\pi\epsilon_0}\frac{1}{r_+}
+\end{eqnarray}
+\subsection*{\large{[2]}}
+\begin{eqnarray}
+  \phi(P)&&= \frac{-q}{4\pi\epsilon}\frac{1}{r+d/2\cos\theta} + \frac{-q}{4\pi\epsilon}\frac{1}{r-d/2\cos\theta} \\
+  &&\approx \frac{q}{4\pi\epsilon_0}\frac{1}{r}\left\{ -1 + \frac{d}{2r}\cos\theta + 1 + \frac{d}{2r}\cos\theta \right\} = \frac{p}{4\pi\epsilon_0}\frac{1}{r^2}\cos\theta
+\end{eqnarray}
+となる．
+\subsection*{\large{[3]}}
+\begin{eqnarray}
+  \bm{E} &&= -\nabla\phi(P) = \left( \bm{e}_r\frac{\partial}{\partial r} + \bm{e}_{\theta}\frac{1}{r}\frac{\partial}{\partial\theta} \right)\frac{p}{4\pi\epsilon_0}\frac{1}{r^2}\cos\theta\\
+  &&= \frac{p}{4\pi\epsilon_0r^3}\left( 2\cos\theta\bm{e}_r + \sin\theta\bm{e}_\theta \right)
+\end{eqnarray}
+である．
+\subsection*{\large{[4]}}
+$\theta=\pi/2$の時，
+\begin{eqnarray}
+  \bm{E} = \frac{p}{4\pi\epsilon_0 r^3}\bm{e}_\theta
+\end{eqnarray}
+であるため，$r$成分は持たない．$\theta_2 = 0$の時，それぞれ$\mp p$の電荷は
+\begin{eqnarray}
+  -q : \bm{F}_- &&= \frac{p}{4\pi\epsilon_0 (l-d/2)^3}\bm{e}_\theta\\
+  q : \bm{F}_+ &&= \frac{p}{4\pi\epsilon_0 (l+d/2)^3}\bm{e}_\theta
+\end{eqnarray}
+であるため，$F_->F_+$であるから，反時計回りに回転し始める．一方．$\theta=-\pi/2$の時はそれぞれの$p_1$からの距離は等しく，($l$が十分に大きいため)，$\theta$方向にしか力がかからないため，回転しない．
+\subsection*{\large{[5]}}
+$\bm{p}_2$に作る電場$\bm{E}$は
+\begin{eqnarray}
+  \bm{E}_1 = \frac{p_1}{4\pi\epsilon_0l^3} \left( 2\cos\theta_1\bm{e}_r + \sin\theta_1\bm{e}_\theta \right)
+\end{eqnarray}
+であり，書き込んだ図より
+\begin{eqnarray}
+  \bm{p}_2\cdot\bm{e}_r =p_2 \cos\theta_2, \quad \bm{p}_2\cdot\bm{e}_\theta = -p_2\sin\theta_2
+\end{eqnarray}
+である．よって
+\begin{eqnarray}
+  U = -\bm{p}_2\cdot\bm{E}_1 = -\frac{p_1p_2}{4\pi\epsilon_0l^3} \left( 2\cos\theta_1\cos\theta_2- \sin\theta_1\sin\theta_2\right)
+\end{eqnarray}
+となる．
+
+\subsection*{\large{[6]}}
+また，$p_2$が$p_1$に作るポテンシャルを考える．原点を$p_2$にして
+\begin{eqnarray}
+  \bm{E}_2 = \frac{p_2}{4\pi\epsilon_0l^3}( 2\cos(\pi-\theta_2)\bm{e}_r+\sin(\pi-\theta_2)\bm{e}_\theta) =\frac{p_2}{4\pi\epsilon_0l^3}\left( -2\cos\theta_2\bm{e}_r - \sin\theta_2\bm{e}_\theta \right)
+\end{eqnarray}
+であり，
+図より
+\begin{eqnarray}
+  \bm{p}_1\cdot\bm{e}_r = \cos(\pi-\theta_1) = -p_1\cos(\theta_1), \quad \bm{p}_1\cdot\bm{e}_\theta = p_1\sin\theta_1
+\end{eqnarray}
+であるため，
+\begin{eqnarray}
+  U_2 = -\bm{p}_1\cdot\bm{E}_2 = -\frac{p_1p_2}{4\pi\epsilon_0l^3} \left( 2\cos\theta_1\cos\theta_2- \sin\theta_1\sin\theta_2\right)
+\end{eqnarray}
+となり同じになる．よって，全体のポテンシャルは
+\begin{eqnarray}
+  U = U_1 + U_2 = -\frac{p_1p_2}{2\pi\epsilon_0l^3} \left( 2\cos\theta_1\cos\theta_2- \sin\theta_1\sin\theta_2\right)
+\end{eqnarray}
+であり，これが最小となる$\theta_1,\theta_2$を求めれば良い．よって
+\begin{eqnarray}
+  \frac{\partial}{\partial\theta_1}U &&= -\frac{p_1p_2}{2\pi\epsilon_0l^3} \left( -2\sin\theta_1\cos\theta_2- \cos\theta_1\sin\theta_2\right) =0\\
+  \frac{\partial}{\partial\theta_2}U &&= -\frac{p_1p_2}{2\pi\epsilon_0l^3} \left( -2\cos\theta_1\sin\theta_2- \sin\theta_1\cos\theta_2\right) =0
+\end{eqnarray}
+よってこれは$\theta_1,\theta_2$に関して対称ゆえそれぞれ同じ値になるため
+\begin{eqnarray}
+  \sin(2\theta)=0,\quad\therefore \theta_1,\theta_2 = \frac{n\pi}{2}, \quad n\in \mathbb{Z}
+\end{eqnarray}
+である．ただし，$\theta_1,\theta_2$の整数$n$は同じ値であるとは限らない．(しっかりHesse行列から調べる必要が大いにあるが，)例えば$\theta_1=\theta_2=0$の時，
+\begin{eqnarray}
+  U =  -\frac{p_1p_2}{\pi\epsilon_0l^3}
+\end{eqnarray}
+である．あと，三角不等式からもしっかり調べられる．
+\subsection*{\large{[7]}}
+鏡像の電気双極子を考える．すると，$\theta_1=-\alpha,\theta_2=\alpha$とした場合と変わらないため，
+\begin{eqnarray}
+  U = -\frac{p_1p_2}{2\pi\epsilon_0(2h)^3}\left( -2\cos^2(\alpha)-\sin^2(\alpha) \right) = \frac{p_1p_2}{2\pi\epsilon_0(2h)^3}\left( 2\cos^2(\alpha)+1-\cos^2(\alpha) \right)
+\end{eqnarray}
+であり，これが最小になるのは，
+\begin{eqnarray}
+  \cos\alpha = 0,\quad\therefore \alpha = \frac{(2n+1)\pi}{2},\quad n\in\mathbb{Z}
+\end{eqnarray}
+である．
 \end{document}
