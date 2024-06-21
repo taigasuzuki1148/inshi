@@ -1,0 +1,383 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                   File: OSAmeetings.tex             %
+%                  Date: 29 Novemver 2018              %
+%                                                     %
+%     For preparing LaTeX manuscripts for submission  %
+%       submission to OSA meetings and conferences    %
+%                                                     %
+%       (c) 2018 Optical Society of America           %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt,dvipdfmx]{jsarticle}
+%% if A4 paper needed, change letterpaper to A4
+\usepackage[dvipdfmx]{graphicx}
+\usepackage[dvipdfmx]{color}
+\usepackage{osameet3} %% use version 3 for proper copyright statement
+\usepackage{ascmac}
+%% provide authormark
+\newcommand\authormark[1]{\textsuperscript{#1}}
+
+%% standard packages and arguments should be modified as needed
+\usepackage{amsmath,amssymb}
+\usepackage[colorlinks=true,bookmarks=false,citecolor=blue,urlcolor=blue]{hyperref} %pdflatex
+%\usepackage[breaklinks,colorlinks=true,bookmarks=false,citecolor=blue,urlcolor=blue]{hyperref} %latex w/dvipdf
+\usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage{empheq}
+\usepackage{physics}
+\usepackage[scr=rsfs]{mathalpha}
+\usepackage[svgnames]{xcolor}% tikzより前に読み込む必要あり
+\usepackage{tikz}
+\usepackage{bm}
+\usepackage{here}
+\usepackage{braket}
+\usepackage{framed,color}
+\usepackage{dcolumn}
+\definecolor{shadecolor}{gray}{0.80}
+\usetikzlibrary{perspective}
+\tikzset
+{%
+  my ball/.style={draw,circle,minimum size=2*\r cm,inner sep=0,shading=ball,ball color=cyan!50!blue,opacity=#1},
+  my ball/.default=1,
+  hidden line/.style={black!60}
+}
+\begin{document}
+
+\title{東大物理工学科 2020}
+
+\author{21B00817 鈴木泰雅,\authormark{1}}
+
+\email{\authormark{*}suzuki.t.ec@m.titech.ac.jp} %% email address is required
+
+\section*{\Large{第一問}}
+\subsection*{\large{[1]}}
+\begin{eqnarray}
+  |\psi(t)\rangle = \exp\left( \frac{1}{i\hbar}\hat{H}(t-t_0) \right)|\psi_0\rangle
+\end{eqnarray}
+であるため
+\begin{eqnarray}
+  \hat{U}(t-t_0) = \exp\left( \frac{1}{i\hbar}\hat{H}(t-t_0) \right)
+\end{eqnarray}
+
+\subsection*{\large{[2]}}
+エルミート性より
+\begin{eqnarray}
+  \hat{H}^{\dagger} = \hat{H}
+\end{eqnarray}
+であり，
+\begin{eqnarray}
+  U^{\dagger}U = \exp\left( \frac{1}{-i\hbar}\hat{H}(t-t_0) \right)\exp\left( \frac{1}{i\hbar}\hat{H}(t-t_0) \right) = \exp(0) = 1
+\end{eqnarray}
+よりユリタリ性が示せた．
+\subsection*{\large{[3]}}
+\begin{eqnarray}
+  \langle \psi(t)|\psi(t)\rangle = \langle \psi_0| U^{\dagger}U \psi_0\rangle =  \langle \psi_0|\psi_0\rangle
+\end{eqnarray}
+より時間依存しないため示せた．
+\subsection*{\large{[4]}}
+まず，$A^2=I$を満たす行列に関して
+\begin{eqnarray}
+  \exp(i a A) = \cos(a)I + i\sin(a)A
+\end{eqnarray}
+が成立している．(証明略)\\
+ここで，
+\begin{eqnarray}
+  \hat{U}(\tau) &= \exp\left( \frac{1}{i\hbar}\hat{H}(\tau) \right) = \exp\left( -i\frac{1}{\hbar}\tau a\hat{\sigma_Z} \right) \\
+  &= \cos\left( \frac{1}{\hbar}\tau a \right)\sigma_I - i \sin\left( \frac{1}{\hbar}\tau a \right)\sigma_Z\\
+  &= 
+  \begin{bmatrix}
+    \exp\left( -i\frac{\tau}{\hbar}a \right) & 0\\
+    0 & \exp\left( i\frac{\tau}{\hbar}a \right)
+  \end{bmatrix}
+\end{eqnarray}
+となる．
+\subsection*{\large{[5]}}
+\begin{eqnarray}
+  \hat{U}_{\phi} &&= 
+  \begin{bmatrix}
+    1 & 0\\
+    0 & e^{i\phi}
+  \end{bmatrix}
+  = e^{i\phi/2}
+  \begin{bmatrix}
+    e^{-i\phi/2} & 0\\
+    0 & e^{i\phi/2}
+  \end{bmatrix}
+  =e^{i\phi/2} \hat{U}\left( \frac{\phi\hbar}{2\tau a} \right)\\
+  && = \exp\left( i \frac{\phi}{2} + 2i n\pi \right) \exp\left( -i \frac{\phi}{2}\sigma_Z \right),n\in \bm{Z}\\
+  &&= \exp\left( \frac{1}{i\hbar}\hat{H}(\tau) \right)
+\end{eqnarray}
+より両辺を比べて
+\begin{eqnarray}
+  \hat{H} &&= -\frac{\phi\hbar}{2\tau}\left( \sigma_I-\sigma_Z \right)-\frac{2n\pi\hbar}{\tau}\sigma_I \\
+  &&=-\frac{\hbar}{\tau}
+  \begin{bmatrix}
+    2n\pi & 0\\
+    0 & 2n\pi+\phi
+  \end{bmatrix}
+\end{eqnarray}
+\subsection*{\large{[6]}}
+ハミルトニアンを
+\begin{eqnarray}
+  \hat{H} = a\sigma_X+ c\sigma_I
+\end{eqnarray}
+とすると，($\sigma_X$が係数になる理由は行列の展開より自明)
+\begin{eqnarray}
+  \hat{U}(\tau) &&= \exp\left( \frac{1}{i\hbar}\hat{H}\tau \right) = \exp\left( -i\frac{1}{\hbar}a\sigma_X\tau \right)\exp\left( -i\frac{1}{\hbar}c\sigma_I\tau \right) \\
+  &&= \left(\cos\left( \frac{a\tau}{\hbar} \right)\sigma_I -i\sin\left( \frac{a\tau}{\hbar} \right)\sigma_X\right)\exp\left( -i\frac{1}{\hbar}c\tau \right)\sigma_I
+\end{eqnarray}
+となる．($\sigma_I,\sigma_X$は可換)ここで，少なくとも
+\begin{eqnarray}
+  \cos\left( \frac{a\tau}{\hbar} \right) =0
+\end{eqnarray}
+が成立している必要があり，
+\begin{eqnarray}
+  \frac{a\tau}{\hbar} = \frac{\pi}{2}
+\end{eqnarray}
+としてよい．代入すると，
+\begin{eqnarray}
+  \hat{U}(\tau) &&= -i\sigma_X \exp\left( -i\frac{1}{\hbar}c\tau \right)\sigma_I = -i\exp\left( -i\frac{1}{\hbar}c\tau \right)\sigma_X\\
+  &&= \sigma_X
+\end{eqnarray}
+となれば良いため，
+\begin{eqnarray}
+  \exp\left( -i\frac{1}{\hbar}c\tau \right) = i = e^{i\pi/2}
+\end{eqnarray}
+であり，
+\begin{eqnarray}
+  c = -\frac{\hbar\pi}{2\tau}
+\end{eqnarray}
+であるため，
+\begin{eqnarray}
+  \hat{H} = \frac{\hbar\pi}{2\tau}\sigma_X -\frac{\hbar\pi}{2\tau}\sigma_I = \frac{\hbar\pi}{2\tau}
+  \begin{bmatrix}
+    -1 & 1\\
+    1 & -1
+  \end{bmatrix}
+\end{eqnarray}
+となる．
+\subsection*{\large{[7]}}
+$\sigma_I$と$\sigma_i$は可換であるため，
+\begin{eqnarray}
+  \hat{U}(\tau) &&= \exp\left( \frac{1}{i\hbar}\hat{H}\tau \right) \\
+  &&= \exp\left( \frac{1}{i\hbar}b\tau \right)\sigma_I \cdot \exp\left[ \frac{1}{i\hbar} \left( a(\sin\theta\cos\phi)\sigma_X + a(\sin\theta\sin\phi)\sigma_Y + a(\cos\theta)\sigma_Z \right) \tau \right]
+\end{eqnarray}
+となる．ここで，
+\begin{eqnarray}
+  \exp\left( i\sum_j a_j \sigma_j \right) = \sigma_I + \left(i\sum_j a_j \sigma_j\right) - \frac{1}{2!}\left( \sum_j a_j \sigma_j \right)^2 \cdots
+\end{eqnarray}
+となるが，$\{ \sigma_i,\sigma_k \}=0$より，
+\begin{eqnarray}
+  \left( \sum_j a_j \sigma_j \right)^2 = \sum_j a_j^2\sigma_I + \sum_{i<k}a_i a_k\sigma_i\sigma_k + \sum_{i<k}a_i a_k\sigma_k\sigma_i = \sum_j a_j^2\sigma_I
+\end{eqnarray}
+となる．また，今回の場合
+\begin{eqnarray}
+  \sum_j a_j^2= a^2
+\end{eqnarray}
+であるため，
+\begin{eqnarray}
+  \exp\left( i\sum_j a_j \sigma_j \right) &&= \sigma_I +i \left(\sum_j a_j \sigma_j\right) - \frac{1}{2!}a^2 \sigma_I -i\frac{1}{3!}(-a^2) \left(\sum_j a_j \sigma_j\right)+\cdots\\
+  &&= \left( 1 - \frac{1}{2!}a^2 + \cdots \right)\sigma_I + i \left( 1-\frac{1}{3!}a^2 + \frac{1}{5!}a^4+\cdots \right)\left(\sum_j a_j \sigma_j\right) \\
+  &&= \cos\left( a \right) \sigma_I + i \sin(a)\frac{1}{a}\left(\sum_j a_j \sigma_j\right)
+\end{eqnarray}
+となる．よって，
+\begin{eqnarray}
+  \hat{U}(\tau) &&= \exp\left( \frac{1}{i\hbar}b\tau \right)\sigma_I\cdot \left[ \cos\left( a \right) \sigma_I + i \sin(a)\cdot \left( (\sin\theta\cos\phi)\sigma_X + (\sin\theta\sin\phi)\sigma_Y + (\cos\theta)\sigma_Z \right) \right]\\
+  &&=\exp\left( \frac{1}{i\hbar}b\tau \right)
+  \begin{bmatrix}
+    i\sin(a)\cos(\theta) + \cos(a) & i\sin(a)\sin(\theta)e^{-i\phi}\\
+    i\sin(a)\sin(\theta)e^{i\phi} & - i\sin(a)\cos(\theta) + \cos(a)
+  \end{bmatrix}
+\end{eqnarray}
+
+\subsection*{\large{[8]}}
+\begin{eqnarray}
+  U_H = \frac{1}{\sqrt{2}}\left( \sigma_X + \sigma_Z \right)
+\end{eqnarray}
+であるため，上記の式を
+\begin{eqnarray}
+  \phi=0,\quad a=\frac{\pi}{2}, \quad \theta=\frac{\pi}{4}
+\end{eqnarray}
+とすると，
+\begin{eqnarray}
+  \hat{U}(\tau) = \frac{1}{\sqrt{2}} i \exp\left( \frac{1}{i\hbar}b\tau \right) \left( \sigma_X + \sigma_Z  \right)
+\end{eqnarray}
+となるため，
+\begin{eqnarray}
+  i \exp\left( \frac{1}{i\hbar}b\tau \right)= 1
+\end{eqnarray}
+となればよいので，
+\begin{eqnarray}
+  b = \frac{\pi\hbar}{2\tau}
+\end{eqnarray}
+となる．よってこれらよりもとのハミルトニアンは
+\begin{eqnarray}
+  H = \frac{\pi}{2\sqrt{2}}\left( \sigma_X + \sigma_Z \right) + \frac{\pi\hbar}{2\tau}\sigma_I
+\end{eqnarray}
+となる．
+
+\subsection*{\large{[9]}}
+$\sigma_Z$をより一般化して
+\begin{eqnarray}
+  \sigma_Z =\text{diag}[1,1,\cdots,-1]
+\end{eqnarray}
+とすればよいため，
+\begin{eqnarray}
+  H &&= \frac{\phi\hbar}{2\tau}\left( \text{diag}[1,1,\cdots,1]-\text{diag}[1,1,\cdots,1,-1] \right) \\
+  &&=\frac{\phi\hbar}{\tau}\text{diag}[0,0,\cdots,0,1]
+\end{eqnarray}
+
+\subsection*{\large{[10]}}
+捨て問？方針はこれを二階のパウリ行列のテンソルで展開して，問題[7]と同様にすればよいが，正直面倒だし証明事項が多い...
+\newpage
+
+\section*{\Large{第二問}}
+
+\subsection*{\large{[1]}}
+$\rho$は$[M/V]$,$\bm{u}$は$[L]$，$\bm{F}$は$[{MLT^{-2}}/V]$となるため，
+\begin{eqnarray}
+  [M/V] [L]/[T^2] = [{MLT^{-2}}/V]
+\end{eqnarray}
+より次元が一致する．
+\subsection*{\large{[2]}}
+$\Delta x_3\to 0$の極限では，釣り合いより応力がかからないとみなせるため，$\bm{p}^{(3)}(\bm{x}',t)=-\bm{p}^{(3)}(\bm{x}'',t)$が成立する．$\bm{p}$は$\Delta x_3$によらないため，これは任意の$\Delta x_3$成立する．
+
+\subsection*{\large{[3]}}
+定義より
+\begin{eqnarray*}
+  \bm{F}(\bm{x},t)\Delta x_1\Delta x_2 \Delta x_3 &&= \left( \bm{p}^{(1)}(\bm{x}'^{(1)},t)-\bm{p}^{(1)}(\bm{x}''^{(1)},t) \right)\Delta x_2\Delta x_3 + \left( \bm{p}^{(2)}(\bm{x}'^{(2)},t)-\bm{p}^{(2)}(\bm{x}''^{(2)},t) \right)\Delta x_3\Delta x_1 \\
+  &&\quad +\left( \bm{p}^{(3)}(\bm{x}'^{(3)},t)-\bm{p}^{(3)}(\bm{x}''^{(3)},t) \right)\Delta x_1\Delta x_2
+\end{eqnarray*}
+ただし，$\bm{x}'^{(k)}$は$k$成分を$\Delta x_k /2$だけ，$\bm{x}''^{(k)}$は$k$成分を$-\Delta x_k /2$だけずらしたものである．よって，$\Delta$が十分に微小とすることによって，
+\begin{eqnarray}
+  \bm{F}(\bm{x},t) = \sum_{k=1,2,3} \frac{\partial \bm{p}^{(k)}(\bm{x},t)}{\partial x_k}
+\end{eqnarray}
+となりこれは$j=1$でも成立するため示せた．
+
+\subsection*{\large{[4]}}
+これは普通に添え字の計算で終わる．結果のみ書くと
+\begin{eqnarray}
+  A = \mu+\lambda
+\end{eqnarray}
+\subsection*{\large{[5]}}
+これは縦波とかの式に変形して位相速度とかに変更すればよい．縦波は$\nabla\times\bm{u}$，横波は$\nabla\cdot\bm{u}$となっている．これらの時間発展を考える．
+前問より求めた方程式より
+\begin{eqnarray}
+  \rho\frac{\partial^2 \bm{u}}{\partial t^2} = \mu\nabla^2\bm{u} + (\mu+\lambda)\nabla(\nabla\cdot\bm{u})
+\end{eqnarray}
+であるため，まずは両辺を$\nabla\times$で取ることによって，
+\begin{eqnarray}
+  \rho\frac{\partial^2 (\nabla\times\bm{u})}{\partial t^2} &&= \mu\nabla\times\nabla^2\bm{u} +  (\mu+\lambda) \nabla\times\nabla(\nabla\cdot\bm{u})\\
+  &&=\mu\nabla\times \left( \nabla(\nabla\cdot\bm{u}) - \nabla\times(\nabla\times\bm{u}) \right)\\
+  &&=- \mu\nabla\times \nabla\times(\nabla\times\bm{u})\\
+  &&= \mu\nabla^2 (\nabla\times\bm{u})
+\end{eqnarray}
+また，両辺を$\nabla\cdot$を取ることによって，
+\begin{eqnarray}
+  \rho\frac{\partial^2 (\nabla\cdot\bm{u})}{\partial t^2} &&= \mu\nabla\cdot\nabla^2 \bm{u} + (\mu+\lambda)\nabla\cdot\nabla(\nabla\cdot\bm{u})\\
+  &&= ( 2\mu+\lambda )\nabla^2(\nabla\cdot\bm{u})
+\end{eqnarray}
+となり．これらよりそれぞれの位相速度が求まり，
+\begin{eqnarray}
+  (縦波):\sqrt{\frac{\rho}{\mu}}, \quad (横波): \sqrt{\frac{\rho}{2\mu+\lambda}}
+\end{eqnarray}
+となる．
+
+\newpage
+
+\section*{\Large{第三問}}
+\subsection*{\large{[1.1]}}
+運動量空間の単位体積あたりの状態数は
+\begin{eqnarray}
+  \frac{L^3}{(2\pi\hbar)^3}\frac{4\pi}{3}
+\end{eqnarray}
+である．(田崎本との定義の違いは？)
+
+\subsection*{\large{[1.2]}}
+エネルギー$\epsilon$を持つ状態の数は
+\begin{eqnarray}
+  \Omega(\epsilon) = \frac{L^3}{(2\pi\hbar)^3}\frac{4\pi}{3}(2m\epsilon)^{3/2 }
+\end{eqnarray}
+より，
+\begin{eqnarray}
+  D(\epsilon)= \frac{d\Omega(\epsilon)}{d\epsilon} = \frac{L^3}{(2\pi\hbar)^3}2\pi (2m)^{3/2}\epsilon^{1/2}
+\end{eqnarray}
+とはなる．
+\subsection*{\large{[1.3]}}
+左辺の積分を考えると
+\begin{eqnarray}
+  \int_0^{\infty}D(\epsilon)\frac{1}{e^{\epsilon/T}-1}d\epsilon &&= \frac{L^3}{(2\pi\hbar)^3}2\pi (2m)^{3/2} \int_0^{\infty} \frac{\epsilon^{1/2}}{e^{\epsilon/T}-1}d\epsilon\\
+  &&= \frac{L^3}{(2\pi\hbar)^3}2\pi (2m)^{3/2} T^{3/2} \frac{\sqrt{\pi}}{2}\zeta\left( \frac{3}{2} \right)
+\end{eqnarray}
+これが$N$と等しい時の温度が$T_C$であるため，
+\begin{eqnarray}
+  T_C = \left( \frac{2\pi\hbar}{L} \right)^2 \frac{1}{2\pi m} \left( N/\zeta\left( \frac{3}{2} \right) \right)^{2/3}
+\end{eqnarray}
+\subsection*{\large{[1.4]}}
+ボーズアインシュタイン凝縮では，全体の粒子数$N$から$T_C$の時の個数$N_C$を引いた粒子数が基底状態$N_0$となるため，
+\begin{eqnarray}
+  N_0 = N-N_C = 
+\end{eqnarray}
+
+\newpage
+\section*{\Large{第四問}}
+\subsection*{\large{[1]}}
+余弦定理より，
+\begin{eqnarray}
+  r_{\pm}^2 = r^2 +\left( \frac{l}{2} \right)^2 \mp rl\cos\theta, \quad\therefore r_{\pm} = r\sqrt{ 1 + \left( \frac{l}{2r} \right)^2 \mp\frac{l}{r}\cos\theta }
+\end{eqnarray}
+ここで，$l/r$は微小であるから
+\begin{eqnarray}
+  \bm{r}_{\pm} = r\sqrt{ 1 \mp\frac{l}{r}\cos\theta } \quad\therefore \frac{1}{r_{\pm}} \approx \frac{1}{r} \left( 1 \pm\frac{l}{2r}\cos\theta \right)
+\end{eqnarray}
+よって，
+\begin{eqnarray}
+  \varphi(\bm{r})= \frac{\alpha_0 E_0 }{4\pi\epsilon_0 l} \frac{1}{r} \left\{ \left( 1 +\frac{l}{2r}\cos\theta \right)-\left( 1 -\frac{l}{2r}\cos\theta \right) \right\} = \frac{\alpha_0 E_0\cos\theta}{4\pi\epsilon_0}\frac{1}{r^2}
+\end{eqnarray}
+よって，$D=1,C=0$である．
+\subsection*{\large{[2]}}
+$\omega_0 l\ll c$より，
+\begin{eqnarray}
+  q\left( t-\frac{r_{\pm}}{c} \right) = \frac{\alpha_0 E_0}{l}\cos\left( \omega_0 ( t- r_{\pm}/c ) \right)
+\end{eqnarray}
+であるため，
+\begin{eqnarray*}
+  \varphi(\bm{r},t) &&=\frac{\alpha_0 E_0}{4\pi\epsilon_0}\left( \frac{\cos\left( \omega_0 ( t- r_{+}/c ) \right)}{lr_+} - \frac{\cos\left( \omega_0 ( t- r_{-}/c ) \right)}{lr_-} \right)\\
+  &&= \frac{\alpha_0 E_0}{4\pi\epsilon_0}\left\{ \frac{\cos(\omega_0 t)\cos(\omega_0 r_+/c)+\sin(\omega_0 t)\sin(\omega_0 r_+/c)}{lr_+}- \frac{\cos(\omega_0 t)\cos(\omega_0 r_-/c)-\sin(\omega_0 t)\sin(\omega_0 r_-/c)}{lr_-} \right\}\\
+  &&= \frac{\alpha_0 E_0}{4\pi\epsilon_0}\left( \cos(\omega_0 t)\frac{1}{r^2} \right)\cos(\theta)
+\end{eqnarray*}
+となる．
+\subsection*{\large{[3]}}
+\begin{eqnarray}
+  p \left( t -\frac{r}{c} \right) = \alpha E_0 \cos\left( \omega_0 ( t-r/c ) \right)
+\end{eqnarray}
+であるため，
+\begin{eqnarray}
+  \bm{A} = \frac{1}{4\pi\epsilon_0 c^2 r}\left( -\alpha \omega_0 E_0\sin\left( \omega_0 ( t-r/c ) \right) \right)\bm{e}_z
+\end{eqnarray}
+となる．ここで，図より，
+\begin{eqnarray}
+  \bm{e}_z = \cos\theta \bm{e}_r + \sin\theta \bm{e}_\theta
+\end{eqnarray}
+であるため，
+\begin{eqnarray}
+  \bm{A}=\frac{1}{4\pi\epsilon_0 c^2 r}\left( -\alpha \omega_0 E_0\sin\left( \omega_0 ( t-r/c ) \right) \right) \left( \cos\theta \bm{e}_r + \sin\theta \bm{e}_\theta \right)
+\end{eqnarray}
+となる．
+\subsection*{\large{[4]}}
+\begin{eqnarray}
+  \nabla \varphi = \frac{\alpha_0 E_0}{4\pi\epsilon_0}\cos(\omega_0 t) \left\{ \left( -\frac{2}{r^3} \right)\cos\theta \bm{e}_r - \frac{1}{r^3}\sin\theta \bm{e}_\theta \right\}
+\end{eqnarray}
+\subsection*{\large{[5]}}
+\begin{eqnarray*}
+  \bm{E} &&= \frac{\alpha_0 E_0}{4\pi\epsilon_0}\left[ \cos(\omega_0 t) \left( \frac{2}{r^3}\cos\theta\bm{e}_r + \frac{1}{r^3}\sin\theta\bm{e}_\theta \right) + \frac{\omega_0^2}{c^2 r}\cos\left( \omega_0 (t-r/c)( \cos\theta \bm{e}_r + \sin\theta\bm{e}_\theta ) \right) \right]\\
+  &&= \frac{\alpha_0 E_0}{4\pi\epsilon_0}\left[ \cos\theta\left\{ \frac{2}{r^3}\cos(\omega_0 t) + \frac{\omega_0^2}{c^2 r}\cos( \omega_0 (t-r/c) ) \right\}\bm{e}_r +\sin\theta\left\{ \frac{1}{r^3}\cos(\omega_0 t) + \frac{\omega_0^2}{c^2 r}\cos( \omega_0 (t-r/c) ) \right\}\bm{e}_\theta  \right]
+\end{eqnarray*}
+また，
+\begin{eqnarray}
+  \bm{B} &&= \nabla\times\bm{A}\\
+  &&= -\frac{\alpha E_0}{4\pi\epsilon_0 c^2 r}\left\{ \frac{2\sin\theta}{r} \right\}\bm{e}_\phi
+\end{eqnarray}
+\subsection*{\large{[6]}}
+
+\end{document}
