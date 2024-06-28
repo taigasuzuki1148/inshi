@@ -479,5 +479,101 @@ $X$を固定することは$n$を固定することである．また全体の�
   -\frac{a}{\kappa}N\kappa \frac{1}{\cosh^2(\beta\kappa)} 
 \end{eqnarray}
 である．
+\newpage
+\section*{\Large{第五問}}
+\subsection*{\large{[1]}}
+運動方程式は
+\begin{eqnarray}
+  m\ddot{\bm{u}} = -e\bm{E}_{\text{ex}} - e\dot{\bm{u}}\times\bm{B}_{\text{ex}} - m\omega_0^2 \bm{u}
+\end{eqnarray}
+であり，各成分ごとに書き下すと
+\begin{eqnarray}
+  \bm{u}
+  =\frac{1}{-m^2(\omega_0^2-\omega^2)^2+(e\omega B)^2} 
+  \begin{bmatrix}
+    m(\omega_0^2-\omega^2) & ie\omega B\\
+    -ie\omega B & m(\omega_0^2-\omega^2) \\
+  \end{bmatrix}
+  \bm{E}_{\text{ex}}
+\end{eqnarray}
+である．
+
+\subsection*{\large{[2]}}
+式に代入すると
+\begin{eqnarray}
+  \tilde{\epsilon}\bm{E}_{\text{ex}} - \bm{E}_{\text{ex}} = 
+  \begin{bmatrix}
+    (\epsilon_{xx}-1)E_x + i\gamma E_y\\
+    -i\gamma E_x + (\epsilon_{xx}-1)E_y \\
+    0
+  \end{bmatrix}
+  =
+  -\frac{ne}{\epsilon_0}
+  \begin{bmatrix}
+    u_x\\
+    u_y\\
+    0
+  \end{bmatrix}
+\end{eqnarray}
+であり，それぞれの係数を比較して
+\begin{eqnarray}
+  \gamma = -\frac{e^2 n\omega B}{A\epsilon_0}, \quad \epsilon_{xx} = -\frac{ne}{\epsilon_0}\frac{1}{A}m(\omega_0^2-\omega^2)+1, \quad A = -m^2(\omega_0^2-\omega^2)^2+(e\omega B)^2
+\end{eqnarray}
+ここで，条件より，$A<0$であるため，
+\begin{eqnarray}
+  \gamma =-\frac{e^2 n\omega B}{A\epsilon_0} >0, \quad \epsilon_{xx} >1
+\end{eqnarray}
+\subsection*{\large{[3]}}
+$E$のみの式にすると
+\begin{eqnarray}
+  \bm{k}\times (\bm{k}\times \bm{E}_0) = -\mu_0\epsilon_0 \omega^2 \tilde{\omega}\bm{E}_0 = -\left( \frac{\omega}{c} \right)^2 \tilde{\omega}\bm{E}_0 
+\end{eqnarray}
+であり，
+\begin{eqnarray}
+  (\bm{k}\cdot \bm{E}_0)\bm{k}-k^2 \bm{E}_0 +\left( \frac{\omega}{c} \right)^2 \tilde{\omega}\bm{E}_0 =0
+\end{eqnarray}
+\subsection*{\large{[4]}}
+$x,y$成分のみ書き下すと
+\begin{eqnarray}
+  k_z^2 E_x &&= \left( \frac{\omega}{c} \right)^2 \left( E_x \epsilon_{xx} + i\gamma E_y \right)\\
+  k_z^2 E_y &&= \left( \frac{\omega}{c} \right)^2 \left( -i\gamma E_x + E_y \epsilon_{xx}\right)
+\end{eqnarray}
+よって，
+\begin{eqnarray}
+  \begin{bmatrix}
+    k_z^2- (\omega/c)^2\epsilon_{xx} & -i\gamma (\omega/c)^2\\
+    i\gamma (\omega/c)^2 & k_z^2- (\omega/c)^2\epsilon_{xx}
+  \end{bmatrix}
+  \bm{E}
+  =0
+\end{eqnarray}
+
+でなければいかない．よって，
+\begin{eqnarray}
+  (k_z^2- (\omega/c)^2\epsilon_{xx})^2 = \gamma^2 (\omega/c)^4
+\end{eqnarray}
+であり，$\epsilon_{xx}>\gamma$より，
+\begin{eqnarray}
+  k_{\pm} = \frac{\omega}{c}\sqrt{ \epsilon_{xx}\pm \gamma }
+\end{eqnarray}
+であり，
+\begin{eqnarray}
+  \bm{E}_{0+} = \frac{1}{\sqrt{2}}E
+  \begin{bmatrix}
+    1 \\
+    i\\
+    0
+  \end{bmatrix}, \quad
+  \bm{E}_{0-} = \frac{1}{\sqrt{2}}E
+  \begin{bmatrix}
+    1 \\
+    -i\\
+    0
+  \end{bmatrix}
+\end{eqnarray}
+\subsection*{\large{[5]}}
+\begin{eqnarray}
+  \bm{E} = 
+\end{eqnarray}
 
 \end{document}
