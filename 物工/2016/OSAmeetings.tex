@@ -335,5 +335,149 @@ $\bm{p}_2$に作る電場$\bm{E}$は
   U = -\bm{p}_2\cdot\bm{E}_1 = -\frac{p_1p_2}{4\pi\epsilon_0l^3} \left( 2\cos\theta_1\cos\theta_2- \sin\theta_1\sin\theta_2\right)
 \end{eqnarray}
 となる．
+\newpage
+\section*{\Large{第三問}}
+\subsection*{\large{[1]}}
+
+シュレディンガー方程式は
+\begin{eqnarray}
+  -\frac{\hbar^2}{2m}\psi''(x) = E\psi(x)
+\end{eqnarray}
+であり，この解は
+\begin{eqnarray}
+  \psi(x) = A\sin(\lambda x) + B\cos(\lambda x),\quad \lambda = \frac{\sqrt{2mE}}{\hbar}
+\end{eqnarray}
+である．
+ここで，$x=\pm a$で$\psi$の時，
+\begin{eqnarray}
+  A = 0 , \text{or} , B=0
+\end{eqnarray}
+である．よって，
+\begin{eqnarray}
+  \psi(x) = A\cos(\lambda x),\quad B\sin(\lambda x)
+\end{eqnarray}
+となり，$\psi(\lambda a)=0$より，
+\begin{eqnarray}
+  \lambda a = \frac{\pi n_{\text{odd}}}{2}, \quad \lambda a= \frac{\pi n_{\text{even}}}{2}
+\end{eqnarray}
+である．よって，
+\begin{eqnarray}
+  \psi(x) = A\cos\left( \frac{\pi n_{\text{odd}}}{2a} x \right), \quad B\sin\left( \frac{\pi n_{\text{even}}}{2a} x \right)
+\end{eqnarray}
+である．ここで，
+\begin{eqnarray}
+  \int_{-a}^{a} \cos^2\left( \frac{\pi n_{\text{odd}}}{2a} x \right)dx = \int_{-a}^{a} \sin^2\left( \frac{\pi n_{\text{odd}}}{2a} x \right)dx= a
+\end{eqnarray}
+であるため，
+\begin{eqnarray}
+  \psi(x) = \sqrt{a}\cos\left( \frac{\pi n_{\text{odd}}}{2a} x \right), \quad \sqrt{a}\sin\left( \frac{\pi n_{\text{even}}}{2a} x \right)
+\end{eqnarray}
+であり，
+\begin{eqnarray}
+  \frac{\sqrt{2mE}}{\hbar}= \frac{\pi n}{2a}, \quad E = \frac{\hbar^2 \pi^2 n^2}{8ma^2}
+\end{eqnarray}
+である．
+\subsection*{\large{[2]}}
+\begin{eqnarray}
+  \Psi(x_1,x_2) &&= \frac{1}{\sqrt{2}}\left( g(x_1)e(x_2)-g(x_2)e(x_1) \right),\\
+  &&g(x_1)g(x_2), \quad e(x_1)e(x_2), \quad \frac{1}{\sqrt{2}}\left( g(x_1)e(x_2)+g(x_2)e(x_1) \right)
+\end{eqnarray}
+\subsection*{\large{[3]}}
+$s=1/2$より，$m=\pm 1/2$である．よって，
+\begin{eqnarray}
+  S=1, \quad M = \pm 1, 0,\qquad S=0, M=0
+\end{eqnarray}
+であるため，同時固有状態と全スピンは
+\begin{eqnarray}
+  S=1, &&\quad |\uparrow\uparrow\rangle, \frac{1}{\sqrt{2}}\left( |\uparrow\downarrow\rangle+ |\downarrow\uparrow\rangle\right), |\downarrow\downarrow\rangle\\
+  S=0, &&\quad  \frac{1}{\sqrt{2}}\left( |\uparrow\downarrow\rangle- |\downarrow\uparrow\rangle\right)
+\end{eqnarray}
+である．
+\subsection*{\large{[4]}}
+
+\newpage
+\section*{\Large{第四問}}
+\subsection*{\large{[1]}}
+
+\begin{eqnarray}
+  X = a\left( n^{+}-n^{-} \right)
+\end{eqnarray}
+
+であり，$N=n^{+}+n^{-}$であるため，
+\begin{eqnarray}
+  X = a\left( N-2n^{-} \right)
+\end{eqnarray}
+であり，$n^{-}$と$X$は一対一対応する．よって，$n^{-}$の選び方が全通りであり，状態数は
+\begin{eqnarray}
+  W = \frac{N!}{(N-n^{-})!n^{-}!}
+\end{eqnarray}
+であり，
+\begin{eqnarray}
+  N-2n^{-}=n, \quad\therefore n^{-}=\frac{N-n}{2}
+\end{eqnarray}
+の時の状態数は
+\begin{eqnarray}
+  W = \frac{N!}{(\frac{N-n}{2})!(\frac{N+n}{2})!},\quad\therefore P(n) = \frac{(\frac{N-n}{2})!(\frac{N+n}{2})!}{N!}
+\end{eqnarray}
+エントロピーは
+\begin{eqnarray}
+  S = k_B\log W \approx k_B\left( N\log N - \frac{N-n}{2}\log\left( \frac{N-n}{2}\right)-\frac{N+n}{2}\log\left( \frac{N+n}{2}\right) \right)
+\end{eqnarray}
+となる．
+
+\subsection*{\large{[2]}}
+$X$を固定することは$n$を固定することである．また全体のエネルギーは$0$であるため自由エネルギーは
+\begin{eqnarray}
+  F = -TS = -k_BT\left( N\log N - \frac{N-X/a}{2}\log\left( \frac{N-X/a}{2}\right)-\frac{N+X/a}{2}\log\left( \frac{N+X/a}{2}\right) \right)
+\end{eqnarray}
+であるため，
+\begin{eqnarray}
+  \tau = -k_BT\frac{1}{a}\left( \frac{NX/a}{2(N^2-(X/a)^2)} + \frac{1}{2}\log \left( \frac{N-X/a}{N+X/a} \right)\right)
+\end{eqnarray}
+である．ここで，$X\ll Na$の時，二次以上の項を無視するとすると
+\begin{eqnarray}
+  &&\log \left( \frac{N-X/a}{N+X/a} \right) = \log \left( \frac{1-X/(Na)}{1+X/(Na)} \right) \approx -\frac{X}{Na} - \frac{X}{Na} = -2\frac{X}{Na}\\
+  &&\frac{NX/a}{2(N^2-(X/a)^2)} = \frac{X/(Na)}{2(1-(X/(Na))^2)}\approx \frac{X}{2Na}
+\end{eqnarray}
+であるため，
+\begin{eqnarray}
+  \tau \approx -k_B T\frac{1}{a}\left( \frac{X}{2Na}-\frac{X}{Na} \right) = k_B T \frac{X}{2Na^2}
+\end{eqnarray}
+となる．
+\subsection*{\large{[3]}}
+分配関数はそれぞれ独立な粒子からできているので
+\begin{eqnarray}
+  Z = z^N  = \left( \exp(-\beta\kappa)+\exp(\beta\kappa) \right)^N = (2\cosh(\beta\kappa))^N
+\end{eqnarray}
+であり，エネルギーの期待値は
+\begin{eqnarray}
+  E = -\frac{1}{Z}\frac{dZ}{d\beta} = -N\tanh(\beta\kappa)\kappa
+\end{eqnarray}
+また，
+\begin{eqnarray}
+  E = \kappa(-n^{+}+n^{-}), \quad X = a(n^{+}-n^{-}),\quad\therefore X = -\frac{a}{\kappa}E
+\end{eqnarray}
+よって，
+\begin{eqnarray}
+  X = Na \tanh(\beta\kappa)
+\end{eqnarray}
+である．また，$\kappa\beta \ll 1$の時，
+\begin{eqnarray}
+  E\approx - N\beta\kappa^2, \quad X\approx Na \beta \kappa
+\end{eqnarray}
+である．
+\subsection*{\large{[4]}}
+\begin{eqnarray}
+  \frac{dE}{d\beta} = - \langle E^2 \rangle + (\langle E \rangle )^2 = -\left( \langle E^2 \rangle- (\langle E \rangle )^2 \right)
+\end{eqnarray}
+ゆえ，$E$の分散は
+\begin{eqnarray}
+  -\frac{dE}{d\beta} = N\kappa \frac{1}{\cosh^2(\beta\kappa)}
+\end{eqnarray}
+であり，$X$の分散は
+\begin{eqnarray}
+  -\frac{a}{\kappa}N\kappa \frac{1}{\cosh^2(\beta\kappa)} 
+\end{eqnarray}
+である．
 
 \end{document}
