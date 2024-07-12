@@ -66,7 +66,59 @@
 \end{eqnarray}
 \subsection*{\large{[2.1]}}
 \begin{eqnarray}
-  I = \int dm \sqrt{r^2-z^2}
+  I &&= \int dm r'^2 = \frac{3m}{4\pi r^3}\int r'^3 dr' d\theta dz , \quad 0 \leq r' \leq \sqrt{r^2-z^2}\\
+  &&=   \frac{3m}{4\pi r^3}\cdot 2\pi \int_{-r}^{r} \frac{1}{4} (r^2-z^2)^2 dz\\
+  &&= \frac{2}{5}mr^2
 \end{eqnarray}
+\subsection*{\large{[2.2]}}
+図より
+\begin{eqnarray}
+  R\theta = r(\phi-\theta), \quad\therefore (R+r)\dot{\theta} = r\dot{\phi}
+\end{eqnarray}
+よって
+\begin{eqnarray}
+  v = \frac{\dot{\theta}}{R+r}, \omega = \dot{\phi}
+\end{eqnarray}
+より，
+\begin{eqnarray}
+  (R+r)^2 v = r\omega
+\end{eqnarray}
+\subsection*{\large{[2.3]}}
+束縛条件は
+\begin{eqnarray}
+  f_r(r') = r' - (r+R) = 0, \quad f_{\theta,\phi}(\theta,\phi) = (R+r)\theta -r\phi =0
+\end{eqnarray}
+であり，束縛条件がない時のラグランジアンは
+\begin{eqnarray}
+  L_0 = \frac{1}{2}m (\dot{r}'^2 + r'^2 \dot{\theta}^2) + \frac{1}{2}\left( \frac{2}{5}mr^2 \right)\dot{\phi}^2 - mgr' \cos\theta
+\end{eqnarray}
+よって，束縛条件がある場合のラグランジュ方程式は
+\begin{eqnarray}
+  m\ddot{r}' - ( mr'\dot{\theta}^2 -mg\cos\theta ) &&= \lambda_r \frac{\partial f_r}{\partial r} = \lambda_r\\
+  mr'^2\ddot{\theta}-mgr'\sin\theta &&= \lambda_{\theta,\phi}(R+r)\\
+  \frac{1}{5}mr'^2 \ddot{\phi} = \lambda_{\theta,\phi}(-r)
+\end{eqnarray}
+よって，$\lambda_{\theta,\phi}$を消去して，また，$r$の束縛条件より
+\begin{eqnarray}
+  mr'^2\ddot{\theta}-mgr'\sin\theta = -\frac{m}{5}(R+r)^2 \ddot{\theta}, \quad\therefore \frac{6}{5}mr'\ddot{\theta}-mg\sin\theta =0
+\end{eqnarray}
+ここで，
+\begin{eqnarray}
+  \frac{6}{5}mr' \dot{\theta}\ddot{\theta} - \dot{\theta}mg\sin\theta = 0\quad\therefore \frac{3}{5}mr' \dot{\theta}^2 + mg\cos\theta =0
+\end{eqnarray}
+よって，束縛条件より$\dot{r}', \ddot{r}' =0$であるため，
+\begin{eqnarray}
+  -mr' \frac{5}{3m}g(1-\cos\theta) + mg\cos\theta = \lambda_r, \quad\therefore \cos\theta = \frac{2}{5}
+\end{eqnarray}
+また，
+\begin{eqnarray}
+  \dot{\theta} = \sqrt{ \frac{5}{3(R+r)}\frac{3}{5} } = \frac{\sqrt{g}}{\sqrt{ R+r }}
+\end{eqnarray}
+より，
+\begin{eqnarray}
+  v = \frac{\sqrt{g}}{(R+r)^{3/2}}
+\end{eqnarray}
+\subsection*{\large{[2.4]}}
+回転により寄与がかかるから．
 
 \end{document}
