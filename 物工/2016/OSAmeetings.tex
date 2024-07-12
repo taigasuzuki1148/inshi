@@ -358,23 +358,23 @@ $\bm{p}_2$に作る電場$\bm{E}$は
 \end{eqnarray}
 となり，$\psi(\lambda a)=0$より，
 \begin{eqnarray}
-  \lambda a = \frac{\pi n_{\text{odd}}}{2}, \quad \lambda a= \frac{\pi n_{\text{even}}}{2}
+  \lambda a/2 = \frac{\pi n_{\text{odd}}}{2}, \quad \lambda a/2= \frac{\pi n_{\text{even}}}{2}
 \end{eqnarray}
 である．よって，
 \begin{eqnarray}
-  \psi(x) = A\cos\left( \frac{\pi n_{\text{odd}}}{2a} x \right), \quad B\sin\left( \frac{\pi n_{\text{even}}}{2a} x \right)
+  \psi(x) = A\cos\left( \frac{\pi n_{\text{odd}}}{a} x \right), \quad B\sin\left( \frac{\pi n_{\text{even}}}{a} x \right)
 \end{eqnarray}
 である．ここで，
 \begin{eqnarray}
-  \int_{-a}^{a} \cos^2\left( \frac{\pi n_{\text{odd}}}{2a} x \right)dx = \int_{-a}^{a} \sin^2\left( \frac{\pi n_{\text{odd}}}{2a} x \right)dx= a
+  \int_{-a/2}^{a/2} \cos^2\left( \frac{\pi n_{\text{odd}}}{a} x \right)dx = \int_{-a/2}^{a/2} \sin^2\left( \frac{\pi n_{\text{odd}}}{a} x \right)dx= a
 \end{eqnarray}
 であるため，
 \begin{eqnarray}
-  \psi(x) = \sqrt{a}\cos\left( \frac{\pi n_{\text{odd}}}{2a} x \right), \quad \sqrt{a}\sin\left( \frac{\pi n_{\text{even}}}{2a} x \right)
+  \psi(x) = \sqrt{\frac{2}{a}}\cos\left( \frac{\pi n_{\text{odd}}}{a} x \right), \quad \sqrt{\frac{2}{a}}\sin\left( \frac{\pi n_{\text{even}}}{a} x \right)
 \end{eqnarray}
 であり，
 \begin{eqnarray}
-  \frac{\sqrt{2mE}}{\hbar}= \frac{\pi n}{2a}, \quad E = \frac{\hbar^2 \pi^2 n^2}{8ma^2}
+  \frac{\sqrt{2mE}}{\hbar}= \frac{\pi n}{a}, \quad E = \frac{\hbar^2 \pi^2 n^2}{2ma^2}
 \end{eqnarray}
 である．
 \subsection*{\large{[2]}}
@@ -472,11 +472,11 @@ $X$を固定することは$n$を固定することである．また全体の�
 \end{eqnarray}
 ゆえ，$E$の分散は
 \begin{eqnarray}
-  -\frac{dE}{d\beta} = N\kappa \frac{1}{\cosh^2(\beta\kappa)}
+  -\frac{dE}{d\beta} = N\kappa^2 \frac{1}{\cosh^2(\beta\kappa)}
 \end{eqnarray}
 であり，$X$の分散は
 \begin{eqnarray}
-  -\frac{a}{\kappa}N\kappa \frac{1}{\cosh^2(\beta\kappa)} 
+  (\frac{a}{\kappa})^2N\kappa^2 \frac{1}{\cosh^2(\beta\kappa)} 
 \end{eqnarray}
 である．
 \newpage
@@ -573,7 +573,7 @@ $x,y$成分のみ書き下すと
 \end{eqnarray}
 \subsection*{\large{[5]}}
 \begin{eqnarray}
-  \bm{E} = 
+  \bm{E} = \frac{1}{\sqrt{2}}\left( \bm{E}_{+} + \bm{E}_{-} \right)
 \end{eqnarray}
 
 \end{document}
