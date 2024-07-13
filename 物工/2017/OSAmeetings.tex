@@ -96,29 +96,55 @@
 \begin{eqnarray}
   m\ddot{r}' - ( mr'\dot{\theta}^2 -mg\cos\theta ) &&= \lambda_r \frac{\partial f_r}{\partial r} = \lambda_r\\
   mr'^2\ddot{\theta}-mgr'\sin\theta &&= \lambda_{\theta,\phi}(R+r)\\
-  \frac{1}{5}mr'^2 \ddot{\phi} = \lambda_{\theta,\phi}(-r)
+  \frac{2}{5}mr^2 \ddot{\phi} = \lambda_{\theta,\phi}(-r)
 \end{eqnarray}
 よって，$\lambda_{\theta,\phi}$を消去して，また，$r$の束縛条件より
 \begin{eqnarray}
-  mr'^2\ddot{\theta}-mgr'\sin\theta = -\frac{m}{5}(R+r)^2 \ddot{\theta}, \quad\therefore \frac{6}{5}mr'\ddot{\theta}-mg\sin\theta =0
+  mr'^2\ddot{\theta}-mgr'\sin\theta = -\frac{m}{5}(R+r)^2 \ddot{\theta}, \quad\therefore \frac{7}{5}mr'\ddot{\theta}-mg\sin\theta =0
 \end{eqnarray}
 ここで，
 \begin{eqnarray}
-  \frac{6}{5}mr' \dot{\theta}\ddot{\theta} - \dot{\theta}mg\sin\theta = 0\quad\therefore \frac{3}{5}mr' \dot{\theta}^2 + mg\cos\theta =0
+  \frac{7}{5}mr' \dot{\theta}\ddot{\theta} - \dot{\theta}mg\sin\theta = 0\quad\therefore \frac{7}{10}mr' \dot{\theta}^2 + mg\cos\theta =mg (=\text{Const}),\because 初期条件から求める
 \end{eqnarray}
 よって，束縛条件より$\dot{r}', \ddot{r}' =0$であるため，
 \begin{eqnarray}
-  -mr' \frac{5}{3m}g(1-\cos\theta) + mg\cos\theta = \lambda_r, \quad\therefore \cos\theta = \frac{2}{5}
+  -mr' \frac{10}{7}\frac{(1-\cos\theta)g}{r'} + mg\cos\theta = \lambda_r, \quad\therefore \cos\theta = \frac{10}{17}
 \end{eqnarray}
 また，
 \begin{eqnarray}
-  \dot{\theta} = \sqrt{ \frac{5}{3(R+r)}\frac{3}{5} } = \frac{\sqrt{g}}{\sqrt{ R+r }}
+  \dot{\theta} = \sqrt{ \frac{10}{17}\frac{g}{R+r} }
 \end{eqnarray}
 より，
 \begin{eqnarray}
-  v = \frac{\sqrt{g}}{(R+r)^{3/2}}
+  v = \frac{\dot{\theta}}{R+r} = \sqrt{ \frac{10g}{17}}\frac{1}{(R+r)^{3/2}}
 \end{eqnarray}
 \subsection*{\large{[2.4]}}
 回転により寄与がかかるから．
 
+\subsection*{\large{[3.1]}}
+角運動量と運動量で考える．それぞれ
+\begin{eqnarray}
+  \bm{P} = m\bm{v},\quad \bm{L} = \bm{r}\times \bm{P} = rP\sin\alpha \hat{y},\quad \sin\alpha = \frac{h-r}{r}
+\end{eqnarray}
+である，ここで，滑らないという条件は，
+\begin{eqnarray}
+  L = \omega I
+\end{eqnarray}
+であり，
+\begin{eqnarray}
+  \omega I = P(h-r),\quad \frac{v}{r}\frac{2}{5}mr^2 = mv (h-r)
+\end{eqnarray}
+であり，
+\begin{eqnarray}
+  r = \frac{5}{7}h
+\end{eqnarray}
+\subsection*{\large{[3.2]}}
+エネルギー保存より(ラグラジアンが陽に時間依存しない)
+\begin{eqnarray}
+  mg(R+r)(1-\cos\theta) + \frac{P^2}{2m} + \frac{1}{2}I\omega^2 = 初期条件
+\end{eqnarray}
+より，
+\begin{eqnarray}
+  \cos\theta = \frac{10}{17} + \frac{7}{17}\frac{P^2}{m^2 g (R+r)}
+\end{eqnarray}
 \end{document}
