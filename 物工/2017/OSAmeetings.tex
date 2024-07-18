@@ -147,4 +147,56 @@
 \begin{eqnarray}
   \cos\theta = \frac{10}{17} + \frac{7}{17}\frac{P^2}{m^2 g (R+r)}
 \end{eqnarray}
+
+\newpage
+\section*{\Large{第四問}}
+\subsection*{\large{[1.1]}}
+$M$個の中から$N$個だけ入る箇所を選択すればよいので，状態数は
+\begin{eqnarray}
+  {}_MC_N = \frac{M!}{N!(M-N)!}
+\end{eqnarray}
+である．
+よって，
+\begin{eqnarray}
+  S = k_B \ln \frac{M!}{N!(M-N)!}\approx k_B \left( M\ln M - N\ln N -(M-N)\ln(M-N) \right)
+\end{eqnarray}
+\subsection*{\large{[1.2]}}
+\begin{eqnarray}
+  F = U-TS
+\end{eqnarray}
+であるため，相互作用が存在しないため，$F=-TS$であるため，
+\begin{eqnarray}
+  F = - k_B T\ln \frac{M!}{N!(M-N)!}\approx k_B \left( M\ln M - N\ln N -(M-N)\ln(M-N) \right)
+\end{eqnarray}
+であり，
+\begin{eqnarray}
+  p_0 &&= -\frac{\partial F_0}{\partial V} = -\frac{\partial F_0}{\partial M} \frac{\partial M}{\partial V} = -\frac{\partial F_0}{\partial M}\frac{1}{v}\\
+  &&= \frac{k_BT}{v}\ln \frac{1}{1-M/N} \approx \frac{k_B N T}{V}
+\end{eqnarray}
+となる．
+\subsection*{\large{[2.1]}}
+自由エネルギーは
+\begin{eqnarray}
+  F = U-TS = -\frac{1}{2}Mz\alpha \phi^2 - k_B T\ln \frac{M!}{N!(M-N)!}\approx k_B \left( M\ln M - N\ln N -(M-N)\ln(M-N) \right)
+\end{eqnarray}
+よって，
+\begin{eqnarray}
+  \mu = -\alpha z\phi + k_BT \left[ \ln \phi -\ln (1-\phi) \right]
+\end{eqnarray}
+が成立する．
+\subsection*{\large{[2.2]}}
+これが単調増加になるためには
+\begin{eqnarray}
+  \frac{\partial \mu}{\partial\phi} >0
+\end{eqnarray}
+になればよい．よって，
+\begin{eqnarray}
+  \frac{\partial \mu}{\partial\phi} = -\alpha z + k_BT \left( \frac{1}{\phi} + \frac{1}{1-\phi} \right) >0
+\end{eqnarray}
+より，
+\begin{eqnarray}
+  T > \frac{\alpha z \phi (1-\phi)}{k_B},\quad\because \frac{k_BT -\alpha z \phi (1-\phi)}{\phi(1-\phi)}>0
+\end{eqnarray}
+
+
 \end{document}
