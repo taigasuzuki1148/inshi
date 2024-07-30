@@ -371,26 +371,31 @@ $\sigma_2$の位置は$\theta=\pi/2-\psi$であり，まとめると
 \end{figure}
 \subsection*{\large{[5.1]}}
 \begin{eqnarray}
-  H = 
-  \begin{bmatrix}
-    \langle 0|H|0\rangle & \langle 1|H|0\rangle & \cdots\\
-    \langle 0|H|1\rangle & \cdots
-  \end{bmatrix}
+  H|0\rangle = -A|0\rangle, H|2\rangle = -A|2\rangle
 \end{eqnarray}
-となっているため，$H|0\rangle,H|2\rangle$の部分だけエネルギー$A$だけ下げれば良い．
+となるようにすればよい．
 \begin{eqnarray}
   H =
   \begin{bmatrix}
-    0 & -\sqrt{2}J-A & 0\\
+    -A & -\sqrt{2}J & 0\\
     -\sqrt{2}J & 0 & -\sqrt{2}J\\
-    0 & -\sqrt{2}J-A & 0
+    0 & -\sqrt{2}J & -A
   \end{bmatrix}
 \end{eqnarray}
 となる．
 \subsection*{\large{[5.2]}}
 固有エネルギーは
 \begin{eqnarray}
-  0,\pm\sqrt{4J^2-2\sqrt{2}JA}
+  -A,\frac{A\pm \sqrt{A^2+16J^2}}{2} 
+\end{eqnarray}
+であり，
+\begin{eqnarray}
+  \sqrt{A^2+16J^2} &&= A\sqrt{ 1+16\left( \frac{J}{A} \right)^2 } \approx A\left( 0 + \frac{1}{2}\left( \frac{J}{A} \right) -\frac{1}{8}\left( \frac{J}{A} \right)^2+ \cdots \right)\\
+  &&= \frac{J}{2}-\frac{1}{8}\frac{J^2}{A}
+\end{eqnarray}
+であるため，
+\begin{eqnarray}
+  -A, \frac{1}{2}\left( A\pm \left( \frac{J}{2}-\frac{1}{8}\frac{J^2}{A} \right) \right)
 \end{eqnarray}
 \subsection*{\large{[5.3]}}
 \subsection*{\large{[6]}}
@@ -450,5 +455,19 @@ $N$個の粒子からなるハミルトニアンは
   \Delta G = V\Delta p
 \end{eqnarray}
 であるため，$p$の増減に従って$G$も増減する．
+\newpage
+\section*{\Large{第五問}}
+\subsection*{\large{[1]}}
+位相速度は
+\begin{eqnarray}
+  v = \frac{\omega}{\tilde{k}}
+\end{eqnarray}
+で与えられるため
+\begin{eqnarray}
+  v = \frac{\omega}{k_1 + ik_2} = \frac{\omega k_1}{k_1^2 + k_2^2} - i\frac{\omega k_2}{k_1^2 + k_2^2}
+\end{eqnarray}
+となる．
+\subsection*{\large{[2]}}
+
 
 \end{document}
