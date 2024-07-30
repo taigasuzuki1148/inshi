@@ -394,6 +394,61 @@ $\sigma_2$の位置は$\theta=\pi/2-\psi$であり，まとめると
 \end{eqnarray}
 \subsection*{\large{[5.3]}}
 \subsection*{\large{[6]}}
+\newpage
+\section*{\Large{第四問}}
+\subsection*{\large{[1]}}
 
+$N$個の粒子からなるハミルトニアンは
+\begin{eqnarray}
+  H = \sum_{i=1}^{N} \left\{ \frac{p^2}{2m} + U(r) \right\}, \quad U(r)=
+  \begin{cases}
+    0 & 容器内\\
+    \infty & 容器の外(r>L)
+  \end{cases}
+\end{eqnarray}
+よって全体の分配関数は
+\begin{eqnarray}
+  Z &&= \frac{1}{N!}\frac{1}{(2\pi\hbar)^N}\left[ \int\int\int \exp\left(-\beta\frac{p^2}{2m}\right)dp_x dp_y dp_z \right]^N \left[ \int\int\int \exp\left(-\beta U(r)\right)dx dydz \right]^N\\
+  &&= \frac{1}{N!}\frac{1}{(2\pi\hbar)^N} (2mk_B T)^{3N/2} V^N
+\end{eqnarray}
+\subsection*{\large{[2]}}
+内部エネルギーは
+\begin{eqnarray}
+  U = F+TS,\quad F = -k_BT\ln Z, \quad S=-\frac{\partial F}{\partial T}
+\end{eqnarray}
+であるため，
+\begin{eqnarray}
+  F &&= -k_BT \log\left[ \frac{1}{N!}\frac{1}{(2\pi\hbar)^N} (2mk_B T)^{3N/2} V^N\right]\\
+  S &&= k_B\log\left[ \frac{1}{N!}\frac{1}{(2\pi\hbar)^N} (2mk_B T)^{3N/2} V^N\right]+ \frac{3N}{2}k_B\\
+  U &&= \frac{3N}{2}k_BT
+\end{eqnarray}
+\subsection*{\large{[3]}}
+\begin{eqnarray}
+  P = k_TN\frac{1}{V}
+\end{eqnarray}
+\subsection*{\large{[4]}}
+分配関数は
+\begin{eqnarray}
+  Z = \exp\left( \beta\alpha\frac{N}{V} \right)\frac{1}{N!}\frac{(2mk_BT)^{3N/2}}{(2\pi\hbar)^N}(V-Nb)^N
+\end{eqnarray}
+よって，圧力$P$は
+\begin{eqnarray}
+  P =\alpha\frac{N}{V^2} + k_B T \frac{N}{V-Nb}
+\end{eqnarray}
+であり，状態方程式は
+\begin{eqnarray}
+  \left( P + \alpha\frac{N}{V^2} \right)(V-Nb) = Nk_B T
+\end{eqnarray}
+\subsection*{\large{[5]}}
+安定な点は最小値を与えている箇所．そして，不安定点は極大値の箇所である．というのも極値で状態方程式は成立するが，熱平衡状態は最小値だからである．
+\subsection*{\large{[6]}}
+\begin{eqnarray}
+  dG= -SdT + Vdp
+\end{eqnarray}
+であるため，
+\begin{eqnarray}
+  \Delta G = V\Delta p
+\end{eqnarray}
+であるため，$p$の増減に従って$G$も増減する．
 
 \end{document}
