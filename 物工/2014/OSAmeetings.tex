@@ -162,4 +162,72 @@ $\sigma_2$の位置は$\theta=\pi/2-\psi$であり，まとめると
 \begin{eqnarray}
   (x_0,y_0) = \left( \frac{\sigma_1-\sigma_3}{\sigma_1+\sigma_3}\frac{1}{2}R, \frac{\sigma_2-\sigma_4}{\sigma_2+\sigma_4}\frac{1}{2}R  \right)
 \end{eqnarray}
+\newpage
+\section*{\Large{第三問}}
+\subsection*{\large{[1]}}
+\begin{eqnarray}
+  \psi_S: J ,\quad \psi_A: -J
+\end{eqnarray}
+である．シュレディンガー方程式は
+\begin{eqnarray}
+  \left( -\frac{\hbar^2}{2m} + U(x) \right)\psi(x) = E\psi(x)
+\end{eqnarray}
+であり，波動関数は$\psi_S$は二つの極値は上に凸，一方，$\psi_S$は上下それぞれに凸であるため．
+\subsection*{\large{[2]}}
+波動関数は実関数であるため，
+\begin{eqnarray}
+  \int_{-\infty}^{\infty} \psi^{*}_L(x)\psi_R(x)dx &&= \frac{1}{2}\int_{-\infty}^{\infty} \left( \psi^{*}_S + \psi^{*}_A \right)\left( \psi_S - \psi_A \right)dx\\
+  &&= \frac{1}{2}\int_{-\infty}^{\infty} \left( \psi_S^2 - \psi^2_A + \psi_A\psi_S - \psi_S \psi_A \right)dx = \frac{1}{2}\int_{-\infty}^{\infty} \left( \psi_S^2 - \psi^2_A\right)dx 
+\end{eqnarray}
+ここでグラフより
+\begin{eqnarray}
+  \psi_S^2 - \psi^2_A =0
+\end{eqnarray}
+より，
+\begin{eqnarray}
+  \int_{-\infty}^{\infty} \psi^{*}_L(x)\psi_R(x)dx=0
+\end{eqnarray}
+であるため直交している．\\
+また，
+\begin{eqnarray}
+  H \psi_L(x) = 0,\quad H \psi_R(x) = J\psi_L(x)
+\end{eqnarray}
+であり，
+\begin{eqnarray}
+  |\psi_L\rangle=
+  \begin{bmatrix}
+    1\\
+    0
+  \end{bmatrix},\quad
+  |\psi_R\rangle=
+  \begin{bmatrix}
+    0\\
+    1
+  \end{bmatrix}
+\end{eqnarray}
+とすると，
+\begin{eqnarray}
+  H = J
+  \begin{bmatrix}
+    0 & 1\\
+    0 & 0
+  \end{bmatrix}
+\end{eqnarray}
+\subsection*{\large{[3]}}
+\begin{eqnarray}
+  |\psi(t)\rangle = \exp\left( -i\frac{H}{\hbar}t \right)|\psi_L\rangle =
+  \begin{bmatrix}
+    0 & \exp\left( -iJ{\hbar}t \right)\\
+    0 & 0
+  \end{bmatrix}
+  \begin{bmatrix}
+    1\\
+    0
+  \end{bmatrix}
+  =0
+\end{eqnarray}
+となり，確率は$0$である．
+\subsection*{\large{[4]}}
+
+
 \end{document}
