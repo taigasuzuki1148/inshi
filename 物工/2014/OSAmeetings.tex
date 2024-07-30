@@ -166,13 +166,9 @@ $\sigma_2$の位置は$\theta=\pi/2-\psi$であり，まとめると
 \section*{\Large{第三問}}
 \subsection*{\large{[1]}}
 \begin{eqnarray}
-  \psi_S: J ,\quad \psi_A: -J
+  \psi_S: -J ,\quad \psi_A: J
 \end{eqnarray}
-である．シュレディンガー方程式は
-\begin{eqnarray}
-  \left( -\frac{\hbar^2}{2m} + U(x) \right)\psi(x) = E\psi(x)
-\end{eqnarray}
-であり，波動関数は$\psi_S$は二つの極値は上に凸，一方，$\psi_S$は上下それぞれに凸であるため．
+である．(後の問題と辻褄を合わせるため，理由は分からない．)
 \subsection*{\large{[2]}}
 波動関数は実関数であるため，
 \begin{eqnarray}
@@ -190,7 +186,7 @@ $\sigma_2$の位置は$\theta=\pi/2-\psi$であり，まとめると
 であるため直交している．\\
 また，
 \begin{eqnarray}
-  H \psi_L(x) = J\psi_R(x),\quad H \psi_R(x) = J\psi_L(x)
+  H \psi_L(x) = -J\psi_R(x),\quad H \psi_R(x) = -J\psi_L(x)
 \end{eqnarray}
 であり，
 \begin{eqnarray}
@@ -207,25 +203,25 @@ $\sigma_2$の位置は$\theta=\pi/2-\psi$であり，まとめると
 \end{eqnarray}
 とすると，
 \begin{eqnarray}
-  H = J
+  H = -J
   \begin{bmatrix}
     0 & 1\\
     1 & 0
   \end{bmatrix}
-  =J\sigma_x
+  =-J\sigma_x
 \end{eqnarray}
 \subsection*{\large{[3]}}
 \begin{eqnarray}
-  |\psi(t)\rangle &&= \exp\left( -i\frac{J\sigma_x}{\hbar}t \right)|\psi_L\rangle =
-  \left( \cos(Jt/\hbar)\sigma_I-i\sin(Jt/\hbar)\sigma_X \right)
+  |\psi(t)\rangle &&= \exp\left( -i\frac{-J\sigma_x}{\hbar}t \right)|\psi_L\rangle =
+  \left( \cos(-Jt/\hbar)\sigma_I-i\sin(-Jt/\hbar)\sigma_X \right)
   \begin{bmatrix}
     1\\
     0
   \end{bmatrix}\\
   &&=
   \begin{bmatrix}
-    \cos(Jt/\hbar) & -i\sin(Jt/\hbar)\\
-    -i\sin(Jt/\hbar) & \cos(Jt/\hbar)
+    \cos(-Jt/\hbar) & -i\sin(-Jt/\hbar)\\
+    -i\sin(-Jt/\hbar) & \cos(-Jt/\hbar)
   \end{bmatrix}
   \begin{bmatrix}
     1\\
@@ -233,15 +229,65 @@ $\sigma_2$の位置は$\theta=\pi/2-\psi$であり，まとめると
   \end{bmatrix}\\
   &&= 
   \begin{bmatrix}
-    \cos(Jt/\hbar)\\
-    -i\sin(Jt/\hbar)
+    \cos(-Jt/\hbar)\\
+    -i\sin(-Jt/\hbar)
   \end{bmatrix}
 \end{eqnarray}
 となり，確率は
 \begin{eqnarray}
-  |\langle \psi_R| \psi(t)\rangle|^2 = \sin^2(Jt/\hbar)
+  |\langle \psi_R| \psi(t)\rangle|^2 = \sin^2(-Jt/\hbar)
 \end{eqnarray}
 \subsection*{\large{[4]}}
-
+それぞれの粒子を合成して，まず，二つの粒子が左にいる場合は
+\begin{eqnarray}
+  |0\rangle = |\psi_L\rangle|\psi_L\rangle
+\end{eqnarray}
+と表記する．ここで，ハミルトニアンは粒子1と粒子2それぞれに対する作用の和で書けるため，
+\begin{eqnarray}
+  H = H_1 + H_2
+\end{eqnarray}
+となる．よって，
+\begin{eqnarray}
+  H |\psi_L\rangle|\psi_L\rangle = (H_1|\psi_L\rangle)|\psi_L\rangle + |\psi_L\rangle(H_2|\psi_L\rangle) = -J( |\psi_R\rangle|\psi_L\rangle+ |\psi_L\rangle|\psi_R\rangle )
+\end{eqnarray}
+である．ここで，ボーズ粒子を考えているため
+\begin{eqnarray}
+  |1\rangle = \frac{1}{\sqrt{2}}( |\psi_R\rangle|\psi_L\rangle+ |\psi_L\rangle|\psi_R\rangle )
+\end{eqnarray}
+より，
+\begin{eqnarray}
+  H|0\rangle = -\sqrt{2}J|1\rangle
+\end{eqnarray}
+であり，
+\begin{eqnarray}
+  H|1\rangle &&=\frac{1}{\sqrt{2}} \left[ (H_1|\psi_R\rangle)|\psi_L\rangle +|\psi_R\rangle(H_2|\psi_L\rangle)+(H_1|\psi_L\rangle)|\psi_R\rangle +|\psi_L\rangle(H_2|\psi_R\rangle) \right]\\
+  &&=  -J\frac{1}{\sqrt{2}} \left[ 2|\psi_L\rangle|\psi_L\rangle + 2|\psi_R\rangle|\psi_R\rangle \right] = -\sqrt{2}J|1\rangle -\sqrt{2}J|2\rangle
+\end{eqnarray}
+となり，同様にして
+\begin{eqnarray}
+  H|2\rangle =  -\sqrt{2}J|1\rangle
+\end{eqnarray}
+となる．よって，
+\begin{eqnarray}
+  |0\rangle =
+  \begin{bmatrix}
+    1\\
+    0\\
+    0
+  \end{bmatrix},\quad
+  |1\rangle =
+  \begin{bmatrix}
+    0\\
+    1\\
+    0
+  \end{bmatrix},\quad
+  |2\rangle =
+  \begin{bmatrix}
+    0\\
+    0\\
+    1
+  \end{bmatrix}
+\end{eqnarray}
+とするとたしかに与えられた行列を得る．
 
 \end{document}
