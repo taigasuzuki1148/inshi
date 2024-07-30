@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.141592653-p3.9.0-210218-2.6 (utf8.sjis) (TeX Live 2021/W32TeX) (preloaded format=platex 2021.9.13)  30 JUL 2024 17:06
+This is e-pTeX, Version 3.141592653-p3.9.0-210218-2.6 (utf8.sjis) (TeX Live 2021/W32TeX) (preloaded format=platex 2021.9.13)  30 JUL 2024 17:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -840,10 +840,10 @@ File: image.png Graphic file (type bmp)
 Here is how much of TeX's memory you used:
  28875 strings out of 479062
  569648 string characters out of 5869667
- 814953 words of memory out of 5000000
+ 815953 words of memory out of 5000000
  46457 multiletter control sequences out of 15000+600000
  461200 words of font info for 117 fonts, out of 8000000 for 9000
  993 hyphenation exceptions out of 8191
  84i,13n,83p,455b,381s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on out/OSAmeetings.dvi (7 pages, 30604 bytes).
+Output written on out/OSAmeetings.dvi (7 pages, 31068 bytes).

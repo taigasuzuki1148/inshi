@@ -340,9 +340,9 @@ $\sigma_2$の位置は$\theta=\pi/2-\psi$であり，まとめると
   |\psi(t)\rangle &&= \left[  I + \frac{1}{2}\left( \cos(2J t/\hbar)-1 \right)B + \frac{i}{\sqrt{2}}\sin(2J t/\hbar)A \right]|0\rangle\\
   &&=
   \begin{bmatrix}
-    \frac{1}{2}(\cos(2Jt/\hbar)+1) & i \sin(2Jt/\hbar) & \frac{1}{2}(\cos(2Jt/\hbar)-1)\\
-    i \sin(2Jt/\hbar) & \cos(2Jt/\hbar) & i \sin(2Jt/\hbar)\\
-    \frac{1}{2}(\cos(2Jt/\hbar)-1) & i \sin(2Jt/\hbar) & \frac{1}{2}(\cos(2Jt/\hbar)+1)
+    \frac{1}{2}(\cos(2Jt/\hbar)+1) & i\frac{1}{\sqrt{2}} \sin(2Jt/\hbar) & \frac{1}{2}(\cos(2Jt/\hbar)-1)\\
+    i \frac{1}{\sqrt{2}}\sin(2Jt/\hbar) & \cos(2Jt/\hbar) & i \frac{1}{\sqrt{2}}\sin(2Jt/\hbar)\\
+    \frac{1}{2}(\cos(2Jt/\hbar)-1) & i \frac{1}{\sqrt{2}}\sin(2Jt/\hbar) & \frac{1}{2}(\cos(2Jt/\hbar)+1)
   \end{bmatrix}
   \begin{bmatrix}
     1\\
@@ -352,14 +352,14 @@ $\sigma_2$の位置は$\theta=\pi/2-\psi$であり，まとめると
   =
   \begin{bmatrix}
     \frac{1}{2}(\cos(2Jt/\hbar)+1) \\
-    i \sin(2Jt/\hbar)\\
+    i \frac{1}{\sqrt{2}}\sin(2Jt/\hbar)\\
     \frac{1}{2}(\cos(2Jt/\hbar)-1) 
   \end{bmatrix}
 \end{eqnarray}
 となる．よって，確率は
 \begin{eqnarray}
   P_0(t) &&= |\langle 0|\psi(t)\rangle|^2 = \cos^4(Jt/\hbar)\\
-  P_1(t) &&= |\langle 1|\psi(t)\rangle|^2 = \sin^2(2Jt/\hbar)\\
+  P_1(t) &&= |\langle 1|\psi(t)\rangle|^2 =\frac{1}{2} \sin^2(2Jt/\hbar)\\
   P_2(t) &&= |\langle 2|\psi(t)\rangle|^2 = \sin^4(Jt/\hbar)
 \end{eqnarray}
 
