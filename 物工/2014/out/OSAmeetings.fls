@@ -1160,4 +1160,8 @@ INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/lm/rm-lmri12.tfm
 INPUT c:/texlive/2021/texmf-dist/fonts/tfm/ptex-fonts/standard/tmin10.tfm
 INPUT c:/texlive/2021/texmf-dist/fonts/tfm/ptex-fonts/standard/tmin10.tfm
 OUTPUT out/OSAmeetings.dvi
+INPUT ./image.png
+INPUT ./image.png
+INPUT image.png
+INPUT extractbb -B cropbox -O image.png
 INPUT out/OSAmeetings.aux

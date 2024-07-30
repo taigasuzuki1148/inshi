@@ -1,11 +1,11 @@
 # Fdb version 3
-["dvipdf"] 1722321828 "out/OSAmeetings.dvi" "out/OSAmeetings.pdf" "out/OSAmeetings" 1722321829
-  "out/OSAmeetings.dvi" 1722321827 23204 41398782e003b87e05e09a7303666656 "latex"
+["dvipdf"] 1722326783 "out/OSAmeetings.dvi" "out/OSAmeetings.pdf" "out/OSAmeetings" 1722326785
+  "out/OSAmeetings.dvi" 1722326783 30604 56d95816ee500c9d997294ae29f37743 "latex"
   (generated)
   "out/OSAmeetings.pdf"
-["latex"] 1722321823 "c:/Users/taiga/Desktop/â@ééëŒçÙ/inshi/ï®çH/2014/OSAmeetings.tex" "out/OSAmeetings.dvi" "OSAmeetings" 1722321829
-  "OSAmeetings.tex" 1722321821 10196 167435f9169f9a9608d93759c9143252 ""
-  "c:/Users/taiga/Desktop/â@ééëŒçÙ/inshi/ï®çH/2014/OSAmeetings.tex" 1722321821 10196 167435f9169f9a9608d93759c9143252 ""
+["latex"] 1722326779 "c:/Users/taiga/Desktop/â@ééëŒçÙ/inshi/ï®çH/2014/OSAmeetings.tex" "out/OSAmeetings.dvi" "OSAmeetings" 1722326785
+  "OSAmeetings.tex" 1722326778 12890 070acc7418659fba8488e09bf4a4ed3a ""
+  "c:/Users/taiga/Desktop/â@ééëŒçÙ/inshi/ï®çH/2014/OSAmeetings.tex" 1722326778 12890 070acc7418659fba8488e09bf4a4ed3a ""
   "c:/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1631505127 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2021/texmf-dist/fonts/tfm/ptex-fonts/jis/jis.tfm" 1631509821 468 53f854284f6afa6c36aaa2d1090ecc12 ""
   "c:/texlive/2021/texmf-dist/fonts/tfm/ptex-fonts/jis/jisg.tfm" 1631509821 468 53f854284f6afa6c36aaa2d1090ecc12 ""
@@ -198,12 +198,13 @@
   "c:/texlive/2021/texmf-dist/web2c/texmf.cnf" 1631506401 40042 fe981136cbb5f3715ab1b0e46e3d3892 ""
   "c:/texlive/2021/texmf-var/web2c/eptex/platex.fmt" 1631529621 2754375 7f63b3606128a22220304d912bdf6bf5 ""
   "c:/texlive/2021/texmf.cnf" 1631529348 713 e69b156964470283e0530f5060668171 ""
+  "image.png" 1722326754 108795 e3b371ea77e3a0b35487306299fe42ed ""
   "jabbrv-ltwa-all.ldf" 1650768242 49107 ef89484545be005458b7162f37634c99 ""
   "jabbrv-ltwa-en.ldf" 1650768242 268657 c239d07b7cc89e14f920c5fc8ed8d12e ""
   "jabbrv.sty" 1650768242 15480 2106da179daf9d5a102407956ba23e0c ""
   "osameet3.sty" 1684717046 8105 5f6f28f3ae7567899e95f0d7231b5691 ""
-  "out/OSAmeetings.aux" 1722321827 652 03fa3514a7b7f3522d9d7460e7954812 "latex"
+  "out/OSAmeetings.aux" 1722326783 831 31d438018aebf2d0c81f6e1c8b15672a "latex"
   (generated)
-  "out/OSAmeetings.aux"
-  "out/OSAmeetings.dvi"
   "out/OSAmeetings.log"
+  "out/OSAmeetings.dvi"
+  "out/OSAmeetings.aux"

@@ -237,7 +237,7 @@ $\sigma_2$の位置は$\theta=\pi/2-\psi$であり，まとめると
 \begin{eqnarray}
   |\langle \psi_R| \psi(t)\rangle|^2 = \sin^2(-Jt/\hbar)
 \end{eqnarray}
-\subsection*{\large{[4]}}
+\subsection*{\large{[4.1]}}
 それぞれの粒子を合成して，まず，二つの粒子が左にいる場合は
 \begin{eqnarray}
   |0\rangle = |\psi_L\rangle|\psi_L\rangle
@@ -289,5 +289,86 @@ $\sigma_2$の位置は$\theta=\pi/2-\psi$であり，まとめると
   \end{bmatrix}
 \end{eqnarray}
 とするとたしかに与えられた行列を得る．
+\subsection*{\large{[4.2]}}
+この固有値を求めれば良い．よって，
+\begin{eqnarray}
+  \det
+  \begin{bmatrix}
+    \lambda & \sqrt{2}J & 0\\
+    \sqrt{2}J & \lambda & \sqrt{2}J\\
+    0 & \sqrt{2}J & \lambda
+  \end{bmatrix}
+  =0
+\end{eqnarray}
+より，$0,\pm 2J$
+となる．
+\subsection*{\large{[4.3]}}
+\begin{eqnarray}
+  |\psi(t)\rangle &&= \exp( -iHt/\hbar )|0\rangle = \left( \sum_{n=0}^{\infty}\frac{1}{n!}(-iHt/\hbar)^n  \right)|0\rangle\\
+  &&= \left( \sum_{n=0}^{\infty}\frac{1}{(2n)!}(-iHt/\hbar)^{2n} + \sum_{n=0}^{\infty}\frac{1}{(2n+1)!}(-iHt/\hbar)^{2n+1} \right)|0\rangle
+\end{eqnarray}
+であり，
+\begin{eqnarray}
+  A:= 
+  \begin{bmatrix}
+    0 & 1& 0\\
+    1 & 0 & 1\\
+    0 & 1& 0
+  \end{bmatrix},\quad
+  B:=
+  \begin{bmatrix}
+    1 & 0 & 1\\
+    0 & 2& 0\\
+    1 & 0 & 1
+  \end{bmatrix}
+\end{eqnarray}
+とする．ここで，
+\begin{eqnarray}
+  A^{2n+1} = 2^nA, \quad A^{2n} = A A^{2n-1} = 2^{n-1}A^2 = 2^{n-1}B 
+\end{eqnarray}
+であることを利用して
+\begin{eqnarray}
+  \sum_{n=0}^{\infty}\frac{1}{(2n)!}(-iHt/\hbar)^{2n} &&= I + \sum_{n=1}^{\infty} \frac{1}{(2n)!}(-1)^n (-\sqrt{2}J t/\hbar)^{2n}2^{n-1} B\\
+  &&= I + \frac{1}{2}\sum_{n=1}^{\infty} \frac{1}{(2n)!}(-1)^n (-2J t/\hbar)^{2n} B\\
+  &&= I + \frac{1}{2}\left( \cos(-2J t/\hbar)-1 \right)B\\
+  \sum_{n=0}^{\infty}\frac{1}{(2n+1)!}(-iHt/\hbar)^{2n+1} &&= \sum_{n=0}^{\infty} \frac{-i}{(2n+1)!}(-1)^n (-\sqrt{2}J t/\hbar)^{2n+1}2^n A\\
+  &&= \frac{-i}{\sqrt{2}}\sum_{n=0}^{\infty} \frac{-i}{(2n+1)!}(-1)^n (-2J t/\hbar)^{2n+1} A\\
+  &&= -\frac{i}{\sqrt{2}}\sin(-2J t/\hbar)A
+\end{eqnarray}
+となるため
+\begin{eqnarray}
+  |\psi(t)\rangle &&= \left[  I + \frac{1}{2}\left( \cos(2J t/\hbar)-1 \right)B + \frac{i}{\sqrt{2}}\sin(2J t/\hbar)A \right]|0\rangle\\
+  &&=
+  \begin{bmatrix}
+    \frac{1}{2}(\cos(2Jt/\hbar)+1) & i \sin(2Jt/\hbar) & \frac{1}{2}(\cos(2Jt/\hbar)-1)\\
+    i \sin(2Jt/\hbar) & \cos(2Jt/\hbar) & i \sin(2Jt/\hbar)\\
+    \frac{1}{2}(\cos(2Jt/\hbar)-1) & i \sin(2Jt/\hbar) & \frac{1}{2}(\cos(2Jt/\hbar)+1)
+  \end{bmatrix}
+  \begin{bmatrix}
+    1\\
+    0\\
+    0
+  \end{bmatrix}
+  =
+  \begin{bmatrix}
+    \frac{1}{2}(\cos(2Jt/\hbar)+1) \\
+    i \sin(2Jt/\hbar)\\
+    \frac{1}{2}(\cos(2Jt/\hbar)-1) 
+  \end{bmatrix}
+\end{eqnarray}
+となる．よって，確率は
+\begin{eqnarray}
+  P_0(t) &&= |\langle 0|\psi(t)\rangle|^2 = \cos^4(Jt/\hbar)\\
+  P_1(t) &&= |\langle 1|\psi(t)\rangle|^2 = \sin^2(2Jt/\hbar)\\
+  P_2(t) &&= |\langle 2|\psi(t)\rangle|^2 = \sin^4(Jt/\hbar)
+\end{eqnarray}
+
+\begin{figure}[H]
+  \begin{center}
+  \includegraphics[width=100mm]{image.png}
+  \caption{それぞれの様子．緑が$P_0(t)$,青が$P_2(t)$,緑が$P_1(t)$}
+  \end{center}
+\end{figure}
+  
 
 \end{document}
