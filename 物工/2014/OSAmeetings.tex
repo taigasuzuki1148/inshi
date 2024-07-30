@@ -468,6 +468,53 @@ $N$個の粒子からなるハミルトニアンは
 \end{eqnarray}
 となる．
 \subsection*{\large{[2]}}
+\begin{eqnarray}
+  \tilde{k} = k_1+ik_2
+\end{eqnarray}
+を代入すると
+\begin{eqnarray}
+  \bm{E}(z,t) = \Re\left[ \tilde{\bm{E}}_0 \exp\left\{ i( ( k_1+ik_2)z-\omega t ) \right\} \right] =  \Re\left[ \tilde{\bm{E}}_0\exp\left( -k_2z \right) \exp\left\{ i( k_1z-\omega t ) \right\} \right] 
+\end{eqnarray}
+であるため，
+\begin{eqnarray}
+  \frac{1}{e} = \exp (-k_2z)
+\end{eqnarray}
+となるような$z$を求めれば良い．よって，
+\begin{eqnarray}
+  z = \frac{1}{k_2}
+\end{eqnarray}
+\subsection*{\large{[3]}}
+代入すると
+\begin{eqnarray}
+  \tilde{k}^2 =\epsilon\mu\omega^2 + \mu \sigma \omega i
+\end{eqnarray}
+であり，
+\begin{eqnarray}
+  \tilde{k}^2 = k_1^2-k_2^2 + i(2k_1k_2)
+\end{eqnarray}
+であるため，これらより二次方程式を解いて
+\begin{eqnarray}
+  k_1 = \left[ \frac{\epsilon\mu \omega^2+\sqrt{ (\epsilon\mu \omega^2)^2 + (\mu\sigma\omega)^2 }}{2} \right]^{1/2},\quad k_2 = \left[ \frac{-\epsilon\mu \omega^2+\sqrt{ (\epsilon\mu \omega^2)^2 + (\mu\sigma\omega)^2 }}{2} \right]^{1/2}
+\end{eqnarray}
+よって整理すると
+\begin{eqnarray}
+  k_1 = \sqrt{\frac{\epsilon\mu\omega^2}{2}}\left[ 1+\sqrt{1+\left(\frac{\sigma}{\epsilon\omega}\right)^2} \right]^{1/2},\quad k_2 = \sqrt{\frac{\epsilon\mu\omega^2}{2}}\left[ -1+\sqrt{1+\left(\frac{\sigma}{\epsilon\omega}\right)^2} \right]^{1/2}
+\end{eqnarray}
+となる．
+\subsection*{\large{[4]}}
+$d=1/k_2$であるため，
+\begin{eqnarray}
+  d = \sqrt{\frac{2}{\epsilon\mu\omega^2}}\left[ -1+\sqrt{1+\left(\frac{\sigma}{\epsilon\omega}\right)^2} \right]^{-1/2}
+\end{eqnarray}
+となる．ここで，$\sigma\gg \epsilon\omega$のとき，
+\begin{eqnarray}
+  d \sim \sqrt{\frac{2}{\epsilon\mu\omega^2}} \left[ -1+\frac{\sigma}{\epsilon\omega} \right]^{-1/2}\sim \sqrt{\frac{2}{\epsilon\mu\omega^2}}\sqrt{\frac{\epsilon\omega}{\sigma}} = \sqrt{\frac{2}{\mu\omega\sigma}}
+\end{eqnarray}
+であり，$\sigma\ll \epsilon\omega$のとき，
+\begin{eqnarray}
+  d \sim \sqrt{\frac{2}{\epsilon\mu\omega^2}} \left[\frac{1}{2}\left(\frac{\sigma}{\epsilon\omega}\right)^2 \right]^{-1/2} = \sqrt{\frac{2}{\epsilon\mu\omega^2}}\sqrt{2}\frac{\epsilon\omega}{\sigma}=2\sqrt{\frac{\epsilon}{\mu\sigma^2}}
+\end{eqnarray}
+\subsection*{\large{[5]}}
 
 
 \end{document}
