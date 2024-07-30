@@ -190,7 +190,7 @@ $\sigma_2$の位置は$\theta=\pi/2-\psi$であり，まとめると
 であるため直交している．\\
 また，
 \begin{eqnarray}
-  H \psi_L(x) = 0,\quad H \psi_R(x) = J\psi_L(x)
+  H \psi_L(x) = J\psi_R(x),\quad H \psi_R(x) = J\psi_L(x)
 \end{eqnarray}
 であり，
 \begin{eqnarray}
@@ -210,23 +210,37 @@ $\sigma_2$の位置は$\theta=\pi/2-\psi$であり，まとめると
   H = J
   \begin{bmatrix}
     0 & 1\\
-    0 & 0
+    1 & 0
   \end{bmatrix}
+  =J\sigma_x
 \end{eqnarray}
 \subsection*{\large{[3]}}
 \begin{eqnarray}
-  |\psi(t)\rangle = \exp\left( -i\frac{H}{\hbar}t \right)|\psi_L\rangle =
+  |\psi(t)\rangle &&= \exp\left( -i\frac{J\sigma_x}{\hbar}t \right)|\psi_L\rangle =
+  \left( \cos(Jt/\hbar)\sigma_I-i\sin(Jt/\hbar)\sigma_X \right)
   \begin{bmatrix}
-    0 & \exp\left( -iJ{\hbar}t \right)\\
-    0 & 0
+    1\\
+    0
+  \end{bmatrix}\\
+  &&=
+  \begin{bmatrix}
+    \cos(Jt/\hbar) & -i\sin(Jt/\hbar)\\
+    -i\sin(Jt/\hbar) & \cos(Jt/\hbar)
   \end{bmatrix}
   \begin{bmatrix}
     1\\
     0
+  \end{bmatrix}\\
+  &&= 
+  \begin{bmatrix}
+    \cos(Jt/\hbar)\\
+    -i\sin(Jt/\hbar)
   \end{bmatrix}
-  =0
 \end{eqnarray}
-となり，確率は$0$である．
+となり，確率は
+\begin{eqnarray}
+  |\langle \psi_R| \psi(t)\rangle|^2 = \sin^2(Jt/\hbar)
+\end{eqnarray}
 \subsection*{\large{[4]}}
 
 
