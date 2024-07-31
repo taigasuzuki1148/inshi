@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.141592653-p3.9.0-210218-2.6 (utf8.sjis) (TeX Live 2021/W32TeX) (preloaded format=platex 2021.9.13)  31 JUL 2024 08:59
+This is e-pTeX, Version 3.141592653-p3.9.0-210218-2.6 (utf8.sjis) (TeX Live 2021/W32TeX) (preloaded format=platex 2021.9.13)  31 JUL 2024 09:45
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -836,7 +836,7 @@ Overfull \hbox (42.26817pt too wide) in alignment at lines 120--122
 [3] [4] [5] [6]
 File: image.png Graphic file (type bmp)
 <image.png>
-[7] [8] [9] [10] [11] [12] (out/OSAmeetings.aux) ) 
+[7] [8] [9] [10] [11] [12] [13] (out/OSAmeetings.aux) ) 
 Here is how much of TeX's memory you used:
  28875 strings out of 479062
  569648 string characters out of 5869667
@@ -846,4 +846,4 @@ Here is how much of TeX's memory you used:
  993 hyphenation exceptions out of 8191
  84i,13n,83p,455b,381s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on out/OSAmeetings.dvi (12 pages, 46872 bytes).
+Output written on out/OSAmeetings.dvi (13 pages, 53020 bytes).

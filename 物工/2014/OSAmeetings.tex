@@ -506,15 +506,66 @@ $d=1/k_2$であるため，
 \begin{eqnarray}
   d = \sqrt{\frac{2}{\epsilon\mu\omega^2}}\left[ -1+\sqrt{1+\left(\frac{\sigma}{\epsilon\omega}\right)^2} \right]^{-1/2}
 \end{eqnarray}
-となる．ここで，$\sigma\gg \epsilon\omega$のとき，
+となる．ここで，$\sigma\gg \epsilon\omega$のとき，(良導体のとき)
 \begin{eqnarray}
   d \sim \sqrt{\frac{2}{\epsilon\mu\omega^2}} \left[ -1+\frac{\sigma}{\epsilon\omega} \right]^{-1/2}\sim \sqrt{\frac{2}{\epsilon\mu\omega^2}}\sqrt{\frac{\epsilon\omega}{\sigma}} = \sqrt{\frac{2}{\mu\omega\sigma}}
 \end{eqnarray}
-であり，$\sigma\ll \epsilon\omega$のとき，
+であり，$\sigma\ll \epsilon\omega$のとき，(不良導体のとき)
 \begin{eqnarray}
   d \sim \sqrt{\frac{2}{\epsilon\mu\omega^2}} \left[\frac{1}{2}\left(\frac{\sigma}{\epsilon\omega}\right)^2 \right]^{-1/2} = \sqrt{\frac{2}{\epsilon\mu\omega^2}}\sqrt{2}\frac{\epsilon\omega}{\sigma}=2\sqrt{\frac{\epsilon}{\mu\sigma^2}}
 \end{eqnarray}
 \subsection*{\large{[5]}}
+今回の系では$z$方向に電磁波が進むため，$E_z=0,B_z=0$としてよい．また，系の設定より$E_y=B_x=0$である．よってそれぞれのMaxwell方程式は$z$成分しか持たないため
+\begin{eqnarray}
+  \frac{\partial}{\partial z}E_x = -\mu\frac{\partial}{\partial t}H_y = -\frac{\partial}{\partial t}B_y
+\end{eqnarray}
+であり，
+\begin{eqnarray}
+  B_y = \frac{\tilde{k}}{\omega}
+\end{eqnarray}
+が成立する．
+ここで，
+\begin{eqnarray}
+  \bm{B} = \Re\left[ \tilde{\bm{B}}_0 \exp\left\{ i(\tilde{k}z-\omega t) \right\} \right]
+\end{eqnarray}
+とすると，
+\begin{eqnarray}
+  \bm{B} = \Re \left[ \tilde{\bm{E}}_0 \frac{1}{\omega}(k_1+ik_2)\exp\left\{ i(\tilde{k}z-\omega t) \right\} \right]
+\end{eqnarray}
+でありこれより位相の遅れは
+\begin{eqnarray}
+  \phi= \tan^{-1}\left( \frac{k_2}{k_1} \right)
+\end{eqnarray}
+である．また，
+\begin{eqnarray}
+  \frac{k_2}{k_1} = \sqrt{ \frac{-\epsilon\mu \omega^2+\sqrt{ (\epsilon\mu \omega^2)^2 + (\mu\sigma\omega)^2 }}{\epsilon\mu \omega^2+\sqrt{ (\epsilon\mu \omega^2)^2 + (\mu\sigma\omega)^2 }} }= \sqrt{ \frac{-1+ \sqrt{1+(\sigma/\epsilon\omega)^2}}{1+ \sqrt{1+(\sigma/\epsilon\omega)^2}} }
+\end{eqnarray}
+となる．よって，
+$\frac{\sigma}{\epsilon\omega}\to\infty$の時は
+\begin{eqnarray}
+  \frac{k_2}{k_1} \to 1,\quad \phi= \frac{\pi}{4},\frac{5\pi}{4}
+\end{eqnarray}
+であり，
+$\frac{\sigma}{\epsilon\omega}\to 0$の時は
+\begin{eqnarray}
+  \frac{k_2}{k_1} \to 0,\quad \phi= 0,\pi
+\end{eqnarray}
+である．
+\subsection*{\large{[6]}}
+ポインティングベクトルの時間平均は
+\begin{eqnarray}
+  \frac{1}{\mu}\langle \Re E \Re B \rangle &&= \frac{1}{4\mu}\langle ( \tilde{\bm{E}}e^{-i\omega t} +\tilde{\bm{E}}^{*}e^{i\omega t})( \frac{k_1+ik_2}{\omega}\tilde{\bm{E}}e^{-i\omega t} + \frac{k_1-ik_2}{\omega}\tilde{\bm{E}}^{*}e^{i\omega t} )\rangle\\
+  &&=\frac{1}{4\mu}|\tilde{\bm{E}}|^2 \left( \frac{k_1-ik_2}{\omega} + \frac{k_1+ik_2}{\omega} \right) = \frac{k_1}{2\mu\omega} |\tilde{\bm{E}}|^2
+\end{eqnarray}
+であり，代入すると
+\begin{eqnarray}
+  \frac{1}{2\mu\omega} |\tilde{\bm{E}}|^2 \sqrt{\frac{\epsilon\mu\omega^2}{2}}\left[ 1+\sqrt{1+\left(\frac{\sigma}{\epsilon\omega}\right)^2} \right]^{1/2}
+\end{eqnarray}
+\subsection*{\large{[7]}}
+\begin{eqnarray}
+  J^2\sigma = \sigma^3 \bm{E}^2?
+\end{eqnarray}
+\subsection*{\large{[8]}}
 
 
 \end{document}
