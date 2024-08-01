@@ -299,7 +299,51 @@ $\sigma_2$の位置は$\theta=\pi/2-\psi$であり，まとめると
 \end{eqnarray}
 より，$0,\pm 2J$
 となる．
+
 \subsection*{\large{[4.3]}}
+\textbf{解答例0}\\
+まず，それぞれの固有値と固有ベクトルは
+\begin{eqnarray}
+  E_0=0: \quad |u_0\rangle&&=
+  \begin{bmatrix}
+    1/\sqrt{2}\\
+    0\\
+    -1/\sqrt{2}
+  \end{bmatrix}\\
+  E_1=-2J: \quad |u_1\rangle&&=
+  \begin{bmatrix}
+    1/2\\
+    1/\sqrt{2}\\
+    1/2
+  \end{bmatrix}\\
+  E_2=2J: \quad |u_2\rangle&&=
+  \begin{bmatrix}
+    -1/2\\
+    1/\sqrt{2}\\
+    -1/2
+  \end{bmatrix}
+\end{eqnarray}
+であり，固有ベクトルは完全系であるため$|\psi(t)\rangle$は
+\begin{eqnarray}
+  |\psi(t)\rangle = c_0\exp(-iE_0t/\hbar)|u_0\rangle + c_1\exp(-iE_1t/\hbar)|u_1\rangle +c_1\exp(-iE_1t/\hbar)|u_1\rangle
+\end{eqnarray}
+であり，初期条件より
+\begin{eqnarray}
+  |\psi(0)\rangle = |0\rangle
+\end{eqnarray}
+であるため，
+\begin{eqnarray}
+  |0\rangle = c_0|u_0\rangle+c_1|u_1\rangle+c_2|u_2\rangle
+\end{eqnarray}
+であり，これを解いて
+\begin{eqnarray}
+  c_0 = 1/\sqrt{2},\quad c_1 = 1/2,\quad c_2 = -1/2
+\end{eqnarray}
+となるため，
+\begin{eqnarray}
+  |\psi(t)\rangle = \frac{1}{\sqrt{2}}|u_0\rangle + \frac{1}{2}\exp\left( -i(-2J)\frac{t}{\hbar} \right)|u_1\rangle-\frac{1}{2}
+\end{eqnarray}
+\textbf{解答例1}\\
 \begin{eqnarray}
   |\psi(t)\rangle &&= \exp( -iHt/\hbar )|0\rangle = \left( \sum_{n=0}^{\infty}\frac{1}{n!}(-iHt/\hbar)^n  \right)|0\rangle\\
   &&= \left( \sum_{n=0}^{\infty}\frac{1}{(2n)!}(-iHt/\hbar)^{2n} + \sum_{n=0}^{\infty}\frac{1}{(2n+1)!}(-iHt/\hbar)^{2n+1} \right)|0\rangle
@@ -366,6 +410,76 @@ $\sigma_2$の位置は$\theta=\pi/2-\psi$であり，まとめると
   \caption{それぞれの様子．緑が$P_0(t)$,青が$P_2(t)$,緑が$P_1(t)$}
   \end{center}
 \end{figure}
+
+\textbf{解答例2}\\
+まず，それぞれの固有値と固有ベクトルは
+\begin{eqnarray}
+  0: \quad \bm{u}_1&&=
+  \begin{bmatrix}
+    1/\sqrt{2}\\
+    0\\
+    -1/\sqrt{2}
+  \end{bmatrix}\\
+  -2J: \quad \bm{u}_2&&=
+  \begin{bmatrix}
+    1/2\\
+    1/\sqrt{2}\\
+    1/2
+  \end{bmatrix}\\
+  2J: \quad \bm{u}_3&&=
+  \begin{bmatrix}
+    -1/2\\
+    1/\sqrt{2}\\
+    -1/2
+  \end{bmatrix}
+\end{eqnarray}
+であり，
+\begin{eqnarray}
+  U = 
+  \begin{bmatrix}
+    1/\sqrt{2} & 1/2 & -1/2\\
+    0 & 1/\sqrt{2} & 1/\sqrt{2}\\
+    -1/\sqrt{2} & 1/2 & -1/2
+  \end{bmatrix}
+\end{eqnarray}
+とすると，ユニタリ行列であるため$U^{-1}=U^{T}$が成立して，
+\begin{eqnarray}
+  U^{T}HU =
+  \begin{bmatrix}
+    0 &  & \\
+     & -2J & \\
+     & & 2J
+  \end{bmatrix}=D
+\end{eqnarray}
+とすると
+\begin{eqnarray}
+  D^n = U^{T} H^n U
+\end{eqnarray}
+であり，
+\begin{eqnarray}
+  \exp(\alpha H) = \sum_{n=0}^{\infty} \frac{(\alpha H)^n}{n!} = U \sum_{n=0}^{\infty} \frac{(\alpha D)^n}{n!} U^{T} =U
+  \begin{bmatrix}
+    1 &  & \\
+     & \exp(-2\alpha J) & \\
+     & & \exp(2\alpha J)
+  \end{bmatrix}U^{T}
+\end{eqnarray}
+である．よって
+\begin{eqnarray}
+  |\psi(t)\rangle = \exp(-iHt/\hbar)|0\rangle = U
+  \begin{bmatrix}
+    1 &  & \\
+     & \exp(-2(-it/\hbar) J) & \\
+     & & \exp(2(-it/\hbar)  J)
+  \end{bmatrix}U^{T}
+  \begin{bmatrix}
+    1 \\
+    0\\
+    0
+  \end{bmatrix}
+\end{eqnarray}
+として問題を解くことができる．
+
 \subsection*{\large{[5.1]}}
 \begin{eqnarray}
   H|0\rangle = -A|0\rangle, H|2\rangle = -A|2\rangle
