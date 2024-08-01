@@ -680,18 +680,34 @@ $\frac{\sigma}{\epsilon\omega}\to 0$の時は
 \subsection*{\large{[6]}}
 ポインティングベクトルの時間平均は
 \begin{eqnarray}
-  \frac{1}{\mu}\langle \Re E \Re B \rangle &&= \frac{1}{4\mu}\langle ( \tilde{\bm{E}}e^{-i\omega t} +\tilde{\bm{E}}^{*}e^{i\omega t})( \frac{k_1+ik_2}{\omega}\tilde{\bm{E}}e^{-i\omega t} + \frac{k_1-ik_2}{\omega}\tilde{\bm{E}}^{*}e^{i\omega t} )\rangle\\
-  &&=\frac{1}{4\mu}|\tilde{\bm{E}}|^2 \left( \frac{k_1-ik_2}{\omega} + \frac{k_1+ik_2}{\omega} \right) = \frac{k_1}{2\mu\omega} |\tilde{\bm{E}}|^2
+  \frac{1}{\mu}\langle \Re E \Re B \rangle &&= \frac{1}{4\mu}\langle ( \tilde{\bm{E}}_0e^{-i\omega t} +\tilde{\bm{E}}_0^{*}e^{i\omega t})( \frac{k_1+ik_2}{\omega}\tilde{\bm{E}}_0e^{-i\omega t} + \frac{k_1-ik_2}{\omega}\tilde{\bm{E}}^{*}_0e^{i\omega t} )\rangle\\
+  &&=\frac{1}{4\mu}|\tilde{\bm{E}}_0|^2 \left( \frac{k_1-ik_2}{\omega} + \frac{k_1+ik_2}{\omega} \right) = \frac{k_1}{2\mu\omega} |\tilde{\bm{E}}_0|^2
 \end{eqnarray}
 であり，代入すると
 \begin{eqnarray}
-  \frac{1}{2\mu\omega} |\tilde{\bm{E}}|^2 \sqrt{\frac{\epsilon\mu\omega^2}{2}}\left[ 1+\sqrt{1+\left(\frac{\sigma}{\epsilon\omega}\right)^2} \right]^{1/2}
+  \frac{1}{2\mu\omega} |\tilde{\bm{E}}_0|^2 \sqrt{\frac{\epsilon\mu\omega^2}{2}}\left[ 1+\sqrt{1+\left(\frac{\sigma}{\epsilon\omega}\right)^2} \right]^{1/2}
 \end{eqnarray}
 \subsection*{\large{[7]}}
 \begin{eqnarray}
-  J^2\sigma = \sigma^3 \bm{E}^2?
+  P = RI^2 = \bm{E}\cdot\bm{J}
 \end{eqnarray}
 \subsection*{\large{[8]}}
-
+\begin{eqnarray}
+  \langle Q\rangle = \frac{\sigma}{2}\langle \bm{E}\cdot\bm{E}^{*}\rangle = \frac{\sigma}{2}\exp(-2k_2z)|\tilde{\bm{E}}_0|^2
+\end{eqnarray}
+であり，
+\begin{eqnarray}
+  \int_{0}^{\infty}\langle Q\rangle dz = \frac{\sigma}{4k_2}|\tilde{\bm{E}}_0|^2
+\end{eqnarray}
+ここで，
+\begin{eqnarray}
+  k_1 k_2 = \frac{\sigma\mu\omega}{2}
+\end{eqnarray}
+であるため，
+\begin{eqnarray}
+  |\langle\bm{S}\rangle|&&=\frac{\sigma}{2}\exp(-2k_2z)|\tilde{\bm{E}}_0|^2\\
+  &&=\int_{0}^{\infty}\langle Q\rangle dz=\frac{\sigma}{4k_2}|\tilde{\bm{E}}_0|^2
+\end{eqnarray}
+となっており，入射したエネルギー$=$媒質内で発生したジュール熱という関係が求まる．
 
 \end{document}
