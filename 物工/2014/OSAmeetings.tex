@@ -87,11 +87,11 @@
 \subsection*{\large{[5]}}
 反発が終わった直後では，
 \begin{eqnarray}
-  \omega_f = \frac{v_f}{a}
+  \omega_f = -\frac{v_f}{a}
 \end{eqnarray}
 の関係が成立するため，
 \begin{eqnarray}
-  l = I \frac{v_f}{a} - ma v_f , \quad\therefore v_f = \frac{5l}{3ma}
+  l = -I \frac{v_f}{a} - ma v_f , \quad\therefore v_f = -\frac{5l}{7ma}
 \end{eqnarray}
 である．\\
 また，$v_f=0$のとき，$l=0$であるため，
@@ -168,18 +168,15 @@ $\sigma_2$の位置は$\theta=\pi/2-\psi$であり，まとめると
 \begin{eqnarray}
   \psi_S: -J ,\quad \psi_A: J
 \end{eqnarray}
-である．(後の問題と辻褄を合わせるため，理由は分からない．)
+である．なお，結合性軌道は対称になり，反結合軌道は反対称になりがちである．
 \subsection*{\large{[2]}}
 波動関数は実関数であるため，
 \begin{eqnarray}
   \int_{-\infty}^{\infty} \psi^{*}_L(x)\psi_R(x)dx &&= \frac{1}{2}\int_{-\infty}^{\infty} \left( \psi^{*}_S + \psi^{*}_A \right)\left( \psi_S - \psi_A \right)dx\\
-  &&= \frac{1}{2}\int_{-\infty}^{\infty} \left( \psi_S^2 - \psi^2_A + \psi_A\psi_S - \psi_S \psi_A \right)dx = \frac{1}{2}\int_{-\infty}^{\infty} \left( \psi_S^2 - \psi^2_A\right)dx 
+  &&= \frac{1}{2}\int_{-\infty}^{\infty} \left( |\psi_S|^2 - |\psi_A|^2 + \psi_A^{*}\psi_S - \psi_S \psi_A^{*} \right)dx\\
+  &&=  \frac{1}{2}\int_{-\infty}^{\infty} \left( |\psi_S|^2 - |\psi_A|^2 \right)dx
 \end{eqnarray}
-ここでグラフより
-\begin{eqnarray}
-  \psi_S^2 - \psi^2_A =0
-\end{eqnarray}
-より，
+ここで規格化条件とそれぞれの$\psi_A,\psi_S$は直交しているため
 \begin{eqnarray}
   \int_{-\infty}^{\infty} \psi^{*}_L(x)\psi_R(x)dx=0
 \end{eqnarray}

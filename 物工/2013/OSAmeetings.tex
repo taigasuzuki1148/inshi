@@ -45,8 +45,61 @@
 \title{東大物理工学科 2013}
 
 \author{21B00817 鈴木泰雅,\authormark{1}}
-\section*{\Large{第一問}}
+\section*{\Large{第四問}}
 \subsection*{\large{[1]}}
-
+それぞれ周期境界条件があるため，
+\begin{eqnarray}
+  p_{x,1} = \frac{2\pi\hbar}{L}n_1,\cdots
+\end{eqnarray}
+のように$p_{x,i},p_{y,i}$それぞれに関して周期的境界条件が成立する．つまり運動量空間において，$\frac{L}{2\pi\hbar}$倍をすると量子状態の数が求められるため
+$E$よりも小さいエネルギーの量子状態は
+\begin{eqnarray}
+  \Omega(E)=\frac{L^{4}}{(2\pi\hbar)^4}\cdot (半径\sqrt{2mE}の4次元球の体積)
+\end{eqnarray}
+である．よって，$E\sim E+dE$にある量子状態の数は
+\begin{eqnarray}
+  W(E) = \frac{d\Omega(E)}{dE}dE = \frac{L^{4}}{(2\pi\hbar)^4}\cdot (半径\sqrt{2mE}の4次元球の表面積)\cdot 2mE \frac{dE}{E}
+\end{eqnarray}
+である．よって示せた．
+\subsection*{\large{[2]}}
+2次元球(円)の体積は図より
+\begin{eqnarray}
+  \int_{-r}^{r} dq_1 2\sqrt{r^2-q_1^2}
+\end{eqnarray}
+で求まる．ここで，2次元球の表面積はこの体積を$r$で微分したものだから
+\begin{eqnarray}
+  S_2(r) = \int_{-r}^{r} dq_1 \frac{2r}{\sqrt{r^2-q_1^2}}
+\end{eqnarray}
+である．同様にして3次元球の体積は$q_1=x,q_2=y$として見立てることによって
+\begin{eqnarray}
+  \int_{-r}^{r}dq_1 \int_{-\sqrt{r^2-q_1^2}}^{\sqrt{r^2-q_1^2}}dq_2 2\sqrt{r^2-q_1^2-q_2^2}
+\end{eqnarray}
+である．これを$r$で微分することによって$S_3(r)$を導ける．同様にして$S_4(r)$も導ける．
+\subsection*{\large{[3]}}
+$v_1$を満たす量子状態の個数を$W'$とすると等確率の原理から
+\begin{eqnarray}
+  P(v_1)dv_1 = \frac{W'}{W(E)}
+\end{eqnarray}
+である．ただし今回は規格化をしなくても良いため
+\begin{eqnarray}
+  P(v_1)dv_1 = W'
+\end{eqnarray}
+として良い．全体のエネルギーは
+\begin{eqnarray}
+  E = \frac{1}{2}mv_1^2 + E_2
+\end{eqnarray}
+であり，全体の量子状態は$E_2$に関してのみ数え上げすればよい．これは全体のエネルギー
+\begin{eqnarray}
+  \epsilon = E-\frac{1}{2}mv_1^2
+\end{eqnarray}
+として1粒子の2次元状態であるため
+\begin{eqnarray}
+  \Omega'(\epsilon) = \frac{L^2}{(2\pi\hbar)^2}\pi(2m\epsilon)
+\end{eqnarray}
+よって，
+\begin{eqnarray}
+  W' = \frac{d\Omega'}{d\epsilon}d\epsilon = (定数)\cdot (-mv_1)dv_1
+\end{eqnarray}
+である．よって，$P(v_1)= v_1$?
 
 \end{document}
