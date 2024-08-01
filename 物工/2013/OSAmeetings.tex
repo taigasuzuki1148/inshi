@@ -74,8 +74,44 @@ $r$成分のラグランジュ方程式より
 \end{eqnarray}
 であるため，
 \begin{eqnarray}
-  \mu \ddot{r} = -\frac{d}{d r} \left( \mu r \dot{\phi}^2 +U(r) \right)  
+  \mu \ddot{r} = -\frac{d}{d r} \left( \mu r \dot{\phi}^2 +U(r) \right) =  -\frac{d}{d r} \left( \frac{1}{2}\frac{l^2}{\mu r^2} +U(r) \right) 
 \end{eqnarray}
+この物理的な意味としては大きなポテンシャル(一般化したポテンシャル)と見なすことができ，第一項は遠心力によるポテンシャル，第二項は外力によるポテンシャルである．
+
+\subsection*{\large{[4]}}
+両辺に$\dot{r}$を書けると
+\begin{eqnarray}
+  \mu\dot{r}\ddot{r} = -\frac{d}{dr}\frac{dr}{dt} \left( \frac{1}{2}\frac{l^2}{\mu r^2} +U(r) \right)  = - \frac{d}{dt}\left( \frac{1}{2}\frac{l^2}{\mu r^2} +U(r) \right) 
+\end{eqnarray}
+であり，左辺は
+\begin{eqnarray}
+  \frac{d}{dt} \left( \frac{1}{2}\mu r^2 \right) =  - \frac{d}{dt}\left( \frac{1}{2}\frac{l^2}{\mu r^2} +U(r) \right) 
+\end{eqnarray}
+より確かにエネルギー保存が実現している．
+\subsection*{\large{[5]}}
+まず$\bm{l}$と垂直であることを示す．そもそも$\bm{r},\dot{\bm{r}}$は$xy$平面上での運動であったため$z$成分も持たない．よって自明に垂直である．
+また，
+\begin{eqnarray}
+  \bm{\dot{r}} =\left( \dot{r}\cos\phi-r\dot{\phi}\sin\phi \right)\bm{e}_x + \left( \dot{r}\sin\phi+r\dot{\phi}\cos\phi \right)\bm{e}_y
+\end{eqnarray}
+であり，$\bm{l}=l\bm{e}_z$であるため，
+\begin{eqnarray}
+  \bm{\dot{r}}\times\bm{l}= l\left( \dot{r}\cos\phi-r\dot{\phi}\sin\phi \right)(-\bm{e}_y)+ l \left( \dot{r}\sin\phi+r\dot{\phi}\cos\phi \right)\bm{e}_x
+\end{eqnarray}
+であるため，
+\begin{eqnarray}
+  \mu\left( \bm{\dot{r}}\times\bm{l} \right)\cdot\bm{r} = \mu l r^2 \dot{\phi}
+\end{eqnarray}
+であるため，
+\begin{eqnarray}
+  Ar\cos\alpha =  \mu l r^2 \dot{\phi}-\mu k r = l^2 - \mu k r
+\end{eqnarray}
+であるため，
+\begin{eqnarray}
+  \frac{1}{r} = \frac{\mu k}{l^2}\left( 1+\frac{A}{\mu k}\cos\alpha \right) 
+\end{eqnarray}
+が成立する．
+
 \newpage
 
 \section*{\Large{第四問}}
