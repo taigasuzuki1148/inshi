@@ -341,8 +341,23 @@ $\sigma_2$の位置は$\theta=\pi/2-\psi$であり，まとめると
 \end{eqnarray}
 となるため，
 \begin{eqnarray}
-  |\psi(t)\rangle = \frac{1}{\sqrt{2}}|u_0\rangle + \frac{1}{2}\exp\left( -i(-2J)\frac{t}{\hbar} \right)|u_1\rangle-\frac{1}{2}
+  |\psi(t)\rangle &&= \frac{1}{\sqrt{2}}|u_0\rangle + \frac{1}{2}\exp\left( -i(-2J)\frac{t}{\hbar} \right)|u_1\rangle-\frac{1}{2}\exp\left( -i(2J)\frac{t}{\hbar} \right)|u_2\rangle\\
+  &&= 
+  \begin{bmatrix}
+    \frac{1}{2}(\cos(2Jt/\hbar)+1) \\
+    i \frac{1}{\sqrt{2}}\sin(2Jt/\hbar)\\
+    \frac{1}{2}(\cos(2Jt/\hbar)-1) 
+  \end{bmatrix}
 \end{eqnarray}
+であるため，それぞれ
+確率は
+\begin{eqnarray}
+  P_0(t) &&= |\langle 0|\psi(t)\rangle|^2 = \cos^4(Jt/\hbar)\\
+  P_1(t) &&= |\langle 1|\psi(t)\rangle|^2 =\frac{1}{2} \sin^2(2Jt/\hbar)\\
+  P_2(t) &&= |\langle 2|\psi(t)\rangle|^2 = \sin^4(Jt/\hbar)
+\end{eqnarray}
+となる．
+
 \textbf{解答例1}\\
 \begin{eqnarray}
   |\psi(t)\rangle &&= \exp( -iHt/\hbar )|0\rangle = \left( \sum_{n=0}^{\infty}\frac{1}{n!}(-iHt/\hbar)^n  \right)|0\rangle\\
