@@ -45,6 +45,39 @@
 \title{東大物理工学科 2013}
 
 \author{21B00817 鈴木泰雅,\authormark{1}}
+\section*{\Large{第一問}}
+\subsection*{\large{[1]}}
+連立方程式を解くことによって
+\begin{eqnarray}
+  \bm{r}_2 = \bm{R} + \frac{m_1}{m_1+m_2}\bm{r}, \quad \bm{r}_1 = \bm{R} - \frac{m_2}{m_1+m_2}\bm{r}
+\end{eqnarray}
+よって，これらを代入することによって，
+\begin{eqnarray}
+  \mathcal{L} = \frac{1}{2}(m_1+m_2)\dot{\bm{R}}^2 + \frac{1}{2}\left( \frac{m_1m_2}{m_1+m_2} \right)\bm{\dot{r}}^2 - U(\bm{r})
+\end{eqnarray}
+となる．よって示せた．
+\subsection*{\large{[2]}}
+\begin{eqnarray}
+  \bm{\dot{r}}^2= \left( \dot{r}\cos\phi - r\sin\phi\dot{\phi} \right)^2 + \left( \dot{r}\cos\phi +r\cos\phi\dot{\phi} \right)^2 = \dot{r}^2 + r^2\dot{\phi}^2
+\end{eqnarray}
+であるため示せた．
+\subsection*{\large{[3]}}
+$r$成分のラグランジュ方程式より 
+\begin{eqnarray}
+  \mu \ddot{r} = \frac{\partial}{\partial r} \left( \mu r \dot{\phi}^2 -U(r) \right)
+\end{eqnarray}
+であり，
+\begin{eqnarray}
+  \frac{d}{dr}\left( \mu r^2\dot{\phi}^2 \right) &&= \frac{\partial}{\partial r}\left(\mu r^2\dot{\phi}^2\right) + \frac{\partial}{\partial \dot{\phi}}\left(\mu r^2\dot{\phi}^2\right) \frac{d\dot{\phi}}{dr}\\
+  &&= 2\mu r \dot{\phi}^2 - 4 \mu r \dot{\phi}^2 = - 2\mu r \dot{\phi}^2\\
+  &&= - \frac{\partial}{\partial r}\left(\mu r^2\dot{\phi}^2\right)
+\end{eqnarray}
+であるため，
+\begin{eqnarray}
+  \mu \ddot{r} = -\frac{d}{d r} \left( \mu r \dot{\phi}^2 +U(r) \right)  
+\end{eqnarray}
+\newpage
+
 \section*{\Large{第四問}}
 \subsection*{\large{[1]}}
 それぞれ周期境界条件があるため，
