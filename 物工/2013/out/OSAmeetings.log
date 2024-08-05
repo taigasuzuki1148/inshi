@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.141592653-p3.9.0-210218-2.6 (utf8.sjis) (TeX Live 2021/W32TeX) (preloaded format=platex 2021.9.13)  1 AUG 2024 19:11
+This is e-pTeX, Version 3.141592653-p3.9.0-210218-2.6 (utf8.sjis) (TeX Live 2021/W32TeX) (preloaded format=platex 2021.9.13)  5 AUG 2024 23:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -834,4 +834,4 @@ Here is how much of TeX's memory you used:
  993 hyphenation exceptions out of 8191
  84i,11n,83p,455b,353s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on out/OSAmeetings.dvi (5 pages, 18372 bytes).
+Output written on out/OSAmeetings.dvi (5 pages, 22664 bytes).

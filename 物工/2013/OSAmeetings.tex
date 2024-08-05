@@ -132,20 +132,16 @@ $r$成分のラグランジュ方程式より
 \newpage
 \section*{\Large{第四問}}
 \subsection*{\large{[1]}}
-それぞれ周期境界条件があるため，
+エネルギーが一定であるため
 \begin{eqnarray}
-  p_{x,1} = \frac{2\pi\hbar}{L}n_1,\cdots
+  E = \frac{1}{2}m\left( v_{x,1}^2 + v_{y,1}^2 + v_{x,2}^2 + v_{y,2}^2 \right)
 \end{eqnarray}
-のように$p_{x,i},p_{y,i}$それぞれに関して周期的境界条件が成立する．つまり運動量空間において，$\frac{L}{2\pi\hbar}$倍をすると量子状態の数が求められるため
-$E$よりも小さいエネルギーの量子状態は
+であり，このミクロカノニカル分布はこれらの4つの自由度を持ち，上記を満たすような分布である．よって，その状態数$W$は
 \begin{eqnarray}
-  \Omega(E)=\frac{L^{4}}{(2\pi\hbar)^4}\cdot (半径\sqrt{2mE}の4次元球の体積)
+  W &&= \# \left[ v_{x,1},v_{y,1},v_{x,2},v_{y,2} : E = \frac{1}{2}m\left( v_{x,1}^2 + v_{y,1}^2 + v_{x,2}^2 + v_{y,2}^2 \right) \right]\\
+  &&=\left( 半径 \sqrt{\frac{2E}{m}}の4次元球の表面積 \right)
 \end{eqnarray}
-である．よって，$E\sim E+dE$にある量子状態の数は
-\begin{eqnarray}
-  W(E) = \frac{d\Omega(E)}{dE}dE = \frac{L^{4}}{(2\pi\hbar)^4}\cdot (半径\sqrt{2mE}の4次元球の表面積)\cdot 2mE \frac{dE}{E}
-\end{eqnarray}
-である．よって示せた．
+
 \subsection*{\large{[2]}}
 2次元球(円)の体積は図より
 \begin{eqnarray}
@@ -161,30 +157,48 @@ $E$よりも小さいエネルギーの量子状態は
 \end{eqnarray}
 である．これを$r$で微分することによって$S_3(r)$を導ける．同様にして$S_4(r)$も導ける．
 \subsection*{\large{[3]}}
-$v_1$を満たす量子状態の個数を$W'$とすると等確率の原理から
+$v_1$を固定すると全体の系は
 \begin{eqnarray}
-  P(v_1)dv_1 = \frac{W'}{W(E)}
+  E = \frac{1}{2}m \left( v_1^2 + v_{x,2}^2 + v_{y,2}^2 \right)
 \end{eqnarray}
-である．ただし今回は規格化をしなくても良いため
+であり，幅$dv_1$を持つときの状態数は
 \begin{eqnarray}
-  P(v_1)dv_1 = W'
+  W'  &&= \# \left[  v_{x,2},v_{y,2}: \frac{2E}{m}-v_1^2 = v_{x,2}^2 + v_{y,2}^2 \right]\\
+  &&=\left( 半径\sqrt{ \frac{2E}{m}-v_1^2 }の2次元球の表面積 \right)\cdot dv_1
 \end{eqnarray}
-として良い．全体のエネルギーは
+であるため，等重率の原理から
 \begin{eqnarray}
-  E = \frac{1}{2}mv_1^2 + E_2
+  P(v_1) = \frac{S_2\left( \sqrt{ \frac{2E}{m}-v_1^2 } \right)}{S_4\left( \sqrt{\frac{2E}{m} } \right)}= \frac{2\pi \sqrt{ \frac{2E}{m}-v_1^2 } }{ \pi \left( \sqrt{\frac{2E}{m}} \right)^3 }
 \end{eqnarray}
-であり，全体の量子状態は$E_2$に関してのみ数え上げすればよい．これは全体のエネルギー
+である．
+\subsection*{\large{[4]}}
+同様にして，この系の速度を固定しなかったときの全体の状態数は
 \begin{eqnarray}
-  \epsilon = E-\frac{1}{2}mv_1^2
+  W_{N} &&= \# \left[ v_{x,1},v_{x,2},\cdots: N\epsilon = \frac{1}{2}m \left( v_{x,1}^2 +v_{x,2}^2 + \cdots  \right) \right] \\
+  &&= \left( 半径 \sqrt{\frac{2N\epsilon}{m}}の2N次元球の表面積 \right) = S_{2N}\left( \sqrt{\frac{2N\epsilon}{m}} \right)
 \end{eqnarray}
-として1粒子の2次元状態であるため
+である．一方，固定した時は
 \begin{eqnarray}
-  \Omega'(\epsilon) = \frac{L^2}{(2\pi\hbar)^2}\pi(2m\epsilon)
+  W'_{N} &&= \# \left[ v_{y,1},v_{y,2},\cdots: N\epsilon = \frac{2N\epsilon}{m}-v_1^2= \left( v_{y,1}^2 +v_{y,2}^2 + \cdots  \right) \right] \\
+  &&= \left( 半径 \sqrt{\frac{2N\epsilon}{m}-v_1^2}の2N-2次元球の表面積 \right) = S_{2N-2}\left( \sqrt{\frac{2N\epsilon}{m}-v_1^2} \right)
 \end{eqnarray}
+よって同様にして考えることによって
+\begin{eqnarray}
+  P_N(v_1) = \frac{W'_{N}}{W_{N}}= \frac{S_{2N-2}\left( \sqrt{\frac{2N\epsilon}{m}-v_1^2} \right)}{S_{2N}\left( \sqrt{\frac{2N\epsilon}{m}} \right)}
+\end{eqnarray}
+となる．ここで，規格化因子を無視するとこれらの項は
+\begin{eqnarray}
+  P_N(v_1) \propto \frac{\left( \sqrt{\frac{2N\epsilon}{m}-v_1^2} \right)^{2N-3}}{\left( \sqrt{\frac{2N\epsilon}{m}} \right)^{2N-1}} = \left( 1- \frac{mv_1^2}{2N\epsilon} \right)^N \frac{m}{\left( 1-\frac{mv_1^2}{2N\epsilon} \right)^{3/2}2N\epsilon}\to \exp\left( -\frac{mv_1^2}{2\epsilon} \right)\frac{m}{2N\epsilon}
+\end{eqnarray} 
+である．よってmaxwellボルツマン分布になることが確かめられた．
+\subsection*{\large{[4]}}
 よって，
 \begin{eqnarray}
-  W' = \frac{d\Omega'}{d\epsilon}d\epsilon = (定数)\cdot (-mv_1)dv_1
+  \frac{N\epsilon}{k_B T} = \frac{mv_1^2}{2}\frac{1}{\epsilon}
 \end{eqnarray}
-である．よって，$P(v_1)= v_1$?
+であるため，
+\begin{eqnarray}
+  \epsilon = \frac{N\epsilon}{k_B T} \frac{2}{mv_1^2}
+\end{eqnarray}
 
 \end{document}
