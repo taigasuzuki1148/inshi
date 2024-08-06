@@ -194,6 +194,41 @@ Maxwell 方程式より
 \newpage
 \section*{\Large{第三問}}
 \subsection*{\large{[1]}}
+それぞれ固有方程式を解いて
+\begin{eqnarray}
+  &&\sigma_x:\quad  \lambda=1: 
+  \frac{1}{\sqrt{2}}(\alpha + \beta),\quad \lambda=-1:\frac{1}{\sqrt{2}}(\alpha - \beta)\\
+  &&\sigma_y:\quad  \lambda=1: 
+  \frac{1}{\sqrt{2}}(\alpha +i \beta),\quad \lambda=-1:\frac{1}{\sqrt{2}}(\alpha -i \beta)
+\end{eqnarray}
+\subsection*{\large{[2.1]}}
+代入すると$x$軸方向しかないことに注意して，
+\begin{eqnarray}
+  H_{SO}= -\left(  \frac{\gamma E}{\hbar}\right)p_x \sigma_y
+\end{eqnarray}
+である．
+\subsection*{\large{[2.2]}}
+$\chi = \uparrow,\downarrow$であり，$\sigma_y$の固有状態は求まっているため
+\begin{eqnarray}
+  \psi_1 = e^{ikx}\frac{1}{\sqrt{2}}(\alpha +i \beta), \quad \psi_2 = e^{ikx}\frac{1}{\sqrt{2}}(\alpha -i \beta)
+\end{eqnarray}
+それぞれの固有値は
+\begin{eqnarray}
+  E_1= \frac{\hbar^2k^2}{2m} - \left(  \frac{\gamma E}{\hbar}\right)\hbar k , \quad E_2 = \frac{\hbar^2k^2}{2m} + \left(  \frac{\gamma E}{\hbar}\right)\hbar k 
+\end{eqnarray}
+\subsection*{\large{[2.3]}}
+ハミルトニアンは
+\begin{eqnarray}
+  \frac{\hbar^2 k^2}{2m} - \left(  \frac{\gamma E}{\hbar}\right)\hbar\sigma_y + \frac{1}{2}g\mu_B B\sigma_x=
+  \begin{bmatrix}
+    \frac{\hbar^2 k^2}{2m} & \frac{\hbar^2 k^2}{2m} - i\left(  \frac{\gamma E}{\hbar}\right)\hbar + \frac{1}{2}g\mu_B B\\
+    \frac{\hbar^2 k^2}{2m} + i\left(  \frac{\gamma E}{\hbar}\right)\hbar + \frac{1}{2}g\mu_B B & \frac{\hbar^2 k^2}{2m}
+  \end{bmatrix}
+\end{eqnarray}
+これを対角化して固有エネルギーを求めると
+\begin{eqnarray}
+  E_{\pm} = \frac{\hbar^2 k^2 }{2m} \pm \sqrt{ \left(\frac{\hbar^2 k^2 }{2m} \right)^2 + \left(\frac{1}{2}g\mu_B B\right)^2 + \left(\gamma E\right)^2 }
+\end{eqnarray}
 
 \newpage
 
@@ -267,6 +302,77 @@ $v_1$を固定すると全体の系は
 \begin{eqnarray}
   \epsilon = \frac{N\epsilon}{k_B T} \frac{2}{mv_1^2}
 \end{eqnarray}
-
+\newpage
+\section*{\Large{第五問}}
+\subsection*{\large{[1]}}
+ガウスの法則より
+\begin{eqnarray}
+  4\pi r^2 D(r) = 4\pi a^2 \sigma ,\quad\therefore D(r) = \sigma\frac{a^2}{r^2}
+\end{eqnarray}
+\subsection*{\large{[2]}}
+この場合は空間に電流が流れないため
+\begin{eqnarray}
+  \nabla\times \bm{H} = \frac{\partial\bm{D}}{\partial t}
+\end{eqnarray}
+\subsection*{\large{[3]}}
+上式を図中の$C$を囲む平面に関して積分をして，Stokesの定理より
+\begin{eqnarray}
+  \oint_C \bm{H}\cdot d\bm{l} = \frac{\partial}{\partial t} \int_S \bm{D}\cdot d\bm{S}
+\end{eqnarray}
+\subsection*{\large{[4]}}
+$\bm{D}\cdot d\bm{S}$を求める．立体角をうまく使ったからできるのか？しっかり調べておく必要があるが今回は愚直に計算していく．
+\begin{eqnarray}
+  \int_S \bm{D}d\bm{S} = \int_0^{2\pi}d\psi \int_{0}^{d}dr' D(r\cos\phi\cos\theta)\cdot \cos\phi r'
+\end{eqnarray}
+である．ここで，
+\begin{eqnarray}
+  r' = r\cos\theta \tan\phi,\quad dr' = r\cos\theta \frac{1}{\cos\phi^2}d\phi
+\end{eqnarray}
+より，
+\begin{eqnarray}
+  \int_S \bm{D}d\bm{S} &&= 2\pi \int_{0}^{\phi=\theta}  r\cos\theta \frac{1}{\cos\phi^2}d\phi \sigma\frac{a^2}{(r\cos\phi\cos\theta)^2} \cos\phi  r\cos\theta \tan\phi\\
+  &&=2\pi\int_0^{\theta} a^2\sigma \frac{1}{\cos^4\phi}\sin\phi d\phi =2\pi a^2\sigma  \left(\frac{1}{\cos^3\theta}-1\right) = \Psi
+\end{eqnarray}
+となる．よって，
+\begin{eqnarray}
+  d\Psi = -\frac{6\pi a^2\sigma}{\cos^4\theta}d\theta
+\end{eqnarray}
+また，
+\begin{eqnarray}
+  vt = \frac{d}{\tan\theta}
+\end{eqnarray}
+であるため，
+\begin{eqnarray}
+  vdt = -\frac{d}{\sin^2\theta}d\theta,\quad\therefore d\theta = -\frac{v\sin^2\theta}{d}dt
+\end{eqnarray}
+となることから．
+\begin{eqnarray}
+  \frac{d\Psi}{d t} = \frac{6\pi a^2 v\sigma}{d\cos^4\theta}\sin^2\theta = \frac{6\pi a^2 v\sigma}{r\cos^4\theta}\sin\theta, \quad\because d = r\sin\theta
+\end{eqnarray}
+\subsection*{\large{[5]}}
+よって，
+\begin{eqnarray}
+  H \cdot 2\pi d = \frac{d\Psi}{d t} = \frac{6\pi a^2 v\sigma}{r\cos^4\theta}\sin\theta
+\end{eqnarray}
+より，
+\begin{eqnarray}
+  H = \frac{3 a^2 v\sigma}{r\cos^4\theta}\sin\theta
+\end{eqnarray}
+\subsection*{\large{[6]}}
+\begin{eqnarray}
+  u(r.t) = \frac{\mu_0}{2}H^2
+\end{eqnarray}
+\subsection*{\large{[7]}}
+全空間で積分すると
+\begin{eqnarray}
+  U &&= 2\pi \int_a^{\infty}dr \int_0^{\pi} \frac{\mu_0}{2}H^2 = 9\pi \mu_0 a^4v^2\sigma^2 \int_a^{\infty}dr\frac{1}{r^2} \int_0^{\pi} \frac{1}{\cos^8\theta}\sin\theta^2 \sin\theta d\theta\\
+  &&=9\pi \mu_0 a^4v^2\sigma^2 \frac{1}{a}\frac{4}{35} = \frac{36}{35} \mu_0 a^3 v^2\sigma^2
+\end{eqnarray}
+となる．
+\subsection*{\large{[8]}}
+\begin{eqnarray}
+  \frac{1}{2}mv^2 + \frac{36}{35} \mu_0 a^3 v^2\sigma^2 = \frac{1}{2}\left( m+\frac{72}{35} \mu_0 a^3 \sigma^2 \right)v^2
+\end{eqnarray}
+となるため，質量が重くなると考えられる．この理由は電磁誘導が起きて帯電球が動きにくくなるから．
 
 \end{document}
