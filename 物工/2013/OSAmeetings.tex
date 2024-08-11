@@ -221,13 +221,13 @@ $\chi = \uparrow,\downarrow$であり，$\sigma_y$の固有状態は求まって
 \begin{eqnarray}
   \frac{\hbar^2 k^2}{2m} - \left(  \frac{\gamma E}{\hbar}\right)\hbar\sigma_y + \frac{1}{2}g\mu_B B\sigma_x=
   \begin{bmatrix}
-    \frac{\hbar^2 k^2}{2m} & \frac{\hbar^2 k^2}{2m} - i\left(  \frac{\gamma E}{\hbar}\right)\hbar + \frac{1}{2}g\mu_B B\\
-    \frac{\hbar^2 k^2}{2m} + i\left(  \frac{\gamma E}{\hbar}\right)\hbar + \frac{1}{2}g\mu_B B & \frac{\hbar^2 k^2}{2m}
+    \frac{\hbar^2 k^2}{2m} & - i\left(  \frac{\gamma E}{\hbar}\right)\hbar + \frac{1}{2}g\mu_B B\\
+     i\left(  \frac{\gamma E}{\hbar}\right)\hbar + \frac{1}{2}g\mu_B B & \frac{\hbar^2 k^2}{2m}
   \end{bmatrix}
 \end{eqnarray}
 これを対角化して固有エネルギーを求めると
 \begin{eqnarray}
-  E_{\pm} = \frac{\hbar^2 k^2 }{2m} \pm \sqrt{ \left(\frac{\hbar^2 k^2 }{2m} \right)^2 + \left(\frac{1}{2}g\mu_B B\right)^2 + \left(\gamma E\right)^2 }
+  E_{\pm} = \frac{\hbar^2 k^2 }{2m} \pm \sqrt{\left(\frac{1}{2}g\mu_B B\right)^2 + \left(\gamma Ek \right)^2 }
 \end{eqnarray}
 
 \newpage
@@ -331,32 +331,32 @@ $\bm{D}\cdot d\bm{S}$を求める．立体角をうまく使ったからでき�
 より，
 \begin{eqnarray}
   \int_S \bm{D}d\bm{S} &&= 2\pi \int_{0}^{\phi=\theta}  r\cos\theta \frac{1}{\cos\phi^2}d\phi \sigma\frac{a^2}{(r\cos\phi\cos\theta)^2} \cos\phi  r\cos\theta \tan\phi\\
-  &&=2\pi\int_0^{\theta} a^2\sigma \frac{1}{\cos^4\phi}\sin\phi d\phi =2\pi a^2\sigma  \left(\frac{1}{\cos^3\theta}-1\right) = \Psi
+  &&=2\pi\int_0^{\theta} a^2\sigma \frac{1}{\cos^4\phi}\sin\phi d\phi  = \Psi
 \end{eqnarray}
 となる．よって，
 \begin{eqnarray}
-  d\Psi = -\frac{6\pi a^2\sigma}{\cos^4\theta}d\theta
+  d\Psi = \frac{2\pi a^2\sigma}{\cos^4\theta}d\theta
 \end{eqnarray}
 また，
 \begin{eqnarray}
-  vt = \frac{d}{\tan\theta}
+  x-vt = \frac{d}{\tan\theta}
 \end{eqnarray}
 であるため，
 \begin{eqnarray}
-  vdt = -\frac{d}{\sin^2\theta}d\theta,\quad\therefore d\theta = -\frac{v\sin^2\theta}{d}dt
+  -vdt = -\frac{d}{\sin^2\theta}d\theta,\quad\therefore d\theta = -\frac{v\sin^2\theta}{d}dt
 \end{eqnarray}
 となることから．
 \begin{eqnarray}
-  \frac{d\Psi}{d t} = \frac{6\pi a^2 v\sigma}{d\cos^4\theta}\sin^2\theta = \frac{6\pi a^2 v\sigma}{r\cos^4\theta}\sin\theta, \quad\because d = r\sin\theta
+  \frac{d\Psi}{d t} = \frac{2\pi a^2 v\sigma}{d\cos^4\theta}\sin^2\theta = \frac{2\pi a^2 v\sigma}{r\cos^4\theta}\sin\theta, \quad\because d = r\sin\theta
 \end{eqnarray}
 \subsection*{\large{[5]}}
 よって，
 \begin{eqnarray}
-  H \cdot 2\pi d = \frac{d\Psi}{d t} = \frac{6\pi a^2 v\sigma}{r\cos^4\theta}\sin\theta
+  H \cdot 2\pi d = \frac{d\Psi}{d t} = \frac{2\pi a^2 v\sigma}{r\cos^4\theta}\sin\theta
 \end{eqnarray}
 より，
 \begin{eqnarray}
-  H = \frac{3 a^2 v\sigma}{r\cos^4\theta}\sin\theta
+  H = \frac{a^2 v\sigma}{r\cos^4\theta}\sin\theta
 \end{eqnarray}
 \subsection*{\large{[6]}}
 \begin{eqnarray}
@@ -365,13 +365,13 @@ $\bm{D}\cdot d\bm{S}$を求める．立体角をうまく使ったからでき�
 \subsection*{\large{[7]}}
 全空間で積分すると
 \begin{eqnarray}
-  U &&= 2\pi \int_a^{\infty}dr \int_0^{\pi} \frac{\mu_0}{2}H^2 = 9\pi \mu_0 a^4v^2\sigma^2 \int_a^{\infty}dr\frac{1}{r^2} \int_0^{\pi} \frac{1}{\cos^8\theta}\sin\theta^2 \sin\theta d\theta\\
-  &&=9\pi \mu_0 a^4v^2\sigma^2 \frac{1}{a}\frac{4}{35} = \frac{36}{35} \mu_0 a^3 v^2\sigma^2
+  U &&= 2\pi \int_a^{\infty}dr \int_0^{\pi} \frac{\mu_0}{2}H^2 = \pi \mu_0 a^4v^2\sigma^2 \int_a^{\infty}dr\frac{1}{r^2} \int_0^{\pi} \frac{1}{\cos^8\theta}\sin\theta^2 \sin\theta d\theta\\
+  &&=\pi \mu_0 a^4v^2\sigma^2 \frac{1}{a}\frac{4}{35} = \frac{4}{35} \mu_0 a^3 v^2\sigma^2
 \end{eqnarray}
 となる．
 \subsection*{\large{[8]}}
 \begin{eqnarray}
-  \frac{1}{2}mv^2 + \frac{36}{35} \mu_0 a^3 v^2\sigma^2 = \frac{1}{2}\left( m+\frac{72}{35} \mu_0 a^3 \sigma^2 \right)v^2
+  \frac{1}{2}mv^2 + \frac{4}{35} \mu_0 a^3 v^2\sigma^2 = \frac{1}{2}\left( m+\frac{8}{35} \mu_0 a^3 \sigma^2 \right)v^2
 \end{eqnarray}
 となるため，質量が重くなると考えられる．この理由は電磁誘導が起きて帯電球が動きにくくなるから．
 
