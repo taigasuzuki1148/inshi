@@ -60,7 +60,28 @@
 \end{eqnarray}
 \subsection*{誘電体中の電界}
 \begin{eqnarray}
-  \bm{E}_{全体} = 
+  \bm{E}_{全体} &&= \bm{E}_{作用している電場} + \bm{E}'_{誘導される電場}\\
+  &&=\bm{E}_{作用している電場} - \frac{\bm{P}}{3\epsilon_0}|_{球体のとき}\\
+  &&=\bm{E}_{作用している電場} - \frac{\bm{P}}{\epsilon_0}|_{平面板のとき, 法線方向}\\
+  &&=\bm{E}_{作用している電場} - \frac{\bm{P}}{2\epsilon_0}|_{棒のとき, 垂直方向}
 \end{eqnarray}
+なお，
+\begin{eqnarray}
+  \bm{D} = \epsilon \bm{E}_{全体}= \epsilon_0\left(1+\chi  \right)\bm{E}_{全体} = \epsilon_0 \bm{E}_{全体} + \bm{P}  
+\end{eqnarray}
+\subsection*{ポテンシャル}
+\begin{eqnarray}
+  \bm{B} = \nabla\times \bm{A},\quad \bm{E} = -\frac{\partial\bm{A}}{\partial t} -\nabla\phi
+\end{eqnarray}
+\subsection*{Maxwellの応力}
+\begin{eqnarray}
+  T = 
+  \begin{bmatrix}
+    E_x D_x -\frac{1}{2}\bm{E}\bm{D} & E_x D_y & E_x D_z\\
+    E_y D_x  & E_y D_y -\frac{1}{2}\bm{E}\bm{D}  & E_y D_z\\
+    E_z D_x  & E_z D_y & E_z D_z -\frac{1}{2}\bm{E}\bm{D}
+  \end{bmatrix}
+\end{eqnarray}
+となる．
 
 \end{document}
