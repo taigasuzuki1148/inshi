@@ -1,0 +1,84 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                   File: OSAmeetings.tex             %
+%                  Date: 29 Novemver 2018              %
+%                                                     %
+%     For preparing LaTeX manuscripts for submission  %
+%       submission to OSA meetings and conferences    %
+%                                                     %
+%       (c) 2018 Optical Society of America           %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt,dvipdfmx]{jsarticle}
+%% if A4 paper needed, change letterpaper to A4
+\usepackage[dvipdfmx]{graphicx}
+\usepackage[dvipdfmx]{color}
+\usepackage{osameet3} %% use version 3 for proper copyright statement
+\usepackage{ascmac}
+%% provide authormark
+\newcommand\authormark[1]{\textsuperscript{#1}}
+
+%% standard packages and arguments should be modified as needed
+\usepackage{amsmath,amssymb}
+\usepackage[colorlinks=true,bookmarks=false,citecolor=blue,urlcolor=blue]{hyperref} %pdflatex
+%\usepackage[breaklinks,colorlinks=true,bookmarks=false,citecolor=blue,urlcolor=blue]{hyperref} %latex w/dvipdf
+\usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage{empheq}
+\usepackage{physics}
+\usepackage[scr=rsfs]{mathalpha}
+\usepackage[svgnames]{xcolor}% tikzより前に読み込む必要あり
+\usepackage{tikz}
+\usepackage{bm}
+\usepackage{here}
+\usepackage{braket}
+\usepackage{framed,color}
+\usepackage{dcolumn}
+\definecolor{shadecolor}{gray}{0.80}
+\usetikzlibrary{perspective}
+\tikzset
+{%
+  my ball/.style={draw,circle,minimum size=2*\r cm,inner sep=0,shading=ball,ball color=cyan!50!blue,opacity=#1},
+  my ball/.default=1,
+  hidden line/.style={black!60}
+}
+\begin{document}
+\title{量子力学 カンニングシート}
+
+\author{21B00817 鈴木泰雅,\authormark{1}}
+\section*{\Large{各種公式}}
+\subsection*{交換関係}
+\begin{eqnarray}
+  [AB,C] = [A,C]B + A[B,C],\quad [A+B,C] = [A,C] + [B,C]
+\end{eqnarray}
+\subsection*{行列の関係式}
+\begin{eqnarray}
+  &&\exp(iaA) = \cos(a)I +i\sin(a)A,\quad A^2 =I を満たす行列\\
+  &&\exp(aA) = \cosh(a)I +\sinh(a)A,\quad A^2 =I を満たす行列
+\end{eqnarray}
+\subsection*{不確定性原理}
+\begin{eqnarray}
+  \Delta p\Delta x \geq \frac{\hbar}{2},\quad \Delta E\Delta t \geq\frac{\hbar}{2}
+\end{eqnarray}
+\subsection*{連続の式}
+\begin{eqnarray}
+  \frac{\partial\rho}{\partial t} = -\nabla\cdot\bm{j},\quad \bm{j} = \frac{i\hbar}{2m}\left( \Psi\Delta\Psi^{*}-\Psi^{*}\Delta\Psi \right)
+\end{eqnarray}
+ただし$\rho=|\Psi|^2$を満たしている．
+\subsection*{ハイゼンベルク方程式}
+\begin{eqnarray}
+  \frac{d\hat{X}}{dt}  = \frac{i}{\hbar}\left[ \hat{H}, \hat{X} \right]
+\end{eqnarray}
+\section*{\Large{摂動論}}
+\begin{eqnarray}
+  E_0 = E_0^{(0)}+ \lambda\langle 0|\hat{V}|0\rangle + \lambda^2 \sum_{j\neq 0}\frac{|\langle j|\hat{V}|0\rangle|^2}{E_0^{(0)}-E_j^{(0)}}
+\end{eqnarray}
+状態は
+\begin{eqnarray}
+  |\psi\rangle = |0\rangle + \lambda\sum_{i\neq j}|j\rangle \frac{\langle j|\hat{V}|0\rangle}{E_0^{(0)}-E_j^{(0)}}
+\end{eqnarray}
+\section*{\Large{スピン}}
+\begin{eqnarray}
+  j_+|j,m\rangle= \sqrt{ j(j+1) }
+\end{eqnarray}
+
+\end{document}
