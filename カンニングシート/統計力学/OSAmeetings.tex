@@ -1,0 +1,68 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                   File: OSAmeetings.tex             %
+%                  Date: 29 Novemver 2018              %
+%                                                     %
+%     For preparing LaTeX manuscripts for submission  %
+%       submission to OSA meetings and conferences    %
+%                                                     %
+%       (c) 2018 Optical Society of America           %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt,dvipdfmx]{jsarticle}
+%% if A4 paper needed, change letterpaper to A4
+\usepackage[dvipdfmx]{graphicx}
+\usepackage[dvipdfmx]{color}
+\usepackage{osameet3} %% use version 3 for proper copyright statement
+\usepackage{ascmac}
+%% provide authormark
+\newcommand\authormark[1]{\textsuperscript{#1}}
+
+%% standard packages and arguments should be modified as needed
+\usepackage{amsmath,amssymb}
+\usepackage[colorlinks=true,bookmarks=false,citecolor=blue,urlcolor=blue]{hyperref} %pdflatex
+%\usepackage[breaklinks,colorlinks=true,bookmarks=false,citecolor=blue,urlcolor=blue]{hyperref} %latex w/dvipdf
+\usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage{empheq}
+\usepackage{physics}
+\usepackage[scr=rsfs]{mathalpha}
+\usepackage[svgnames]{xcolor}% tikzより前に読み込む必要あり
+\usepackage{tikz}
+\usepackage{bm}
+\usepackage{here}
+\usepackage{braket}
+\usepackage{framed,color}
+\usepackage{dcolumn}
+\definecolor{shadecolor}{gray}{0.80}
+\usetikzlibrary{perspective}
+\tikzset
+{%
+  my ball/.style={draw,circle,minimum size=2*\r cm,inner sep=0,shading=ball,ball color=cyan!50!blue,opacity=#1},
+  my ball/.default=1,
+  hidden line/.style={black!60}
+}
+\begin{document}
+\title{統計力学 カンニングシート}
+
+\author{21B00817 鈴木泰雅,\authormark{1}}
+\section*{\Large{各種公式}}
+\subsection*{分配関数との関係式}
+\begin{eqnarray}
+  &&F = -\frac{1}{\beta}\ln Z\\
+  &&E = -\frac{\partial}{\partial\beta}\ln Z
+\end{eqnarray}
+\subsection*{熱力学的関係式}
+\begin{eqnarray}
+  F = E-TS,\quad dF = -pdV -SdT 
+\end{eqnarray}
+\subsection*{磁場との関係式}
+\begin{eqnarray}
+  H = \cdots - \mu_0H\sum_i \sigma_i
+\end{eqnarray}
+のとき
+\begin{eqnarray}
+  &&m= -\frac{\partial F}{\partial H}\\
+  &&\chi = \frac{\partial m}{\partial H}|_{H=0}
+\end{eqnarray}
+
+\end{document}
