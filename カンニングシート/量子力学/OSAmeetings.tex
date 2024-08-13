@@ -94,7 +94,31 @@
 \end{eqnarray}
 \section*{\Large{スピン}}
 \begin{eqnarray}
-  j_+|j,m\rangle= \sqrt{ j(j+1) }
+  j_+|j,m\rangle= \sqrt{ (j-m)(j+m+1) }|j,m+1\rangle,\quad j_-|j,m\rangle= \sqrt{ (j+m)(j-m+1) }|j,m-1\rangle
 \end{eqnarray}
+となる。
+\subsection*{スピンの足し算}
+$J = L+S$のとき、以下のような規則で足し上げる
+\begin{eqnarray}
+  &&m_{\text{total}}= m_L + m_S \quad 全パターンにおいて\\
+  &&s_{\text{total}}= s_1+s_1,s_1+s_2-1,\cdots |s_1-s_2|,\quad 全パターンにおいて
+\end{eqnarray}
+そして、全体の波動関数を
+\begin{eqnarray}
+  |m_{\text{total}},s_{\text{total}}\rangle\rangle 
+\end{eqnarray}
+として表記する。まず、
+\begin{eqnarray}
+  |m_{\text{total,max}},s_{\text{total,max}}\rangle\rangle = |s_{1,max}, m_{L,max}\rangle\otimes |s_{2,max}, m_{S,max}\rangle
+\end{eqnarray}
+となっているため、これらの左右どちらにも
+\begin{eqnarray}
+  J_- = j_{-,1} + j_{-,2}
+\end{eqnarray}
+を作用させて
+\begin{eqnarray}
+  |m_{\text{total,max}},s_{\text{total,max}}-1\rangle\rangle
+\end{eqnarray}
+を計算していく。
 
 \end{document}

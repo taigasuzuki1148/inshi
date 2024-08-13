@@ -83,5 +83,36 @@
   \end{bmatrix}
 \end{eqnarray}
 となる．
+\section*{\Large{電磁波}}
+\subsection*{空間上の電磁波}
+平面電磁波の関係：
+\begin{eqnarray}
+  \frac{H}{E}= \sqrt{\frac{\epsilon}{\mu}},\quad \frac{1}{2}\epsilon E^2 = \frac{1}{2}\mu H^2
+\end{eqnarray}
+となり、エネルギーは電波と磁場に半分づつ分かれている。
+\subsection*{エネルギーの流れ}
+ポンティングベクトルは以下で定義される：
+\begin{eqnarray}
+  S = E\times H
+\end{eqnarray}
+ただし注意として
+\begin{eqnarray}
+  S = \frac{1}{\mu_0}\Re\bm{E}\times\Re\bm{B}
+\end{eqnarray}
+である。
+運動量の流れは
+\begin{eqnarray}
+  \frac{1}{c^2}\langle S \rangle
+\end{eqnarray}
+\subsection*{導体中の電磁波}
+この時は$\sigma,\mu$
+\begin{eqnarray}
+  \bm{E} = \sigma \bm{J}
+\end{eqnarray}
+を使って次の電信方程式を立てられる：
+\begin{eqnarray}
+  \frac{\partial E_x}{\partial z^2} = \mu\epsilon\frac{\partial E_x}{\partial t^2} + \sigma\mu\frac{\partial E_x}{\partial t}
+\end{eqnarray}
+完全導体では$\sigma=\infty$の導体のことであり、超伝導体に似ているが、超伝導体はこれ以外にも様々な性質を持っている。
 
 \end{document}
