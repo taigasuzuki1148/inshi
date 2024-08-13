@@ -68,6 +68,22 @@
 \begin{eqnarray}
   \frac{d\hat{X}}{dt}  = \frac{i}{\hbar}\left[ \hat{H}, \hat{X} \right]
 \end{eqnarray}
+\section*{\Large{調和振動子}}
+解は
+\begin{eqnarray}
+  x= \left( \frac{m\omega}{\hbar\pi} \right)^{1/4}\frac{1}{\sqrt{2^{n_x}n_x!}}H_{n_x}\left( \sqrt{\frac{m\omega}{\hbar}}x \right)\exp\left( -\frac{m\omega}{2\hbar}x^2 \right)
+\end{eqnarray}
+であり，
+\begin{eqnarray}
+  H_0(x)=1,\quad H_1(x)=2x
+\end{eqnarray}
+を満たす．
+\subsection*{昇降演算子}
+\begin{eqnarray}
+  &&\hat{a}|n\rangle = \sqrt{n}|n-1\rangle,\quad \hat{a}^{\dagger}|n\rangle = \sqrt{n+1}|n+1\rangle,\\
+  &&\left[\hat{a},\hat{a}^{\dagger}\right]=1
+\end{eqnarray}
+
 \section*{\Large{摂動論}}
 \begin{eqnarray}
   E_0 = E_0^{(0)}+ \lambda\langle 0|\hat{V}|0\rangle + \lambda^2 \sum_{j\neq 0}\frac{|\langle j|\hat{V}|0\rangle|^2}{E_0^{(0)}-E_j^{(0)}}

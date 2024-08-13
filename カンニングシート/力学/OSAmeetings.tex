@@ -54,6 +54,26 @@
 \begin{eqnarray}
   I\frac{d\omega}{dt} = \bm{r}\times\bm{F}
 \end{eqnarray}
+\subsection*{原理}
+剛体の運動では重心方向の運動と，回転方向の運動に分離して考えることもできる．(場合によっては相互作用を削除したい場合はラグランジュ方程式を使う)
+\subsection*{運動量}
+\begin{eqnarray}
+  \bm{P}= M\bm{v}_G, \quad \bm{L}= \bm{r}_G \times M\bm{v}_G + I'\omega'
+\end{eqnarray}
+ただし，$\bm{r}_G$の支点がモーメントの軸であるときは$\bm{r}_G=0$である．この式は
+\begin{eqnarray}
+  \bm{L}= \bm{r}_{G} \times M\bm{v}_{慣性モーメントの基準点} + I'\omega'
+\end{eqnarray}
+として見てもよい．
 
+\subsection*{エネルギー}
+\begin{eqnarray}
+  T = \frac{1}{2}M\bm{v}_G^2 + \frac{1}{2}I'\omega'^2
+\end{eqnarray}
+この式は
+\begin{eqnarray}
+  T = \frac{1}{2}M\bm{v}_{慣性モーメントの基準点} + \frac{1}{2}I\omega^2
+\end{eqnarray}
+として見ても良い．
 
 \end{document}
