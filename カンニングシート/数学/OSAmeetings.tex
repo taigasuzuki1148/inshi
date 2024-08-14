@@ -100,5 +100,107 @@
   &&\left(\sinh(x)\right)' = \cosh(x)\\
   &&\left(\tanh(x)\right)' = \frac{1}{\cosh^2(x)}
 \end{eqnarray}
+\section*{\Large{ベクトル解析}}
+\begin{eqnarray}
+  &&A\cdot (B\times C) = (A\times B)\cdot C = C\cdot (A\times B) = (C\times A)\cdot B = B\cdot (A\times B)\\
+  &&A\times (B\times C) = B(A\cdot C) - C(A\cdot B)\\
+  &&(A\times B)\cdot(C\times D)= (A\cdot C)(B\cdot D) - (A\cdot D)(B\cdot C)
+\end{eqnarray}
+また，
+\begin{eqnarray}
+  \nabla\cdot(\nabla\times\bm{A})= \nabla\times(\nabla f)=0
+\end{eqnarray}
+となる．
 
+\section*{\Large{積分}}
+\subsection*{ジョルダン不等式}
+\begin{eqnarray}
+  \int_0^\pi e^{-r\sin\theta}d\theta < \frac{\pi}{r}
+\end{eqnarray}
+\subsection*{留数定理}
+\begin{eqnarray}
+  \int_C f(z)dz= 2\pi i \sum \Res_{z=z_0}f(z)
+\end{eqnarray}
+なお，留数は以下で求められる
+\begin{eqnarray}
+  \Res_{z=z_0}f(z) = \frac{1}{(m-1)!}\lim_{z\to z_0}\frac{d^{m-1}}{dz^{m-1}}\left[ (z-z_0)^m f(z) \right]
+\end{eqnarray}
+\subsection*{$\log$の入った積分}
+これは分枝載線に気を付ける．
+\subsection*{$\sin$の入った積分}
+\begin{eqnarray}
+  I = \int_0^{2\pi}f(\cos\theta,\sin\theta)d\theta
+\end{eqnarray}
+の時は$z=e^{i\theta}$と置いて，原点を中心とする単位円上で積分を行えばよい．
+$\infty$などが積分に入っている場合は$\Re$などを最終的に取る方が実は良かったりする．
+\section*{\Large{フーリエ}}
+\subsection*{フーリエ級数展開}
+$(-\pi,\pi)$において定義された関数$f(x)$に関して
+\begin{eqnarray}
+  f(x) &&\sim \frac{a_0}{2} + \sum_{n=1}^{\infty}\left( a_n \cos(nx) + b_n\sin(nx) \right),\\
+  && a_n := \frac{1}{\pi}\int_{-\pi}^{\pi} f(x)\cos(nx) dx\\
+  && b_n := \frac{1}{\pi}\int_{-\pi}^{\pi} f(x)\sin(nx)dx
+\end{eqnarray}
+\subsection*{フーリエ変換}
+\begin{eqnarray}
+  \tilde{f}(k)= \frac{1}{\sqrt{2\pi}} \int_{-\infty}^{\infty}f(x)e^{-ikx}dx
+\end{eqnarray}
+
+\section*{\Large{ラプラス変換}}
+\begin{eqnarray}
+  F(p) = \int_0^\infty e^{-pt}f(t)dt
+\end{eqnarray}
+で与えられる．微分方程式を解く際に覚えなければいけない公式は
+\begin{eqnarray}
+  \mathcal{L}[f^{(n)}(t)] = p^nF(p) -p^{n-1}f(0) - p^{n-2} f(0) -\cdots
+\end{eqnarray}
+であり，
+\begin{eqnarray}
+  \mathcal{L}[e^{at}] = \frac{1}{p-a}, \quad \mathcal{L}[1]= \frac{1}{p},\quad \mathcal{L}[\cos(at)] = \frac{p}{p^2+a^2}, \quad \mathcal{L}[\sin(at)] = \frac{a}{p^2+a^2}
+\end{eqnarray}
+\section*{\Large{特殊関数}}
+\subsection*{\large{ガンマ関数}}
+\begin{eqnarray}
+  \Gamma(x) := \int_0^\infty e^{-t}t^{x-1}dx
+\end{eqnarray}
+部分積分より
+\begin{eqnarray}
+  \Gamma(x+1) = x \Gamma(x)
+\end{eqnarray}
+が成立し，
+\begin{eqnarray}
+  \Gamma(1)=1,\quad \Gamma(n+1) = n\Gamma(n),\quad \Gamma\left(\frac{1}{2}\right)= \sqrt{\pi},\quad \Gamma(n+1) = n!
+\end{eqnarray}
+が成立する．
+\subsection*{\large{ベータ関数}}
+\begin{eqnarray}
+  B(z,\xi) := \int_0^1 t^{z-1}(1-t)^{\xi-1}dt
+\end{eqnarray}
+また，
+\begin{eqnarray}
+  B(z,\xi) = \frac{\Gamma(z)\Gamma(\xi)}{\Gamma(z+\xi)}
+\end{eqnarray}
+\subsection*{\large{ルジャンドル関数}}
+ルジャンドルの微分方程式は
+\begin{eqnarray}
+  (1-x^2)y'' -2xy' + \lambda y=0
+\end{eqnarray}
+この時$\lambda=n(n+1)$の値を取る時，解はルジャンドル多項式になる$P_n(x)$なお，これはロドリゲスの公式により
+\begin{eqnarray}
+  P_n(x) = \frac{1}{2^n n!}\frac{d^n}{dx^n}(x^2-1)^n
+\end{eqnarray}
+\subsection*{\large{ベッセル関数}}
+ベッセルの微分方程式は
+\begin{eqnarray}
+  x^2y'' + xy' + (x^2-\nu^2)y=0
+\end{eqnarray}
+\subsection*{\large{エルミート多項式}}
+\begin{eqnarray}
+  e^{-z^2+2zx} = \sum_{n=0}^{\infty} H_n(x)\frac{z^n}{n!}
+\end{eqnarray}
+である．各種性質はレポートを見る．なお，エルミート多項式は次のエルミート微分方程式を満たす：
+\begin{eqnarray}
+  y''-2xy' + 2ny=0
+\end{eqnarray}
+あとはレポートを見直せば問題ない
 \end{document}

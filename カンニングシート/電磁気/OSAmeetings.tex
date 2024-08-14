@@ -46,19 +46,35 @@
 
 \author{21B00817 鈴木泰雅,\authormark{1}}
 \section*{\Large{静電場(誘電体を含む)}}
-\subsection*{Maxwell方程式}
+\subsection*{\large{Maxwell方程式}}
 \begin{eqnarray}
   &&\nabla\cdot \bm{D} = \rho\\
   &&\nabla\cdot\bm{B}=0\\
   &&\nabla\times \bm{E} = -\frac{\partial \bm{B}}{\partial t}\\
   &&\nabla\times \bm{H} = \bm{j} + \frac{\partial\bm{E}}{\partial t}
 \end{eqnarray}
-\subsection*{コンデンサー}
+\subsection*{\large{ビオ・ザバールの法則}}
+\begin{eqnarray}
+  d\bm{B} = \mu_0 \frac{I}{4\pi}\frac{d\bm{s}\times \bm{r}}{r^3}
+\end{eqnarray}
+\subsection*{\large{アンペールの法則}}
+\begin{eqnarray}
+  \oint_C \bm{B}\cdot d\bm{s} = \sum \mu_0 I
+\end{eqnarray}
+\subsection*{\large{磁界が電流に及ぼす力}}
+単位長さあたり
+\begin{eqnarray}
+  d\bm{F}=\bm{I}\times\bm{B}
+\end{eqnarray}
+が成立する．ただし，この式は二つの電流無限に長いときであり，有限の時は成立しない．
+
+
+\subsection*{\large{コンデンサー}}
 \begin{eqnarray}
   &&C= \frac{Q}{V_1-V_2}\\
   &&C_{並列} = \sum_i C_i,\quad \frac{1}{C_{直列}} = \sum_i \frac{1}{C_i}
 \end{eqnarray}
-\subsection*{誘電体中の電界}
+\subsection*{\large{誘電体中の電界}}
 \begin{eqnarray}
   \bm{E}_{全体} &&= \bm{E}_{作用している電場} + \bm{E}'_{誘導される電場}\\
   &&=\bm{E}_{作用している電場} - \frac{\bm{P}}{3\epsilon_0}|_{球体のとき}\\
@@ -69,11 +85,44 @@
 \begin{eqnarray}
   \bm{D} = \epsilon \bm{E}_{全体}= \epsilon_0\left(1+\chi  \right)\bm{E}_{全体} = \epsilon_0 \bm{E}_{全体} + \bm{P}  
 \end{eqnarray}
-\subsection*{ポテンシャル}
+また，誘電体の表面にある面密度：
+\begin{eqnarray}
+  \sigma_P = \bm{n}\cdot\bm{P}=P_n
+\end{eqnarray}
+内部にある体積密度：
+\begin{eqnarray}
+  \rho_P = -\nabla\bm{P}(\bm{r})
+\end{eqnarray}
+\subsection*{\large{磁性体中の磁界}}
+誘電体と同様にして
+\begin{eqnarray}
+  \bm{H}_{全体} &&= \bm{H}_{作用している磁場}+\bm{H}'_{誘導される磁場}\\
+  &&=\bm{H}_{作用している磁場}-\frac{N_{\alpha}\bm{M}}{\mu_0}
+\end{eqnarray}
+といった形で誘導電場と同じように反磁場が働く．
+\begin{eqnarray}
+  \bm{B} = \mu\bm{H}_{全体}= \mu_0(1+\chi)\bm{H}_{全体}= \mu_0 \bm{H}_{全体} + \bm{M}
+\end{eqnarray}
+なお，反磁性体と常磁性体の大きな違いは$\mu,\mu_0$の大きさの違いであり，法則自体には違いは全くない．ただし，自発磁化$M_0$などが働く場合は
+\begin{eqnarray}
+  \bm{B} = \mu\bm{H}_{全体} + \bm{M}_0
+\end{eqnarray}
+になるため上記の公式は使えない．特に自発磁化がない反磁性体などに有効な公式である．
+\subsection*{一般の磁化電流}
+磁性体の内部の空間に分布している磁化電流は
+\begin{eqnarray}
+  \bm{i}_M = \frac{1}{\mu_0}\nabla\times\bm{M}
+\end{eqnarray}
+磁性体の表面に流れる磁化電流は
+\begin{eqnarray}
+  \bm{j}_M = \frac{-1}{\mu_0}\bm{n}\times\bm{M}
+\end{eqnarray}
+
+\subsection*{\large{ポテンシャル}}
 \begin{eqnarray}
   \bm{B} = \nabla\times \bm{A},\quad \bm{E} = -\frac{\partial\bm{A}}{\partial t} -\nabla\phi
 \end{eqnarray}
-\subsection*{Maxwellの応力}
+\subsection*{\large{Maxwellの応力}}
 \begin{eqnarray}
   T = 
   \begin{bmatrix}
@@ -84,13 +133,13 @@
 \end{eqnarray}
 となる．
 \section*{\Large{電磁波}}
-\subsection*{空間上の電磁波}
+\subsection*{\large{空間上の電磁波}}
 平面電磁波の関係：
 \begin{eqnarray}
   \frac{H}{E}= \sqrt{\frac{\epsilon}{\mu}},\quad \frac{1}{2}\epsilon E^2 = \frac{1}{2}\mu H^2
 \end{eqnarray}
 となり、エネルギーは電波と磁場に半分づつ分かれている。
-\subsection*{エネルギーの流れ}
+\subsection*{\large{エネルギーの流れ}}
 ポンティングベクトルは以下で定義される：
 \begin{eqnarray}
   S = E\times H
@@ -104,7 +153,7 @@
 \begin{eqnarray}
   \frac{1}{c^2}\langle S \rangle
 \end{eqnarray}
-\subsection*{導体中の電磁波}
+\subsection*{\large{導体中の電磁波}}
 この時は$\sigma,\mu$
 \begin{eqnarray}
   \bm{E} = \sigma \bm{J}
@@ -114,7 +163,7 @@
   \frac{\partial E_x}{\partial z^2} = \mu\epsilon\frac{\partial E_x}{\partial t^2} + \sigma\mu\frac{\partial E_x}{\partial t}
 \end{eqnarray}
 完全導体では$\sigma=\infty$の導体のことであり、超伝導体に似ているが、超伝導体はこれ以外にも様々な性質を持っている。
-\subsection*{Maxwell方程式から得られるもの}
+\subsection*{\large{Maxwell方程式から得られるもの}}
 Maxwell方程式から
 \begin{eqnarray}
   -\bm{j}\cdot\bm{E} = \nabla\cdot\left(\bm{E}\times\frac{1}{\mu}\bm{B}\right) + \frac{\partial}{\partial t}\left[ \frac{1}{2}\left(\frac{1}{\mu}\bm{B}^2 + \epsilon\bm{E}^2\right) \right]
