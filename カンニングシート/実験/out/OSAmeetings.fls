@@ -1158,4 +1158,5 @@ INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/lm/rm-lmri10.tfm
 INPUT c:/texlive/2021/texmf-dist/fonts/tfm/ptex-fonts/standard/tmin10.tfm
 INPUT c:/texlive/2021/texmf-dist/fonts/tfm/ptex-fonts/standard/tmin10.tfm
 OUTPUT out/OSAmeetings.dvi
+INPUT c:/texlive/2021/texmf-dist/fonts/tfm/ptex-fonts/standard/tgoth10.tfm
 INPUT out/OSAmeetings.aux

@@ -144,8 +144,38 @@ $p$偏光の向きは入射面に対して垂直，$s$偏光は入射面と平�
 \begin{eqnarray}
   I(x) = I_0 e^{-\mu x} = I_0 e^{-\sigma nx},\quad \mu= \sigma n
 \end{eqnarray}
-
-
+$n$は単位体積あたりの原子の数$[\text{cm}{}^{-3}]$であり，$\sigma$は面積の次元を持つ1原子あたりの吸収および散乱の全断面積である．
+\subsection*{$\gamma$線との相互作用}
+$\gamma$線では光電効果，コンプトン効果，電子対生成がある．
+\begin{eqnarray}
+  &&\sigma_{\text{photo}} \propto Z^5\\
+  &&\sigma_{\text{comp}} \propto Z\\
+  &&\sigma_{\text{pair}} \propto Z^2
+\end{eqnarray}
+であり，電子対生成に関しては$1.02\text{MeV}$以上の$\gamma$線だけで相互作用が起きる．
+\subsection*{シンチレーターの種類}
+密度$\rho$の物質に対して
+\textbf{1cm進むごとに$\mathcal{O}(2\rho)[\text{MeV}]$だけエネルギーを失う．}
+無機シンチレーターは潮解性があり，大気に晒すとぼろぼろになってしまう．プラスチックシンチレータは安価であり潮解性がない．
 \section*{\Large{同軸ケーブル}}
+伝送方程式は
+\begin{eqnarray}
+  \frac{\partial^2 V}{\partial z^2} = LC\frac{\partial^2 V}{\partial t^2}
+\end{eqnarray}
+であり，ここから速度は
+\begin{eqnarray}
+  \frac{1}{v^2} = LC,\quad\therefore v =\sqrt{\frac{1}{LC}}
+\end{eqnarray}
+となる．また，
+\begin{eqnarray}
+  L = \frac{\mu}{2\pi}\ln\left(\frac{b}{a}\right),\quad C = \frac{2\pi\epsilon}{\ln(b/a)}
+\end{eqnarray}
+となる．また，インピーダンスは
+\begin{eqnarray}
+  Z_0 = \sqrt{\frac{L}{C}}
+\end{eqnarray}
+となる．
+\subsection*{インピーダンス整合}
+
 
 \end{document}
