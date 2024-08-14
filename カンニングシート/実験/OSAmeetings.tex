@@ -42,38 +42,110 @@
   hidden line/.style={black!60}
 }
 \begin{document}
-\title{力学 カンニングシート}
+\title{実験 カンニングシート}
 
 \author{21B00817 鈴木泰雅,\authormark{1}}
-\section*{\Large{剛体}}
-\subsection*{慣性モーメント}
-\begin{eqnarray}
-  I = \int r^2 dm
-\end{eqnarray}
-\subsection*{運動方程式}
-\begin{eqnarray}
-  I\frac{d\omega}{dt} = \bm{r}\times\bm{F}
-\end{eqnarray}
-\subsection*{原理}
-剛体の運動では重心方向の運動と，回転方向の運動に分離して考えることもできる．(場合によっては相互作用を削除したい場合はラグランジュ方程式を使う)
-\subsection*{運動量}
-\begin{eqnarray}
-  \bm{P}= M\bm{v}_G, \quad \bm{L}= \bm{r}_G \times M\bm{v}_G + I'\omega'
-\end{eqnarray}
-ただし，$\bm{r}_G$の支点がモーメントの軸であるときは$\bm{r}_G=0$である．この式は
-\begin{eqnarray}
-  \bm{L}= \bm{r}_{G} \times M\bm{v}_{慣性モーメントの基準点} + I'\omega'
-\end{eqnarray}
-として見てもよい．
+\section*{\Large{計測と解析}}
 
-\subsection*{エネルギー}
+\subsection*{誤差の伝播公式}
+誤差$\Delta f$は
 \begin{eqnarray}
-  T = \frac{1}{2}M\bm{v}_G^2 + \frac{1}{2}I'\omega'^2
+  \Delta f= \sqrt{ \sum_i \left(\frac{\partial f}{\partial x_i}\right)^2(\Delta_i)^2 }
 \end{eqnarray}
-この式は
+となる．ないしは
 \begin{eqnarray}
-  T = \frac{1}{2}M\bm{v}_{慣性モーメントの基準点} + \frac{1}{2}I\omega^2
+  f(x,y+\delta) = f(x,y) + \frac{\partial f}{\partial y}(\delta)
 \end{eqnarray}
-として見ても良い．
+として計算しても同じである．
+\subsection*{最小二乗法の公式}
+\begin{eqnarray}
+  f= ax_{data} + b
+\end{eqnarray}
+として近似したいとき，最小二乗法によると
+\begin{eqnarray}
+  a &&= \frac{\overline{xy} - (\overline{x})(\overline{y})}{\overline{x^2} - (\overline{x})^2} = \frac{\mathrm{Cov}[\mathcal{X},\mathcal{Y}]}{\mathrm{Cov}[\mathcal{X}, \mathcal{X}]} = \frac{\mathrm{Cov}[\mathcal{X},\mathcal{Y}]}{\mathrm{Var}[\mathcal{X}]}\\
+  b &&= \overline{y} - a\overline{x}
+\end{eqnarray}
+\section*{\Large{単位と暗記事項}}
+\begin{eqnarray}
+  &&G= 10^{9},\quad M=10^{6},\quad k = 10^{3} \\
+  &&\mu= 10^{-6},\quad n=10^{-9},\quad p = 10^{-12},\quad f = 10^{-15} \\ 
+\end{eqnarray}
+光子のときのエネルギと運動量は
+\begin{eqnarray}
+  E = h\nu = 2\pi\hbar\frac{c}{\lambda}\\
+  P = E/c = h\nu/c
+\end{eqnarray}
+なお，
+\begin{eqnarray}
+  1[\text{eV}] &&= 1.602\cdot 10^{-19}[\text{J}]\\
+  \hbar c &&\approx 200[\text{MeV}\cdot\text{fm}]\\
+   c &&\approx 3.0\cdot 10^{8}[\text{m}/\text{s}]\\
+   h &&\approx 6.62\cdot 10^{-34}[\text{Js}]
+\end{eqnarray}
+\begin{eqnarray}
+  [\text{W}]= [\text{J}/\text{s}],\quad [\text{J}]= [\text{m}\cdot\text{N}]
+\end{eqnarray}
+\section*{\Large{光}}
+\subsection*{時間分解能}
+接近したパルス同士が重なってしまい分離できなくなる．つまりパルスの数を数え落とすようになってしまい数え落としたパルスの数を補正する必要がある．嬉しいことに装置には不感時間$\tau$が付与されているため
+計算できる．
+\subsection*{光増倍管}
+増幅率は以下で定義される：
+\begin{eqnarray}
+  G = \lambda^n,\quad \lambda:1回のダイノードへの衝突で叩き出される電子の数，n:ダイノードの数
+\end{eqnarray}
+\subsection*{単位時間あたりのレーザーから放出される光子数}
+全体のレーザーのエネルギ/1光子のエネルギーが光子の数であるため
+\begin{eqnarray}
+  N = \frac{W}{h\nu} = \frac{W}{2\pi\hbar c/\lambda}
+\end{eqnarray}
+\subsection*{レンズの式}
+\begin{eqnarray}
+  \frac{1}{f}= \frac{1}{a} + \frac{1}{b}
+\end{eqnarray}
+なお，一般に凸レンズよりも凹レンズの方が収差が小さい．
+\subsection*{偏光板}
+光軸方向のみの光が出力されその強度は$\cos(\theta-\phi)$である．ちょうど$\theta=\phi+\pi/2$などのように光軸と振動方向が直交するときは$0$になる．
+
+\subsection*{1/2偏光板}
+偏光の位相を$\pi$だけずらしたものである．円偏光であれば反対方向に回転，直線偏光であれば透過軸を対称な直線偏光になる．光の強度は角度依存性なし
+\subsection*{1/4偏光板}
+位相を$\pi/2$だけずらしたものである．直線偏光が入ると楕円変更になり，ちょうど円偏光になる箇所も存在する．振動方向と光軸
+との角度を$\pi/4$にすることで円偏光が得られる．光の強度は角度依存性なし
+\subsection*{反射と偏光}
+$p$偏光の向きは入射面に対して垂直，$s$偏光は入射面と平行である．
+\subsection*{屈折の法則}
+\begin{eqnarray}
+  n_1 \sin\theta_1 = n_2\sin\theta_2
+\end{eqnarray}
+となる．ちょうど入射角$\theta_1$と透過角$\theta_2$の関係が
+\begin{eqnarray}
+  \theta_1 + \theta_2 =\pi/2
+\end{eqnarray}
+のときブリュースター角は
+\begin{eqnarray}
+  \theta = \tan^{-1}\left(\frac{n_2}{n_1}\right)
+\end{eqnarray}
+となる．なお，これは$p$偏光のみに関して起こり$s$偏光では起こらない．
+\section*{\Large{真空}}
+真空を実現できる装置の性能の順番として
+\begin{eqnarray}
+  油回転ポンプ < 油拡散ポンプ
+\end{eqnarray}
+また，計測器としてはガイスラー菅，ピラニゲージが$1atm\sim 10^{-1}Pa$ほどの圧力を測定することができるが，電離真空計では$10^{-1}\sim 10^{-5}Pa$の圧力を得られる．
+
+\section*{\Large{放射線}}
+厚さ$dx$に入射した$I$個の光子が$-dI$個だけ減少したとすると
+\begin{eqnarray}
+  -dI = \mu I dx,\quad \mu は吸収係数[\text{cm}{}^{-1}]
+\end{eqnarray}
+であり，
+\begin{eqnarray}
+  I(x) = I_0 e^{-\mu x} = I_0 e^{-\sigma nx},\quad \mu= \sigma n
+\end{eqnarray}
+
+
+\section*{\Large{同軸ケーブル}}
 
 \end{document}
