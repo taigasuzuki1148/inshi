@@ -46,6 +46,18 @@
 
 \author{21B00817 鈴木泰雅,\authormark{1}}
 \section*{\Large{各種公式}}
+Energy (Legendre transformation)
+\begin{align}
+    & & dU=TdS-pdV+\mu dN \\
+    H =&U +pV & dH = TdS + Vdp + \mu dN\\
+    F =&U -TS & dF = -SdT -pdV + \mu dN\\
+    G =&U -TS + pV & dG = -SdT + Vdp + \mu dN\\
+    J =&U-TS-N\mu & dJ = -SdT-pdV-Nd\mu
+\end{align}
+Gibbs-Duhem's relation
+\begin{equation}
+    F = N\mu-pV,\quad G = N\mu
+\end{equation}
 \subsection*{分配関数との関係式}
 \begin{eqnarray}
   &&F = -\frac{1}{\beta}\ln Z\\
@@ -66,6 +78,43 @@
 \begin{eqnarray}
   &&m= -\frac{\partial F}{\partial H}\\
   &&\chi = \frac{\partial m}{\partial H}|_{H=0}
+\end{eqnarray}
+また，エネルギーの期待値・分散等は以下の通り：
+\begin{eqnarray}
+  \frac{d E}{d\beta} = - \langle E\rangle^2 + \langle E^2 \rangle,\quad (分散) = - \frac{dE}{d\beta}
+\end{eqnarray}
+\subsection*{グランドカノニカル}
+大分配関数：
+\begin{eqnarray}
+  \Xi(\beta,\mu) = \sum_{N=0}^{\infty} e^{\beta\mu N}Z_{V,N}(\beta) = \sum_{N=0}^{\infty}e^{\beta \mu N} \sum_{i} e^{-\beta E_i} = \sum_N \frac{1}{N!}\sum_i\exp\left( -\beta E_i + \beta\mu N \right)
+\end{eqnarray}
+この表式はもともと粒子が区別できないことを前提に置いているため粒子の区別などを別途考える必要性がない．
+\subsection*{グランドカノニカルの熱力学量}
+\begin{eqnarray}
+  J = -k_B T \ln \Xi,\quad J = -PV
+\end{eqnarray}
+それぞれの密度の期待値，エネルギーの期待値等は導出した方が早い．
+\section*{\Large{フェルミ・ボーズ}}
+フェルミ関数，ボーズ分布関数
+\begin{eqnarray}
+  f_F = \frac{1}{e^{\beta(\epsilon-\mu)}+1},\quad f_B = \frac{1}{e^{\beta(\epsilon-\mu)}-1}
+\end{eqnarray}
+\subsection*{ゾンマーフェルト展開}
+\begin{eqnarray}
+  I = \int_{-\infty}^{\infty} d\epsilon h(\epsilon) f_B(\epsilon)
+\end{eqnarray}
+とすると
+\begin{eqnarray}
+  I(\beta,\mu) = \int_{-\infty}^{\mu} h(\epsilon)d\epsilon + \frac{\pi^2}{6}h'(\epsilon)(k_BT)^2 + \mathcal{O}(k_BT)^4
+\end{eqnarray}
+\subsection*{状態密度との関係式}
+\begin{eqnarray}
+  \rho &&= \int_0^{\infty} d\epsilon \nu(\epsilon) f_B(\epsilon,\mu)\\
+  u &&= \int_0^{\infty} d\epsilon \nu(\epsilon) f_{B}(\epsilon,\mu)
+\end{eqnarray}
+また，十分に低温のとき
+\begin{eqnarray}
+  f_B'(\epsilon) \sim -\delta(\epsilon-\epsilon_F)
 \end{eqnarray}
 
 \end{document}
