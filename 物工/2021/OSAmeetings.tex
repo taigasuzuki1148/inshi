@@ -155,6 +155,65 @@ $M$に気を付けて
 となり，これは撃力が伝わらないことを意味している．
 
 \subsection*{\large{[3.1]}}
-
+\begin{eqnarray}
+  A_q =C_q e^{iqL},\quad D_q = B_q e^{iqL}
+\end{eqnarray}
+が成立し，それぞれ代入すると
+\begin{eqnarray}
+  \begin{bmatrix}
+    C_q \\
+    B_q
+  \end{bmatrix}
+  = S_q 
+  \begin{bmatrix}
+    C_q\\
+    B_q
+  \end{bmatrix}
+  e^{iqL}
+\end{eqnarray}
+となる．よって，
+\begin{eqnarray}
+  \begin{bmatrix}
+    1-T_q e^{iqL} & - R_qe^{iqL}\\
+    - R_qe^{iqL} & 1- T_q e^{iqL}
+  \end{bmatrix}
+  \begin{bmatrix}
+    C_q\\
+    B_q
+  \end{bmatrix} =0
+\end{eqnarray}
+となり，$C_q\neq 0, B_q \neq 0$であるため，
+\begin{eqnarray}
+  \left( 1- T_q e^{iqL} \right)^2 -(R_qe^{iqL})^2= 0
+\end{eqnarray}
+\subsection*{\large{[3.2]}}
+$M=m$の時，$T_q=1,R_q=0$より，
+\begin{eqnarray}
+  e^{iqL}=1
+\end{eqnarray}
+である．よって，
+\begin{eqnarray}
+  q = \frac{2\pi n}{L},\quad 0<n< \left\lfloor\frac{L}{2} \right\rfloor 
+\end{eqnarray}
+また，前問と同様の運動方程式になるため$A_q, B_q$をそれぞれ独立に扱うことができるため
+\begin{eqnarray}
+  \omega_q = 2\sqrt{\frac{k}{m}}\left| \sin\left(\frac{q}{2}\right) \right|
+\end{eqnarray}
+となる．
+\subsection*{\large{[3.3]}}
+$M=2m$の時，
+\begin{eqnarray}
+  T_q = \frac{e^{-iq}-e^{iq}}{2e^{-iq}-1},\quad R_q = \frac{-e^{-iq}-e^{iq}+1}{2e^{-iq}-1}
+\end{eqnarray}
+よって，代入して整理すると
+\begin{eqnarray}
+  e^{2iqL}\left( -4 -4 \cos q +1 \right)=0
+\end{eqnarray}
+である．
+よって，虚部と実部がそれぞれ$0$になることからまず，虚部に関して
+\begin{eqnarray}
+  \sin(qL)=0,\quad\therefore q = \frac{n\pi}{L},\quad n\in\mathbb{Z}
+\end{eqnarray}
+また，$q = \frac{n\pi}{L}$のとき，$\cos(qL)= (-1)^{n}$であるため，
 
 \end{document}
